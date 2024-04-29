@@ -1,0 +1,87 @@
+.fixx{
+    position: relative;
+    top: -0px;
+    height: 100%;
+}
+
+.filter_width{
+    width: 315px;
+    min-width: 200px;
+    border-right: 2px solid black;
+}
+
+.btn_width{
+    width: 93%;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 30px;
+}
+.btn_input{
+    width: 93%;
+    padding: 7px;
+    outline: 1px solid rgba(0, 0, 0, 0.32) ;
+    border-radius: 10px;
+}
+.btn_input :hover{
+    outline: 1px solid rgba(0, 0, 0, 1) ;
+}
+
+.saleStatus{
+    height: 0px;
+}
+.yachtType{
+    height: 0px;
+}
+.length_filter{
+    height: 0px;
+}
+.builder{
+    height: 0px;
+}
+.year{
+    height: 0px;
+}
+.price{
+    height: 0px;
+}
+.country{
+    height: 0px;
+}
+.subtype{
+    height: 0px;
+}
+.volume{
+    height: 0px;
+}
+
+.main_parent > Button{
+    background-color: black;
+}
+
+.topfilter_btn{
+    margin: 4px;
+    text-align: center;
+}
+
+.topfilter_btn_all{
+    margin: 4px;
+    text-align: center;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.border_1{
+    border:1px solid rgba(0, 0, 0, 0.344);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.458);
+}
+
+.ml_full{
+    left:80%;
+    position: sticky;
+    border:1px solid rgba(0, 0, 0, 0.344);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.458);
+}

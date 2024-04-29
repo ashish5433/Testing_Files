@@ -1,0 +1,19 @@
+.main_div{
+    /* height: 5rem; */
+    width: 15%;
+    overflow-wrap: break-word;
+    margin-left: 60%;
+    margin-top: 1.8%;
+    background: rgba(255, 255, 255, 0.9);
+    /* color: burlywood; */
+    z-index: 5000;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    font-size: large;
+
+}
+
+

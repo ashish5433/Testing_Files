@@ -1,0 +1,219 @@
+.login_div{
+    height: 10vh;
+    width: 100%;
+   display: flex;
+   justify-content: flex-end;
+    background-color:  rgb(93, 23, 235);
+    position: sticky;
+    top: 0;
+}
+
+.login_btn{
+    font-size: 24px;
+    padding: 0 5px;
+    color: black;
+    cursor: pointer;
+    margin-left: 20%;
+    margin-top: -100px;
+}
+.main_div{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.center_div{
+    z-index: 1;
+    min-width: 65vw;
+    height: 47vw;
+    margin: 100px;
+    margin-left: 270px;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(93, 23, 235),
+    0.3em 0.3em 1em rgb(93, 23, 235);
+}
+.center_div h1 {
+    
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.center_div p {
+    margin: 0% 5%;
+    font-size: larger;
+}
+.content_div{
+    display: flex;
+    flex-direction: row;
+    flex: 10%;
+}
+.content_div>h4{
+    margin-left: -4%;
+    color: rgb(249,115,22);
+}
+
+.main_form_div{
+    display: flex;
+    padding: 2% 3%;
+    border-radius: 0 0 2rem 2rem;
+    height: 87%;
+}
+.form_left_div{
+    flex: 40%;
+}
+.form_right_div{
+    flex: 60%;
+}
+
+.form_left_div div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    position: relative;
+}
+.form_left_div div label{
+    font-size: larger;
+    margin-left: 2%;
+    font-weight: 400;
+}
+
+.form_left_div div input{
+    margin-top: 1%;
+    width: 80%;
+   padding: 10px 10px;
+   border-radius: 2rem;
+   color: black;
+   position: relative;
+   border: 2px solid  rgb(93, 23, 235);
+}
+
+.form_left_div div select{
+    margin-top: 1%;
+    width: 80%;
+   padding: 10px 10px;
+   border-radius: 2rem;
+   color: black;
+   border: 2px solid  rgb(93, 23, 235);
+}
+
+.form_left_div div input::placeholder{
+    color: rgb(67, 66, 66);
+}
+.icon {
+    font-size: 1.3rem;
+    color: blue;
+    transform: translate(6rem, -2rem);
+  }
+.verify_btn{
+    position: relative;
+    left: 65%;
+   z-index: 100;
+   margin-top: -11%;
+   width: 40px;
+   margin-bottom: 5%;
+}
+.verifyemail_btn{
+    position: relative;
+    left: 65%;
+   z-index: 100;
+   margin-top: -8.5%;
+   width: 40px;
+   margin-bottom: 5%;
+}
+
+.right_div_content{
+    display: flex;
+    flex-direction: row;
+}
+.right_div_content h2{
+    color: purple;
+    margin-top: 10px;
+    font-weight:bolder ;
+}
+.right_div_content input{
+    margin: 1% 1%;
+    width: 60%;
+   padding: 10px 10px;
+   border-radius: 2rem;
+   color: black;
+   border: 2px solid  rgb(249,115,22);
+}
+
+.right_form_div{
+    height: 80%;
+    padding: 2% 3%;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-rows: repeat(8,1fr);
+    row-gap: 0px;
+    column-gap: 10px;
+}
+.rad_btn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+.rad_btn input{
+  width: 15px;
+  height: 15px;
+  accent-color: purple;
+  appearance: none;
+  border-radius: 50%;
+  border: 0.8px solid rgb(190, 189, 189);
+  background-color: grey;
+  box-shadow: 0px 0px 0px 8px white, 0 0 0 9px grey;
+  margin-right: 10px;
+}
+.rad_btn input:checked  {
+    appearance: auto;
+    box-shadow:  0 0 0 0;
+    width: 30px;
+    height: 30px;
+    color: purple;
+    margin-left: -10px;
+}
+.rad_btn label{
+ font-size: 24px;
+} 
+.btn_div{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    height: 10%;
+}
+.sub_btn{
+    font-size: 24px;
+    background-color: rgb(249,115,22);
+    width: 30%;
+    padding: 5px 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 2rem;
+
+}
+
+
+
+
+
+.footer_assistance{
+    position: sticky;
+    bottom: 5%;
+}
+
+.phone_inp input:focus{
+  box-shadow: none !important;
+}
+.phone_inp::-webkit-scrollbar{
+    display: none !important; 
+}
+.country-list::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+  }
+
+.logincoverbox{
+    width: 100vw;
+}

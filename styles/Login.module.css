@@ -1,0 +1,42 @@
+.main_div{
+height: 100vh;
+width: 100%;
+/* background-color: black; */
+display: flex;
+overflow: hidden;
+background-image: url(".././images/rightvideo.gif");
+background-repeat: no-repeat;
+background-size:cover;
+object-fit: cover;
+}
+
+.login_div{
+margin-top: 10%;
+flex: 45%;
+}
+.signup_div{
+flex: 50%;
+background-color: rgb(255, 255, 255);
+/* background-image: url(".././images/rightvideo.gif");
+background-repeat: no-repeat;
+background-size:cover;
+padding: 3rem; */
+}
+.assistance_btn{
+position: absolute;
+width: 20%;
+display: flex;
+color: white;
+font-weight: light;
+bottom: 5%;
+left: 5%;
+}
+.assistance_btn:hover{
+cursor: pointer;
+}
+
+.assistance_btn p{
+width: 50%;
+position: absolute;
+transform: translate(4rem,0rem);
+}

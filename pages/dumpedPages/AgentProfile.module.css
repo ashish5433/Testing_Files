@@ -1,0 +1,238 @@
+.first {
+  background: #000;
+  min-height: 100vh;
+  font-family: "Cabinet Grotesk", sans-serif;
+  color: aquamarine;
+}
+.bg_image {
+  position: relative;
+  width: 100%;
+}
+.big_image {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  opacity: 0.7;
+}
+.overlay {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.375),
+    rgba(0, 0, 0, 1)
+  );
+}
+.dash {
+  position: absolute;
+  height: 20vh;
+  width: 80%;
+  background: rgba(148, 20, 148, 0.373);
+  background: rgba(255, 255, 255, 0.161);
+  top: 15rem;
+  left: 10rem;
+  backdrop-filter: blur(9px);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.imgnname {
+  transform: translateY(-5rem);
+  width: 250px;
+  height: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  letter-spacing: 2px;
+}
+.imgnname h4{
+transform: translateY(0.5rem);
+}
+.icons {
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.icons_mem{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    opacity: 0.9;
+}
+
+.details {
+  position: absolute;
+  left: 0rem;
+  top: 3rem;
+  text-align: center;
+  display: flex;
+}
+.details > div {
+  margin: 0 2.3rem;
+}
+.details h1{
+font-size: 3rem;
+opacity: 0.4;
+}
+.details2 h1{
+font-size: 3rem;
+opacity: 0.4;
+}
+.details h2 {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+.details2 h2 {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+.details p {
+  opacity: 0.8;
+}
+.details2 p {
+  opacity: 0.8;
+}
+.details2 {
+  position: absolute;
+  right: 0rem;
+  top: 3rem;
+  text-align: center;
+  display: flex;
+}
+.details2 > div {
+  margin: 0 2.7rem;
+}
+
+.functions {
+  position: absolute;
+  bottom: -5rem;
+  width: 50%;
+  background: #ffffff1b;
+  height: 5rem;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem 0rem 5rem;
+  text-align: center;
+  box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.257);
+  transition-duration: 300ms;
+}
+.functions p {
+    font-size: 0.8rem;
+  padding-top: 5px;
+  opacity: 0.8;
+  transition-duration: 300ms;
+}
+.icons2 {
+  margin: auto;
+  opacity: 0.8;
+  transition-duration: 300ms;
+}
+.functions p:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.icons2:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #00000000;
+  color: rgba(255, 255, 255, 0.672);
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid_container > div {
+  background: rgba(148, 20, 148, 0.373);
+  background: rgba(255, 255, 255, 0.161);
+}
+
+.item1 {
+  height: 600px;
+  width: 600px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: 0 20px;
+  border-radius: 15px;
+padding: 2rem 2rem;
+
+}
+.item1 h1{
+font-size: 2rem;
+border-bottom: 2px solid aquamarine;
+border-bottom: 2px solid rgb(255, 255, 255,0.672);
+margin-bottom: 20px;
+opacity: 0.8;
+}
+.item1 p{
+font-size: 0.8rem;
+opacity: 0.8;
+text-overflow: clip;
+}
+.items {
+  border-radius: 15px;
+  margin: 20px 20px;
+  height: 280px;
+  width: 280px;
+padding: 2rem 2rem;
+display: flex;
+flex-direction: column;
+letter-spacing: 1px;
+word-spacing: 1px;
+transition-duration: 400ms;
+}
+.ull{
+  list-style-type:disc;
+margin: 0;
+padding:0 1rem;
+}
+.ull li{
+font-size: 0.8rem;
+opacity: 0.8;
+}
+
+.item1 .ull li{
+font-size: 1.4rem;
+}
+
+.item1 .ull{
+    padding: 0 2rem;
+}
+
+.items h1{
+font-size: 2rem;
+border-bottom: 2px solid aquamarine;
+border-bottom: 2px solid rgb(255, 255, 255,0.672);
+margin-bottom: 20px;
+opacity: 0.8;
+}
+.items p{
+font-size: 0.8rem;
+opacity: 0.8;
+text-overflow: clip;
+}
+
+.height_adjuster {
+  height: 70vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.border_adjuster {
+  width: 90%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.625);
+  border-radius: 1rem;
+  height: 10vh;
+ 
+}

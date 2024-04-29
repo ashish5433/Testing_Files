@@ -1,0 +1,254 @@
+
+.main_div{
+   
+    background-color: rgb(93, 23, 235);
+   height: 120vh;
+
+}
+.header{
+    padding: 40px 30px;
+    font-weight: bolder;
+}
+.header span{
+    color: white;
+    font-weight: bolder;
+}
+.main_div2{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+.left_div{
+    flex: 40%;
+    background: rgb(93, 23, 235);
+    margin: 0 2% 0 5%;
+    display: flex;
+    flex-direction: column;
+}
+.left_div_top{
+    flex: 20%;
+    background-color: white;
+    margin-bottom: 10%;
+    padding-bottom: 30px;
+}
+.left_div_top h3{
+    margin: 10px 20px;
+}
+.first_line{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+}
+.first_line div{
+    margin: 2% 0%;
+    flex: 50%;
+
+}
+.first_line div input{
+    width: 80%;
+    margin: 1% 5%;
+   padding: 10px 10px;
+   border-radius: 2rem;
+   color: black;
+   position: relative;
+   border: 2px solid  rgb(93, 23, 235);
+}
+.second_line{
+    display: flex;
+    justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+.second_line div{
+    /* margin: 0 10%; */
+    flex: 50%;
+}
+.second_line div input{
+    width: 80%;
+    margin: 1% 5%;
+   padding: 10px 10px;
+   border-radius: 2rem;
+   color: black;
+   position: relative;
+   border: 2px solid  rgb(93, 23, 235);
+}
+.left_div_btm{
+    flex: 70%;
+    background-color: white;
+}
+.left_div_btm h3{
+    margin: 10px 20px;
+
+}
+.left_div_btm div{
+    margin: 5% 0%;
+}
+.left_div_btm div input{
+    width: 80%;
+    margin: 0% 5%;
+   padding: 10px 10px;
+   border-radius: 2rem;
+   color: black;
+   position: relative;
+   border: 2px solid  rgb(93, 23, 235);
+}
+.right_div{
+    flex: 40%;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0 5% 0 2%;
+    display: flex;
+    flex-direction: column;
+}
+.right_div_top{
+    flex: 30%;
+    background-color: white;
+    margin-bottom: 10%;
+}
+.right_div_top h3{
+   margin: 10px 30px;
+}
+.right_top_2{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.right_top_2 div{
+   
+    flex: 50% ;
+    
+}
+.right_div_top div input[type=text]{
+    width: 80%;
+    margin: 1% 5%;
+   padding: 10px 10px;
+   border-radius: 2rem;
+   color: black;
+   position: relative;
+   border: 2px solid  rgb(93, 23, 235);
+}
+
+.right_div_btm{
+    flex: 70%;
+    background-color: white;
+}
+.right_div_btm h3{
+    margin: 10px 30px;
+}
+
+.rad_btn{
+    margin: 10px 30px ;
+    display: flex;
+    justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.rad_btn input{
+  width: 15px;
+  height: 15px;
+  accent-color: purple;
+  appearance: none;
+
+  border-radius: 50%;
+  border: 0.8px solid rgb(190, 189, 189);
+  background-color: grey;
+  box-shadow: 0px 0px 0px 8px white, 0 0 0 9px grey;
+  margin-right: 10px;
+}
+.rad_btn input:checked  {
+    /* background-color: purple; */
+
+    appearance: auto;
+    box-shadow:  0 0 0 0;
+    width: 30px;
+    height: 30px;
+    color: purple;
+    /* margin-left: -10px; */
+    margin-top: 5px;
+}
+.rad_btn label{
+ font-size: 24px;
+} 
+.owner_type{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 2rem;
+    border: 2px solid  rgb(93, 23, 235);
+
+    padding: 10px;
+    width: 42%;
+    
+}
+
+.emi_option{
+  
+    border-radius: 2rem;
+    border: 2px solid  rgb(93, 23, 235);
+
+    padding: 10px;
+    margin-top: 5px;
+}
+.rent_option{
+  
+    border-radius: 2rem;
+    border: 2px solid  rgb(93, 23, 235);
+    width: 40%;
+    margin-left: 40px;
+
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom:10px ;
+}
+
+.option_style{
+    background-color: rgba(161, 122, 239, 0.34);
+    font-size: 20px;
+   
+    text-align: center;
+    /* -webkit-box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 650px) {
+    
+    .right_div_top{
+        position: relative;
+        margin-top: 40px;
+        left: 10px;
+      
+    }
+    .right_div_btm{
+        position: relative;
+        left: 10px;
+    }
+    .first_line {
+        flex-direction: column;
+    }
+    .second_line{
+        flex-direction: column;
+    }
+    .second_line div{
+       margin-top: 10px;
+    }
+    .right_top_2{
+        flex-direction: column;
+    }
+    .right_top_2 div{
+       margin-top: 10px;
+    }
+    .rad_btn{
+        flex-direction: column;
+        padding: 10px 0px;
+        /* margin-bottom: 0px; */
+    }
+    .rad_btn input{
+        margin-top: 20px;
+    }
+    .main_div{
+        height: 250vh;
+    }
+  }

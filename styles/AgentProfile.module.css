@@ -1,0 +1,242 @@
+.images {
+  position: relative;
+}
+
+.bg_image {
+  width: 80%;
+  height: 45vh !important;
+  /* opacity: 0.9; */
+  border-radius: 1rem;
+}
+.bg_image_div {
+  position: relative;
+  padding: 1rem;
+}
+.bg_overlay {
+  position: absolute;
+  /* background: rgba(0, 0, 0, 0.162); */
+  height: 50vh !important;
+  width: 80%;
+  top: 0;
+  /* margin: 1rem; */
+
+}
+
+.membership_image{
+position: absolute;
+bottom: -5%;
+right: 22%;
+background-color: #0000005f;
+padding: 0.9rem 0.9rem 0.8rem 0.9rem;
+border-radius: 50%;
+backdrop-filter: blur(7px);
+}
+.profile_image {
+  position: absolute;
+  /* bottom: -1rem; */
+  bottom: -40%;
+  left: 4%;
+  border-radius: 1rem;
+  border: 5px solid white;
+}
+.Agent_details {
+  position: absolute;
+  left: 21%;
+  padding-top: 0rem;
+  font-family: "Clash Grotesk", sans-serif;
+  /* font-weight: 500; */
+  
+}
+.Agent_details > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5rem;
+}
+.Agent_details > h3 {
+  font-size: 1rem;
+}
+.Agent_details > div {
+  padding-top: 0rem;
+}
+.Agent_details > div > span {
+  padding: 0 1.5rem 0 0;
+  opacity: 0.9;
+}
+
+.Agent_socials {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  right: 28%;
+  padding-top: 3rem;
+}
+
+.social_image{
+cursor: pointer;
+transition-duration: 200ms;
+}
+.social_image:hover{
+    transform: scale(1.1);
+}
+
+.side_div{
+position: absolute;
+top: 0;
+right: 0;
+margin: 1rem;
+background: #0000002a;
+width: 18%;
+border-radius: 1rem;
+height: 105vh;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+justify-content:flex-start;
+align-items: center;
+}
+.side_div>h2{
+font-size: 1rem;
+text-decoration: underline;
+}
+.product_related_image{
+width: 220px !important;
+height: 130px !important;
+/* border-radius: 1rem; */
+
+}
+.related_product_name{
+padding: 0.3rem 0;
+}
+.related_product_name>div{
+display: flex;
+padding: 0.5rem;
+justify-content: space-between;
+
+}
+.related_product_name>div>div>h3{
+font-size: 1.1rem;
+padding: 0rem 0;
+margin: 0;
+}
+.related_product_name>div>div>h5{
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+.related_product_name>div>button{
+background: blue;
+padding:0 1rem;
+margin: 0.4rem 0;
+  font-size: 0.9rem;
+  color: white;
+
+}
+.upper_second_div{
+  position: absolute;
+margin-top: 9rem;
+margin-left: 20rem;
+background: #0000002a;
+width: 59%;
+border-radius: 1rem;
+padding: 1rem;
+}
+.user_related_images{
+display: flex;
+justify-content: space-around;
+
+}
+.user_related_images>div>div{
+display: flex;
+justify-content: space-between;
+}
+.user_related_images>div>div>div>h3{
+font-size: 1.1rem;
+padding: 0rem 0;
+margin: 0;
+}
+.user_related_images>div>div>div>h5{
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+.user_related_images>div>div>button{
+background: blue;
+color: white;
+
+padding:0 1rem;
+margin: 0.4rem 0;
+  font-size: 0.9rem;
+
+}
+.second_div{
+/* padding-top: 6rem; */
+display: flex;
+margin-top: 9rem ;
+
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-left: 4.3rem;
+
+background: #0000002a;
+display: inline-block;
+padding:2rem 3rem;
+  font-family: "Clash Grotesk", sans-serif;
+
+
+  /* border-radius: 1rem; */
+border-bottom-left-radius: 1rem;
+border-bottom-right-radius: 1rem;
+}
+.second_div>h1{
+  
+  font-size:1.1rem;
+  padding: 0.1rem;
+}
+
+.third_div{
+padding: 4rem 5rem;
+
+padding-bottom: 0;
+}
+.third_div>div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.third_div h3{
+padding-left: 2rem;
+}
+
+.message_div{
+position: fixed;
+bottom: 5%;
+right: 5%;
+background-color: #6767674c;
+border-radius: 50%;
+cursor: pointer;
+}
+.message_image{
+  margin: 1rem;
+  border-radius: 50%;
+}
+.fourth_div{
+padding: 4rem 5rem;
+}
+.fourth_div>div{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+padding-top: 1rem;
+}
+.fourth_div>div>div{
+  height:120px;
+  width: 300px;
+  border: 1px solid black;
+  background: #000;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+justify-content: center;
+align-items: center;
+}

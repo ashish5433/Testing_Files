@@ -1,0 +1,22 @@
+@media only screen and (max-width: 1190px){
+    .small{
+        visibility: hidden;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .small{
+        visibility: visible;
+    }
+}
+
+
+@media only screen and (max-width: 990px){
+    .smallnav{
+        visibility: hidden;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .smallnav{
+        visibility: visible;
+    }
+}

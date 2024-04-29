@@ -1,0 +1,26 @@
+.dashboard_navbutton{
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+}
+
+.dashboard_navbutton_first{
+    border: 2px solid white;
+    color: black;
+    background:white;
+    border-radius: 20px;
+}
+
+.items_end{
+    margin-left: 25vw;
+}
+
+
+.piechart {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.piechart {
+    background: conic-gradient(brown 0.00%, black 0.00% 0.55%, blue 0.55% 6.08%, green 6.08% 13.68%, yellow 13.68% 23.27%, orange 23.27% 40.47%, red 40.47%);
+  }
