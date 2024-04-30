@@ -2,9 +2,10 @@
 height: 100vh;
 width: 100%;
 /* background-color: black; */
+/* background-color: rgba(219, 183, 183, 0.311); */
 display: flex;
 overflow: hidden;
-background-image: url(".././images/rightvideo.gif");
+background-image: url(".././images/nexus-6-k6Wx2acrRO4-unsplash.jpg");
 background-repeat: no-repeat;
 background-size:cover;
 object-fit: cover;
@@ -16,7 +17,8 @@ flex: 45%;
 }
 .signup_div{
 flex: 50%;
-background-color: rgb(255, 255, 255);
+
+
 /* background-image: url(".././images/rightvideo.gif");
 background-repeat: no-repeat;
 background-size:cover;

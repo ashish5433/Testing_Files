@@ -12,7 +12,7 @@ export default function LoggingIn() {
         <div className={classes.signup_div}>
           <SignUp />
         </div>
-        <div className={classes.assistance_btn}>
+        {/* <div className={classes.assistance_btn}>
           <Image
             className={`${classes.assist_icon}`}
             src="/profile.png"
@@ -20,7 +20,7 @@ export default function LoggingIn() {
             height={50}
           />
           <p>Seek Assistance For Account Creation</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

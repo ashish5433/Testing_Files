@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Economica&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&family=Jersey+20&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -1174,7 +1176,7 @@ nav {
 .inner_login {
   width: 80%;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.259);
+  /* background-color: rgba(255, 255, 255, 0.259); */
   padding: 2rem 2rem 2rem 2rem;
   border-radius: 2rem;
 }
@@ -1197,20 +1199,23 @@ nav {
   display: block;
   width: 80%;
   padding: 0.7rem 1rem;
-  background-color: rgb(255, 255, 255) !important;
+  /* background-color: rgb(255, 255, 255) !important;
+   */
+   background-color: #5c565628;
   border-radius: 2rem;
-  box-shadow: 0 0 0 3px rgb(93, 23, 235);
-  font-size: 0.8rem;
+  box-shadow: 0 4px 5px -1px rgba(216, 113, 113, 0.557);
+  font-size: 1rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .signUpEnterEmail:active {
-  background-color: rgb(255, 255, 255) !important;
+  /* background-color: rgb(255, 255, 255) !important; */
   outline: none;
 }
 
 .signUpEnterEmail:focus {
-  background-color: rgb(255, 255, 255) !important;
+  /* background-color: rgb(255, 255, 255) !important; */
   outline: none;
 }
 
@@ -1233,20 +1238,30 @@ nav {
 .signUpEnterPass {
   width: 80%;
   padding: 0.7rem 1rem;
-  background-color: rgb(255, 255, 255) !important;
+  /* background-color: rgb(255, 255, 255) !important;
+   */
+   background-color: #5c565628;
   border-radius: 2rem;
-  box-shadow: 0 0 0 3px rgb(93, 23, 235);
-  font-size: 0.8rem;
+  box-shadow: 0 4px 5px -1px rgba(216, 113, 113, 0.557);
+  font-size: 1rem;
   margin-bottom: 1rem;
+  color: white;
+}
+.LoginTitle{
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  color: #5d7493;
+  text-align: center;
+  font-style: normal;
 }
 
 .signUpEnterPass:active {
-  background-color: rgb(255, 255, 255) !important;
+  /* background-color: rgb(255, 255, 255) !important; */
   outline: none;
 }
 
 .signUpEnterPass:focus {
-  background-color: rgb(255, 255, 255) !important;
+  /* background-color: rgb(255, 255, 255) !important; */
   outline: none;
 }
 
@@ -1288,9 +1303,8 @@ nav {
   width: 35%;
   padding: 0.7rem;
   border-radius: 2rem;
-  background-color: #0070f3;
-  background-color: rgba(192, 18, 18, 0.65);
-  color: white;
+  border-radius: 3rem;
+  border: 1.5px solid rgb(97, 5, 5);
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -1299,8 +1313,8 @@ nav {
 }
 
 .signupsubmitbtn:hover {
-  background-color: #005ae6;
-  background-color: rgba(192, 18, 18, 0.85);
+  /* background-color: #005ae6;
+  background-color: rgba(192, 18, 18, 0.85); */
 }
 
 .signupsubmitbtngoogle {
@@ -1321,6 +1335,7 @@ nav {
 
 .signupTerms {
   font-size: 20px;
+  color: whitesmoke;
 }
 
 .login_icons {
@@ -1332,14 +1347,22 @@ nav {
 .or_text {
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 2.5rem;
-  color: rgb(255, 255, 255);
+  margin-top: 0.8rem;
+  color: rgb(237, 225, 225);
 }
 
 .explorer_title {
   font-size: 2rem;
-  font-weight: lighter;
-  padding-bottom: 1rem;
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
+  color: #5d7493;
+  /* font-weight: lighter; */
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+
+
 }
 
 .name_n_loc {
@@ -1351,8 +1374,7 @@ nav {
   width: 50%;
 
 }
-
-.name_n_loc>div>label {
+ame_n_loc>div>label {
   font-size: 0.8rem;
   letter-spacing: 1px;
   font-weight: bold;
@@ -1366,13 +1388,17 @@ nav {
   width: 90%;
   padding: 0.7rem 1rem;
   border-radius: 2rem;
-  box-shadow: 0 0 0 3px rgb(93, 23, 235);
-  font-size: 0.8rem;
+  background-color: #5c565628;
+  box-shadow: 0 4px 5px -1px rgba(216, 113, 113, 0.557);
+  font-size: 1rem;
   margin-bottom: 1rem;
+  color: white;
+
 }
 
 .name_n_loc>div>input:focus {
   outline: none;
+  color: white;
 }
 
 .email_n_code {
@@ -1398,13 +1424,17 @@ nav {
   width: 90%;
   padding: 0.7rem 1rem;
   border-radius: 2rem;
-  box-shadow: 0 0 0 3px rgb(93, 23, 235);
-  font-size: 0.8rem;
+  background-color: #5c565628;
+  box-shadow: 0 4px 5px -1px rgba(216, 113, 113, 0.557);
+  font-size: 1rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .email_n_code>div>input:focus {
   outline: none;
+  color: white;
+
 }
 
 .password_n_conf {
@@ -1430,17 +1460,23 @@ nav {
   width: 90%;
   padding: 0.7rem 1rem;
   border-radius: 2rem;
-  box-shadow: 0 0 0 3px rgb(93, 23, 235);
-  font-size: 0.8rem;
+  color: white;
+
+  background-color: #5c565628;
+  box-shadow: 0 4px 5px -1px rgba(216, 113, 113, 0.557);
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .password_n_conf>div>input:focus {
   outline: none;
+  color: white;
+
 }
 
 .mobile_num {
   width: 50%;
+  padding-top: 1rem;
 }
 
 .mobile_num>div {
@@ -1453,7 +1489,7 @@ nav {
   letter-spacing: 1px;
   font-weight: bold;
   padding-left: 1rem;
-  padding-bottom: 0.3rem;
+  /* padding-bottom: 0.3rem; */
   text-transform: uppercase;
 }
 
@@ -1462,13 +1498,18 @@ nav {
   width: 90%;
   padding: 0.7rem 1rem;
   border-radius: 2rem;
-  box-shadow: 0 0 0 3px rgb(93, 23, 235);
-  font-size: 0.8rem;
+  background-color: #5c565628;
+  color: white;
+
+  box-shadow: 0 4px 5px -1px rgba(216, 113, 113, 0.557);
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .mobile_num>div>input:focus {
   outline: none;
+  color: white;
+
 }
 
 .signup_icon {
@@ -1493,22 +1534,25 @@ nav {
 }
 
 .signupsubmitbtn2 {
-  width: 35%;
+  width: 20%;
   padding: 0.7rem;
-  border-radius: 2rem;
-  background-color: #0070f3;
-  background-color: rgba(192, 18, 18, 0.65);
-  color: white;
+  border-radius: 3rem;
+  border: 1.5px solid rgb(97, 5, 5);
+ 
+  /* background-color: #0070f3; */
+  /* background-color: rgba(192, 18, 18, 0.65); */
+  color: black;
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 1s;
 }
 
 .signupsubmitbtn2:hover {
+  /* border: 0px solid rgb(97, 5, 5);
   background-color: #005ae6;
-  background-color: rgba(192, 18, 18, 0.85);
+  background-color: rgba(192, 18, 18, 0.85); */
 }
 
 

@@ -6,8 +6,8 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import leftvideo from "../images/leftvideo.gif"
-import Image from "next/image";
+// import leftvideo from "../images/leftvideo.gif"
+// import Image from "next/image";
 import {
   onAuthStateChanged,
   signInWithPopup,
@@ -232,9 +232,9 @@ function SignIn() {
       />
       <div className="login_content ">
         <div className="inner_login">
-          <h2>Login</h2>
-          <button onClick={chnagepage}>Sign Out</button>
-          <label>EMAIL</label>
+          <h3 className="LoginTitle">Already have an Account</h3>
+          {/* <button onClick={chnagepage}>Sign Out</button> */}
+          {/* <label>EMAIL</label> */}
           <input
             className="signUpEnterEmail"
             type="email"
@@ -243,7 +243,7 @@ function SignIn() {
               setSignInEmail(e.target.value);
             }}
           />
-          <label>PASSWORD</label>
+          {/* <label>PASSWORD</label> */}
           <input
             className="signUpEnterPass"
             type={showPassword}
@@ -252,21 +252,11 @@ function SignIn() {
               setSignInPassword(e.target.value);
             }}
           />
-          <button onClick={handleShowPassword}>
-            <FontAwesomeIcon
-              icon={showPass ? faEye : faEyeSlash}
-              className="signupicon"
-            />
-          </button>
+          
           <div className="button_div">
             <div>
-              <input
-                className="radios"
-                type="checkbox"
-                checked={isChecked}
-                onChange={handleCheckboxChange}
-              />
-              <p>Always Signed in</p>
+             
+              <p onClick={forgetPassword} style={{color:"white"}}>Forgot Password</p>
             </div>
             <button className="signupsubmitbtn" onClick={login}>
               Login
@@ -277,11 +267,11 @@ function SignIn() {
       <p className="or_text">or login with</p>
       <div className="login_icons">
         <button className="signupsubmitbtngoogle" onClick={signInwithgoogle}>
-          <GoogleIcon icon={faGoogle} />
+        <FontAwesomeIcon icon={faGoogle} />
         </button>
       </div>
       <div className="logo_name">
-        <h1>SHAUKEENS</h1>
+        <h1 className="LoginTitle">KIR.AI</h1>
       </div>
     </>
   );
