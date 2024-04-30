@@ -271,7 +271,7 @@ function SignIn() {
         </button>
       </div>
       <div className="logo_name">
-        <h1 className="LoginTitle">KIR.AI</h1>
+        <h1>KIR.AI</h1>
       </div>
     </>
   );

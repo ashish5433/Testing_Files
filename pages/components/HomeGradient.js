@@ -56,6 +56,50 @@ export default function HomeGradient({
   const [rv, changeRVs] = useState(false);
   const [iot, changeIot] = useState(false);
 
+  const scroller = () => {
+    window.scrollTo({
+      top: 640,
+      behavior: 'smooth',
+    });
+  }
+  const scrollAndChangeEstate = () => {
+    if(!estate){
+      scroller();
+      estateChangeHandler();
+    }else{
+      estateChangeHandler();
+    }
+  };
+  const scrollAndChangeBike = () => {
+    if(!bike){
+      scroller();
+      bikeChangeHandler();
+    }
+    else{
+      bikeChangeHandler();
+    }
+  };
+  const scrollAndChangeCar = () => {
+    if(!car){
+
+      scroller();
+      carChangeHandler();
+    }
+    else{
+      carChangeHandler();
+
+    }
+  };
+  const scrollAndChangeIot = () => {
+    if(!iot){
+      scroller();
+      iotChangeHandler();
+    }
+    else{
+      iotChangeHandler();
+    }
+  };
+
   const yachtChangeHandler = () => {
     if (YachtProps) {
       changeYacht(false);
@@ -485,14 +529,14 @@ export default function HomeGradient({
       name: "Home Carousel Image 6",
       image: "/c3.jpg",
     },
-   
-    
+
+
   ];
   return (
     <>
       <CarouselPage CarouselImages={homeCarouselImages} />
       <div className={classes.overlay_main_title}>
-        <h1 className={fontBebas.className}>SHAUKEENS.</h1>
+        <h1 className={fontBebas.className}>KIR.AI</h1>
         <div className={classes.carousel_search}>
           <input type="text" className={fontUnica.className} />
           <button type="submit">
@@ -525,7 +569,7 @@ export default function HomeGradient({
                 ? `${classes.carousel_icons} ${classes.selected}`
                 : `${classes.carousel_icons}`
             }
-            onClick={estateChangeHandler}
+            onClick={scrollAndChangeEstate}
           >
             <span className="material-symbols-outlined">villa</span>
           </div>
@@ -555,7 +599,7 @@ export default function HomeGradient({
                 ? `${classes.carousel_icons} ${classes.selected}`
                 : `${classes.carousel_icons}`
             }
-            onClick={bikeChangeHandler}
+            onClick={scrollAndChangeBike}
           >
             <span className="material-symbols-outlined">two_wheeler</span>
           </div>
@@ -565,7 +609,7 @@ export default function HomeGradient({
                 ? `${classes.carousel_icons} ${classes.selected}`
                 : `${classes.carousel_icons}`
             }
-            onClick={carChangeHandler}
+            onClick={scrollAndChangeCar}
           >
             <span className="material-symbols-outlined">directions_car</span>
           </div>
@@ -575,7 +619,7 @@ export default function HomeGradient({
                 ? `${classes.carousel_icons} ${classes.selected}`
                 : `${classes.carousel_icons}`
             }
-            onClick={iotChangeHandler}
+            onClick={scrollAndChangeIot}
           >
             <span className="material-symbols-outlined">home_iot_device</span>
           </div>
