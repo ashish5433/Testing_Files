@@ -427,9 +427,11 @@ nav {
   font-size: 1.5rem;
 }
 
-/* .midsection-bg{
-  background-color: aquamarine;
-} */
+.midsection-bg{
+  background: #101010;
+  z-index: 100000;
+  position: relative;
+}
 .product-category-card-div {
   margin-top: 2rem;
   width: 100%;
