@@ -151,7 +151,6 @@ const AlanContainer = ({yo,setYo}) => {
           else if(commandData.command === "highlight"){
             let vlu = commandData.vlu;
             if(vlu === "bikes"){
-              classData.setclassAdder(false);
 
             }
             else if(vlu === "cars"){
