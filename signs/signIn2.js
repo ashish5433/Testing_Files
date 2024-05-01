@@ -64,7 +64,16 @@ function SignIn() {
     try {
       const user = await signInWithPopup(auth, provider);
       console.log(user);
-      alert("Signed In");
+      toast.success("Signed In Successfully ", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
       router.push({
         pathname: "/",
       });
@@ -259,8 +268,10 @@ function SignIn() {
               <p onClick={forgetPassword} style={{color:"white"}}>Forgot Password</p>
             </div>
             <button className="signupsubmitbtn" onClick={login}>
+              
               Login
             </button>
+           
           </div>
         </div>
       </div>

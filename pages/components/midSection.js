@@ -26,6 +26,8 @@ export default function midSection({
   ATVProps,
   RVProps,
   IotProps,
+  yo,
+  setYo
 }) {
   return (
     <div className="midsection-bg">
