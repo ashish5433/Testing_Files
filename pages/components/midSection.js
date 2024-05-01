@@ -37,8 +37,8 @@ export default function midSection({
       {BikeProps && <BikePage />}
       {CarProps && <CarPage />}
       {IotProps && <IotPage />}
+      <FeaturedCategories />
 
-      <FeaturedCategories yo={yo} setYo={setYo}/>
       {/* <MidSectionGallery/>*/}
       {/*<NewAndTrending/>*/}
     </div>

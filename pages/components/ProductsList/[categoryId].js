@@ -96,11 +96,13 @@ export default function ProductsList() {
       categoryDetail === "coupe" ||
       categoryDetail === "hyper cars" ||
       categoryDetail === "super cars" ||
-      categoryDetail === "vintage cars" ||
-      categoryDetail === "sedan" ||
-      categoryDetail === "suv" ||
-      categoryDetail === "hatchback" ||
-      categoryDetail === "convertible"
+      categoryDetail === "Vintage Cars" ||
+      categoryDetail === "Sedan Cars" ||
+      categoryDetail === "SUV Cars" ||
+      categoryDetail === "HatchBacks" ||
+      categoryDetail === "convertible"||
+      categoryDetail === "EV Cars"||
+      categoryDetail === "Luxury Cars"
     ) {
       setCarouselImages("carCarousel");
     } else if (categoryDetail === "submarines") {

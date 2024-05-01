@@ -326,7 +326,7 @@ function Navbar1(props) {
                   style={{ fontSize: "1.5rem", fontWeight: "bold" }}
                   className={play.className}
                 >
-                  ShauKeens
+                  KIR.AI
                 </h1>
               </div>
 
@@ -417,7 +417,7 @@ function Navbar1(props) {
               <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header>
                   <Offcanvas.Title className={play.className}>
-                    Shaukeens
+                    KIR.AI
                   </Offcanvas.Title>
                   <Button
                     variant="primary"
