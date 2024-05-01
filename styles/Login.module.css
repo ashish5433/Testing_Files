@@ -4,7 +4,7 @@ width: 100%;
 /* background-color: black; */
 display: flex;
 overflow: hidden;
-background-image: url(".././images/rightvideo.gif");
+background-image: url(".././images/right.mp4");
 background-repeat: no-repeat;
 background-size:cover;
 object-fit: cover;

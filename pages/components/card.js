@@ -6,27 +6,29 @@ const play = Unica_One({
   subsets: ["latin"],
 });
 
-export default function Card() {
+export default function Card({yo,setYo}) {
   return (
     <div>
       <div className="card-div">
-              <div className="category-cards card-comp-1">
+              <div className="category_cards card_comp_1">
                   <div className="category-card-overlay"></div>
           <h1 className={play.className}>Real Estates</h1>
           <span className={play.className}>1000+ Listings</span>
           <p className={play.className}>╰┈➤</p>
         </div>
-        <div className="category-cards card-comp-2">
+        <div className={yo
+                ? `category_cards card_comp_2 outline`
+                : `category_cards card_comp_2`}>
           <h1 className={play.className}>Bikes</h1>
           <span className={play.className}>2000+ Listings</span>
           <p className={play.className}>╰┈➤</p>
         </div>
-        <div className="category-cards card-comp-3">
+        <div className="category_cards card_comp_3">
           <h1 className={play.className}>Cars</h1>
           <span className={play.className}>1000+ Listings</span>
           <p className={play.className}>╰┈➤</p>
         </div>
-        <div className="category-cards card-comp-4">
+        <div className="category_cards card_comp_4">
           <h1 className={play.className}>Appliances</h1>
           <span className={play.className}>10000+ Listings</span>
           <p className={play.className}>╰┈➤</p>

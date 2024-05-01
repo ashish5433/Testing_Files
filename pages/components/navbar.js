@@ -8,7 +8,8 @@ import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 import Dropdown from "react-bootstrap/Dropdown";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import classes from "./../../styles/responsive.module.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Nav_li_items from "../../Check/nav_li_items";
 import Sidenav from "./sidenav";
 import { app } from "../../firebase/firebase";
@@ -207,11 +208,29 @@ function Navbar1(props) {
   const sign_Out = () => {
     signOut(auth)
       .then(() => {
-        alert("Signed Out Successfully....");
+        toast.success("Signed Out Successfully ", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
         // setisUser(true);
       })
       .catch((error) => {
-        console.log(error)
+        toast.error("Some Error Occured ", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       });
   };
  
@@ -262,6 +281,18 @@ function Navbar1(props) {
   }
   return (
     <>
+       <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       {["lg"].map((expand) => (
         <div>
           <Navbar

@@ -6,8 +6,8 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import leftvideo from "../images/leftvideo.gif"
-import Image from "next/image";
+// import leftvideo from "../images/leftvideo.gif"
+// import Image from "next/image";
 import {
   onAuthStateChanged,
   signInWithPopup,
@@ -64,7 +64,16 @@ function SignIn() {
     try {
       const user = await signInWithPopup(auth, provider);
       console.log(user);
-      alert("Signed In");
+      toast.success("Signed In Successfully ", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
       router.push({
         pathname: "/",
       });
@@ -260,17 +269,14 @@ function SignIn() {
           </button>
           <div className="button_div">
             <div>
-              <input
-                className="radios"
-                type="checkbox"
-                checked={isChecked}
-                onChange={handleCheckboxChange}
-              />
-              <p>Always Signed in</p>
+              
+              <p onClick={forgetPassword}>Forgot Password</p>
             </div>
             <button className="signupsubmitbtn" onClick={login}>
+              
               Login
             </button>
+           
           </div>
         </div>
       </div>

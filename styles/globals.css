@@ -372,24 +372,24 @@ nav {
   gap: 40px;
 }
 
-.card-comp-1 {
+.card_comp_1 {
   background: url("../images/card_1.jpg") center center no-repeat;
 }
 
-.card-comp-2 {
+.card_comp_2 {
   background: url("../images/midsection-bike.jpg") center center no-repeat;
 }
 
-.card-comp-3 {
+.card_comp_3 {
   background: url("../images/card_3.jpg") center center no-repeat;
 }
 
-.card-comp-4 {
+.card_comp_4 {
   background: url("../images/midsection-iot.jpg") center center no-repeat;
   overflow: hidden !important;
 }
 
-.category-cards {
+.category_cards {
   background-size: 300px;
   height: 400px;
   width: 300px;
@@ -397,28 +397,28 @@ nav {
   overflow: hidden;
 }
 
-.category-cards:hover {
+.category_cards:hover {
   height: 400px;
   width: 300px;
   cursor: pointer;
   background-size: 350px;
 }
 
-.category-cards h1 {
+.category_cards h1 {
   color: #ffffff;
   position: relative;
   top: 70%;
   padding: 10%;
 }
 
-.category-cards span {
+.category_cards span {
   color: #ffffff;
   position: relative;
   top: 60%;
   padding: 11%;
 }
 
-.category-cards p {
+.category_cards p {
   color: #ffffff;
   position: relative;
   top: 45%;
@@ -1619,4 +1619,10 @@ nav {
   .mdhidden {
     display: none;
   }
+}
+
+.outline {
+  border: solid 15px rgba(255, 166, 0, 0.858);
+  outline: none;
+  background-size: 400px;
 }

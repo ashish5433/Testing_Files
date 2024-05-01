@@ -11,6 +11,7 @@ import { app } from "../firebase/firebase";
 import HomeBeforelogin from "./components/HomeBeforelogin";
 import { useTheme } from "styled-components";
 import UserProfile from "./components/UserProfile";
+import AlanContainer from "./components/AlanContainer"
 export default function Home() {
   const [yachts, setYachts] = useState(false);
   const [estates, setEstates] = useState(false);
@@ -45,7 +46,7 @@ export default function Home() {
         }
       });
     }, [isUser]);
-
+    const[color,setcolor]=useState(true);
     
   return (
 
@@ -57,12 +58,13 @@ export default function Home() {
     // }
     // </>
     <>
-    
      <div className="nav1">
      <Navbar1 isShow={toShow} setToshow={SettoShow}/>
      {toShow &&<UserProfile Name={userName} Email={userEmail} />}
 
       </div>
+      <AlanContainer yo={color} 
+        setYo={setcolor}/>
       <div className="cor1">
         <HomeGradient
           YachtProps={yachts}
@@ -101,6 +103,8 @@ export default function Home() {
         ATVProps={atv}
         RVProps={rv}
         IotProps={iot}
+        yo={color}
+        setYo={setcolor}
       />
       <Footer />
       <ProgressBar color="black" height={10} position="bottom" /> 

@@ -20,7 +20,7 @@ const fontRaleway = Raleway({
   subsets: ["latin"],
 });
 
-export default function HomeGradient({
+function HomeGradient({
   YachtProps,
   EstateProps,
   AircraftProps,
@@ -212,7 +212,7 @@ export default function HomeGradient({
       RVPropsFunction(false);
     }
   };
-  const carChangeHandler = () => {
+   const carChangeHandler = () => {
     if (CarProps) {
       changeYacht(false);
       changeEstate(false);
@@ -624,3 +624,5 @@ export default function HomeGradient({
     </>
   );
 }
+
+export default HomeGradient;

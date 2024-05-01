@@ -26,6 +26,8 @@ export default function midSection({
   ATVProps,
   RVProps,
   IotProps,
+  yo,
+  setYo
 }) {
   return (
     <div className="midsection-bg">
@@ -36,7 +38,7 @@ export default function midSection({
       {CarProps && <CarPage />}
       {IotProps && <IotPage />}
 
-      <FeaturedCategories />
+      <FeaturedCategories yo={yo} setYo={setYo}/>
       {/* <MidSectionGallery/>*/}
       {/*<NewAndTrending/>*/}
     </div>
