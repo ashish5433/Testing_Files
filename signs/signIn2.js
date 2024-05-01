@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import Router, { useRouter } from "next/router";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import leftvideo from "../images/leftvideo.gif"
-// import Image from "next/image";
+import { emailContext } from "@/pages/context/context";
 import {
   onAuthStateChanged,
   signInWithPopup,
@@ -37,7 +36,10 @@ function SignIn() {
   const [showPassword, setshowPassword] = useState("password");
   const [showPass, setshowPass] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
-
+  const emailbyvoice=useContext(emailContext)
+  console.log(emailbyvoice)
+  
+  
   const handleShowPassword = () => {
     setshowPass(!showPass);
     showPassword === "password"
@@ -247,6 +249,8 @@ function SignIn() {
           <input
             className="signUpEnterEmail"
             type="email"
+            // value={defaultmail}
+
             placeholder="Enter your Email"
             onChange={(e) => {
               setSignInEmail(e.target.value);

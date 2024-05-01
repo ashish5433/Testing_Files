@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Bebas_Neue } from "next/font/google";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -15,6 +15,7 @@ import Sidenav from "./sidenav";
 import { app } from "../../firebase/firebase";
 import Link from "next/link";
 import Dashboard from "./Dashboard/Dashboard";
+import { emailContext } from "../context/context";
 const player = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
@@ -27,7 +28,7 @@ function Navbar1(props) {
   const [isUser, setisUser] = useState(true);
   const [btnDisable, setbtnDisable] = useState(false);
   const [color, setColor] = useState(false);
-
+  // const data=useContext(emailContext)
   // const li_default = [[[]]];
 
   const [default_item, setdefaultItem] = useState("");
@@ -328,6 +329,7 @@ function Navbar1(props) {
                 >
                   KIR.AI
                 </h1>
+                {/* <h3>{data.emailbyvoice}</h3> */}
               </div>
 
               <div
@@ -362,7 +364,11 @@ function Navbar1(props) {
                   </span>
                 </Button>
                 <Button className="me-2 nav-btn">
-                  <span className="nav-btns">List With Us</span>
+                  <span className="nav-btns" onClick={
+                    ()=>{
+                      {data.setEmailbyvoice("Asyush")}
+                    }
+                  } >List With Us</span>
                 </Button>
                 <Button
                   className="me-2 nav-btn login-name-button"
@@ -405,6 +411,8 @@ function Navbar1(props) {
                             className="focus:bg-slate-100"
                             //href="#/action-2"
                             onClick={sign_Out}
+                           
+
                           >
                             Sign Out
                           </Dropdown.Item>
@@ -435,7 +443,10 @@ function Navbar1(props) {
                         account_circle
                       </span>
                       {isUser ? (
-                        <Button onClick={signInClick}>
+                        <Button
+                         onClick={signInClick}
+                         
+                         >
                           Sign in / Register
                         </Button>
                       ) : (

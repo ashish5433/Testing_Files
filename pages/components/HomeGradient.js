@@ -1,8 +1,9 @@
 import classes from "./../../styles/Home.module.css";
 import { Unica_One, Bebas_Neue, Raleway } from "next/font/google";
-import { useState } from "react";
+import { useState ,useContext, useEffect} from "react";
 import CarouselPage from "./Carousel";
-
+import { addClass } from "../context/context";
+// import { useEffect } from "react";
 const fontUnic = Unica_One({
   weight: ["400"],
   style: ["normal"],
@@ -65,17 +66,22 @@ function HomeGradient({
     if(!estate){
       scroller();
       estateChangeHandler();
+            classAdd.setplotclassAdder(false);
     }else{
       estateChangeHandler();
+            classAdd.setplotclassAdder(false);
     }
   };
   const scrollAndChangeBike = () => {
     if(!bike){
       scroller();
       bikeChangeHandler();
+      classAdd.setbikeclassAdder(false);
     }
     else{
       bikeChangeHandler();
+      classAdd.setbikeclassAdder(false);
+
     }
   };
   const scrollAndChangeCar = () => {
@@ -83,9 +89,13 @@ function HomeGradient({
 
       scroller();
       carChangeHandler();
+      classAdd.setcarclassAdder(false);
+      
     }
     else{
       carChangeHandler();
+      classAdd.setcarclassAdder(false);
+      
 
     }
   };
@@ -93,9 +103,11 @@ function HomeGradient({
     if(!iot){
       scroller();
       iotChangeHandler();
+            classAdd.setiotclassAdder(false);
     }
     else{
       iotChangeHandler();
+            classAdd.setiotclassAdder(false);
     }
   };
 
@@ -570,6 +582,30 @@ function HomeGradient({
 
 
   ];
+  const classAdd=useContext(addClass);
+  useEffect(()=>{
+    if(classAdd.bikeclassAdder){
+      scrollAndChangeBike();
+      console.log(classAdd.bikeclassAdder);
+
+    }
+    else if(classAdd.carclassAdder){
+      scrollAndChangeCar();
+      console.log(classAdd.carclassAdder);
+
+    }
+    else if(classAdd.plotclassAdder){
+      scrollAndChangeEstate();
+      console.log(classAdd.plotclassAdder);
+
+    }
+    else if(classAdd.iotclassAdder){
+      scrollAndChangeIot();
+      console.log(classAdd.iotclassAdder);
+        }
+    
+  },[classAdd.bikeclassAdder,classAdd.carclassAdder,classAdd.plotclassAdder,classAdd.iotclassAdder]);
+
   return (
     <>
       <CarouselPage CarouselImages={homeCarouselImages} />

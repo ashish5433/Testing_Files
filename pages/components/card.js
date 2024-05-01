@@ -19,19 +19,19 @@ export default function Card({yo,setYo}) {
         <div className={yo
                 ? `category_cards card_comp_2 outline`
                 : `category_cards card_comp_2`}>
-          <h1 className={play.className}>Bikes</h1>
-          <span className={play.className}>2000+ Listings</span>
-          <p className={play.className}>╰┈➤</p>
+          <h1 className={player.className}>Bikes</h1>
+          <span className={player.className}>2000+ Listings</span>
+          <p className={player.className}>╰┈➤</p>
         </div>
         <div className="category_cards card_comp_3">
-          <h1 className={play.className}>Cars</h1>
-          <span className={play.className}>1000+ Listings</span>
-          <p className={play.className}>╰┈➤</p>
+          <h1 className={player.className}>Cars</h1>
+          <span className={player.className}>1000+ Listings</span>
+          <p className={player.className}>╰┈➤</p>
         </div>
         <div className="category_cards card_comp_4">
-          <h1 className={play.className}>Appliances</h1>
-          <span className={play.className}>10000+ Listings</span>
-          <p className={play.className}>╰┈➤</p>
+          <h1 className={player.className}>Appliances</h1>
+          <span className={player.className}>10000+ Listings</span>
+          <p className={player.className}>╰┈➤</p>
         </div>
       </div>
     </div>
