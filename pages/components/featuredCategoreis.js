@@ -15,7 +15,7 @@ export default function midSection({yo,setYo}) {
       <h1 className={player.className}>Featured Categories</h1>
       <hr className="hr_rule" />
       <div>
-        <Card  yo={yo} setYo={setYo}/>
+        <Card/>
       </div>
     </div>
   );

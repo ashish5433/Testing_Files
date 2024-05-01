@@ -12,13 +12,17 @@ const player = Bebas_Neue({
 const Banner = () => {
     return (
         <div className="menu-titles">
+        <h1 className={player.className}>Bestseller</h1>
+
             <hr className="hr_rule" />
             <div className="banner-main">
                 <div className="banner-bg-div">
 
                     <h1 className={player.className}>Product Name</h1>
-                    <h2 className={player.className}>Rishav Randi</h2>
-                    <p className={player.className}>lorem loremloremloremloremlorem lorem lorem loremlorem lorem lorem  lorem lorem loremlorem lorem lorem  lorem lorem loremlorem lorem lorem </p>
+                    <h2 className={player.className}>Product Brand</h2>
+                    <p className={player.className}>Product Details 1---   </p>
+                    <p className={player.className}>Product Details 2---   </p>
+
                     <Link href={`/components/BestSellers`} className="banner-btn"><span className={player.className}>
                         Explore Bestsellers <span className="arrow-sign">
                              &rarr;

@@ -179,7 +179,7 @@ export default function ProductsList() {
           </div>
           <div>
             <div className="flex flex-col absolute left-[10vw] top-[280px] w-[80%] text-neutral-50 text-opacity-80">
-              <h1 style={{ fontSize: "14rem", letterSpacing:"4px" }} className={`m-auto relative ${fontBebas.className}`}>{categoryDetail}.</h1>
+              <h1 style={{ fontSize: "10rem", letterSpacing:"4px" }} className={`m-auto relative ${fontBebas.className}`}>{categoryDetail}.</h1>
               <div className={`m-auto  ${classes.carousel_search}`}>
                 <div><input style={{ width: "33vw" }}
                   type="text"

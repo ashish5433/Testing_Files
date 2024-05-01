@@ -6,7 +6,7 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { emailContext } from "@/pages/context/context";
+// import { emailContext } from "@/pages/context/context";
 import {
   onAuthStateChanged,
   signInWithPopup,
@@ -36,8 +36,8 @@ function SignIn() {
   const [showPassword, setshowPassword] = useState("password");
   const [showPass, setshowPass] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
-  const emailbyvoice=useContext(emailContext)
-  console.log(emailbyvoice)
+  // const emailbyvoice=useContext(emailContext)
+  // console.log(emailbyvoice)
   
   
   const handleShowPassword = () => {
