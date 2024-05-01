@@ -10,7 +10,7 @@ const play=Bebas_Neue({
 const Trending = () => {
     return (
         <div className="menu-titles">
-            <h1 className={play.className}>Trending</h1>
+            <h1 className={play.className}>Trending Products</h1>
             <hr className="hr_rule" />
             <div>
                 <CardCopy/>

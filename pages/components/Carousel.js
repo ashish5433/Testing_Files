@@ -17,9 +17,8 @@ export default function CarouselPage({CarouselImages}) {
           stopOnHover={false}
         >
         {CarouselImages?.map((data) => (
-          <div>
-          
-          <div className="overlay"></div>
+          <div key={data.image}>      
+          <div className="overlay" ></div>
             <Image
             className="img-slider"
             src={data.image}

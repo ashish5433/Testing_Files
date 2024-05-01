@@ -652,7 +652,6 @@ nav {
   right: 4%;
   text-decoration: none;
   font-size: 2rem;
-
   padding: 0.5rem 1.3rem;
   background: rgba(255, 255, 255, 0.611);
   color: #000;
@@ -2011,43 +2010,60 @@ ame_n_loc>div>label {
   position: absolute;
   z-index: 100;
   display: flex;
-  align-items: end;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: flex-end;
   flex-direction: column;
+  color: #ffffffa9;
+
 }
 .trending-inner>div{
-  height: 150px;
+  height: 120px;
   width: 100%;
   background-color: #0000007f;
   backdrop-filter: blur(10px);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
 
 padding: 1rem;
   display: flex;
-  align-items: end;
-  flex-direction: column;border: 1px solid rgba(255, 255, 255, 0.175);
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.175);
 }
 .spandiv{
   width: 55%;
   display: flex;
   justify-content: space-between;
+  transform: translateY(-21px);
+
 }
 .trending-inner h1 {
-  color: #ffffff;
   padding: 0;
-  font-size: 1.75rem;
+  font-size: 2.2rem;
+  transform: translateY(-10px);
+  color: rgba(255, 255, 255, 0.729);
 }
 
 .trending-inner span {
-  color: #ffffff;
   font-size: 1rem !important;
+  
 }
 
 .trending-inner p {
-  color: #ffffff;
-  font-size: 1.5rem;
-padding-top: 10px;
+  font-size: 1.6rem;
+/* padding-top: 10px; */
+padding: 0px 12px;
+transform: translateY(-17px);
+background: rgba(255, 255, 255, 0.611);
+transition-duration:200ms;
+border: 1px solid rgba(255, 255, 255, 0.444);
+
+color: #000;
+}
+.trending-inner p:hover{
+  color: rgba(255, 255, 255, 0.611);
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.444);
 }
 .maps{
   width: 90%;
