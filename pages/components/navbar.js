@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 import Dropdown from "react-bootstrap/Dropdown";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import classes from "./../../styles/responsive.module.css";
@@ -14,7 +14,7 @@ import Sidenav from "./sidenav";
 import { app } from "../../firebase/firebase";
 import Link from "next/link";
 import Dashboard from "./Dashboard/Dashboard";
-const play = Bebas_Neue({
+const player = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
@@ -27,170 +27,170 @@ function Navbar1(props) {
   const [btnDisable, setbtnDisable] = useState(false);
   const [color, setColor] = useState(false);
 
-  const li_default = [[[]]];
+  // const li_default = [[[]]];
 
   const [default_item, setdefaultItem] = useState("");
 
-  const li1_items = [
-    [
-      ["Popular Builders"],
-      [
-        "Sunseeker",
-        "Azimut",
-        "Riva",
-        "Benetti",
-        "Custom",
-        "Cranchi",
-        "Beneteau",
-        "Ferretti",
-      ],
-      [
-        "Sea Ray",
-        "Sunreef",
-        "Chris Craft",
-        "Heesen",
-        "Pershing",
-        "Hatteras",
-        "Princess",
-        "Viking",
-      ],
-    ],
-  ];
-  const li2_items = [
-    [
-      ["Top Countries"],
-      [
-        "United States",
-        "Spain",
-        "Italy",
-        "France",
-        "Portugal",
-        "Canada",
-        "United Kingdom",
-        "Greece",
-      ],
-      [
-        "Switzerland",
-        "United Arab Emirates",
-        "Mexico",
-        "South Africa",
-        "Australia",
-        "Germany",
-        "Netherlands",
-        "Japan",
-      ],
-    ],
+  // const li1_items = [
+  //   [
+  //     ["Popular Builders"],
+  //     [
+  //       "Sunseeker",
+  //       "Azimut",
+  //       "Riva",
+  //       "Benetti",
+  //       "Custom",
+  //       "Cranchi",
+  //       "Beneteau",
+  //       "Ferretti",
+  //     ],
+  //     [
+  //       "Sea Ray",
+  //       "Sunreef",
+  //       "Chris Craft",
+  //       "Heesen",
+  //       "Pershing",
+  //       "Hatteras",
+  //       "Princess",
+  //       "Viking",
+  //     ],
+  //   ],
+  // ];
+  // const li2_items = [
+  //   [
+  //     ["Top Countries"],
+  //     [
+  //       "United States",
+  //       "Spain",
+  //       "Italy",
+  //       "France",
+  //       "Portugal",
+  //       "Canada",
+  //       "United Kingdom",
+  //       "Greece",
+  //     ],
+  //     [
+  //       "Switzerland",
+  //       "United Arab Emirates",
+  //       "Mexico",
+  //       "South Africa",
+  //       "Australia",
+  //       "Germany",
+  //       "Netherlands",
+  //       "Japan",
+  //     ],
+  //   ],
 
-    [
-      ["Top Cities"],
-      [
-        "Los Angeles",
-        "Marbella",
-        "London",
-        "New York",
-        "Paris",
-        "Miami",
-        "Ibiza",
-        "Beverly Hills",
-      ],
-      [
-        "Cannes",
-        "Mallorca",
-        "Madrid",
-        "Lisbon",
-        "Rome",
-        "Milan",
-        "Nice",
-        "Toronto",
-      ],
-    ],
+  //   [
+  //     ["Top Cities"],
+  //     [
+  //       "Los Angeles",
+  //       "Marbella",
+  //       "London",
+  //       "New York",
+  //       "Paris",
+  //       "Miami",
+  //       "Ibiza",
+  //       "Beverly Hills",
+  //     ],
+  //     [
+  //       "Cannes",
+  //       "Mallorca",
+  //       "Madrid",
+  //       "Lisbon",
+  //       "Rome",
+  //       "Milan",
+  //       "Nice",
+  //       "Toronto",
+  //     ],
+  //   ],
 
-    [
-      ["Top Regions"],
-      [
-        "French Riviera",
-        "Costa del Sol",
-        "French and Swiss Alps",
-        "Costa Blanca",
-        "California, USA",
-        "Hamptons, NY, USA",
-        "Florida, USA",
-        "Tuscany",
-      ],
-      [
-        "Algarve",
-        "Greek Islands",
-        "Balearic Islands",
-        "Caribbean",
-        "Dubai",
-        "Amalfi Coast",
-        "Lombardy",
-        "Costa Brava",
-      ],
-    ],
-  ];
-  const li6_items = [
-    [
-      ["Popular Makes"],
-      [
-        "Bugatti",
-        "Pagani",
-        "Koenigsegg",
-        "Ferrari",
-        "Lamborghini",
-        "Mercedes",
-        "Rolls-Royce",
-        "McLaren",
-      ],
-      [
-        "Brabus",
-        "Porsche",
-        "Aston Martin",
-        "Bentley",
-        "Maybach",
-        "BMW",
-        "Ford",
-        "Audi",
-      ],
-    ],
-    [
-      ["Popular Models"],
-      [
-        "Ferrari LaFerrari",
-        "Bugatti Chiron",
-        "Ferrari F40",
-        "Lamborghini Aventador",
-        "McLaren P1",
-        "Porsche 918",
-        "Ford GT",
-        "Mercedes SLR McLaren",
-      ],
-      [
-        "Pagani Huayra",
-        "Porsche Carrera GT",
-        "Lamborghini Urus",
-        "Lamborghini Murcielago",
-        "Ferrari Enzo",
-        "Lexus LFA",
-        "Brabus G-Class",
-        "Rolls-Royce Cullinan",
-      ],
-    ],
-  ];
-  const li4_items = [
-    [
-      ["Popular Manufacturer"],
-      [
-        "Embraer",
-        "Dassault",
-        "Gulfstream",
-        "Bombardier",
-        "Cessna",
-        "Boeing",
-        "Pilatus",
-      ],
-    ],
-  ];
+  //   [
+  //     ["Top Regions"],
+  //     [
+  //       "French Riviera",
+  //       "Costa del Sol",
+  //       "French and Swiss Alps",
+  //       "Costa Blanca",
+  //       "California, USA",
+  //       "Hamptons, NY, USA",
+  //       "Florida, USA",
+  //       "Tuscany",
+  //     ],
+  //     [
+  //       "Algarve",
+  //       "Greek Islands",
+  //       "Balearic Islands",
+  //       "Caribbean",
+  //       "Dubai",
+  //       "Amalfi Coast",
+  //       "Lombardy",
+  //       "Costa Brava",
+  //     ],
+  //   ],
+  // ];
+  // const li6_items = [
+  //   [
+  //     ["Popular Makes"],
+  //     [
+  //       "Bugatti",
+  //       "Pagani",
+  //       "Koenigsegg",
+  //       "Ferrari",
+  //       "Lamborghini",
+  //       "Mercedes",
+  //       "Rolls-Royce",
+  //       "McLaren",
+  //     ],
+  //     [
+  //       "Brabus",
+  //       "Porsche",
+  //       "Aston Martin",
+  //       "Bentley",
+  //       "Maybach",
+  //       "BMW",
+  //       "Ford",
+  //       "Audi",
+  //     ],
+  //   ],
+  //   [
+  //     ["Popular Models"],
+  //     [
+  //       "Ferrari LaFerrari",
+  //       "Bugatti Chiron",
+  //       "Ferrari F40",
+  //       "Lamborghini Aventador",
+  //       "McLaren P1",
+  //       "Porsche 918",
+  //       "Ford GT",
+  //       "Mercedes SLR McLaren",
+  //     ],
+  //     [
+  //       "Pagani Huayra",
+  //       "Porsche Carrera GT",
+  //       "Lamborghini Urus",
+  //       "Lamborghini Murcielago",
+  //       "Ferrari Enzo",
+  //       "Lexus LFA",
+  //       "Brabus G-Class",
+  //       "Rolls-Royce Cullinan",
+  //     ],
+  //   ],
+  // ];
+  // const li4_items = [
+  //   [
+  //     ["Popular Manufacturer"],
+  //     [
+  //       "Embraer",
+  //       "Dassault",
+  //       "Gulfstream",
+  //       "Bombardier",
+  //       "Cessna",
+  //       "Boeing",
+  //       "Pilatus",
+  //     ],
+  //   ],
+  // ];
   const auth = getAuth(app);
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -216,7 +216,7 @@ function Navbar1(props) {
   };
  
   
-  const [li_content, set_li_content] = useState(li_default);
+  // const [li_content, set_li_content] = useState(li_default);
 
   const [nav2, setNav2] = useState(false);
   const [searchbar, setSearchbar] = useState(false);
@@ -292,8 +292,8 @@ function Navbar1(props) {
                   </svg>
                 </Button>
                 <h1
-                  style={{ fontSize: "1.5rem", fontWeight: "bold" }}
-                  className={play.className}
+                  style={{ fontSize: "1.5rem", fontWeight: "bold", letterSpacing:"2px"}}
+                  className={player.className}
                 >
                   KIR.AI
                 </h1>
@@ -308,7 +308,7 @@ function Navbar1(props) {
                   <input
                     style={{ maxWidth: "500px", minWidth: "400px" }}
                     type="text"
-                    className={play.className}
+                    className={player.className}
                   />
                   <button type="submit">
                     <span
@@ -385,7 +385,7 @@ function Navbar1(props) {
               </div>
               <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header>
-                  <Offcanvas.Title className={play.className}>
+                  <Offcanvas.Title className={player.className}>
                     KIR.AI
                   </Offcanvas.Title>
                   <Button
@@ -415,26 +415,23 @@ function Navbar1(props) {
                     </div>
                     <div>
                       <span class="material-symbols-outlined">recommend</span>
-                      <Button>Just For You</Button>
+                      <Button>About us</Button>
                     </div>
                     <div>
                       <span class="material-symbols-outlined">fact_check</span>
-                      <Button>List With Us</Button>
+                      <Button>Best Sellers</Button>
                     </div>
                   </div>
                   <hr />
                   <div className="btn-div">
-                    <div>
+                    {/* <div>
                       <span class="material-symbols-outlined">
                         directions_boat
                       </span>
                       <Button>Yachts</Button>
-                    </div>
-                    <div>
-                      <span class="material-symbols-outlined">villa</span>
-                      <Button>Real Estates</Button>
-                    </div>
-                    <div>
+                    </div> */}
+                    
+                    {/* <div>
                       <span class="material-symbols-outlined">helicopter</span>
                       <Button>Helicopters</Button>
                     </div>
@@ -443,8 +440,8 @@ function Navbar1(props) {
                         flight_takeoff
                       </span>
                       <Button>Jets</Button>
-                    </div>
-                    <div>
+                    </div>*/}
+                    <div> 
                       <span class="material-symbols-outlined">two_wheeler</span>
                       <Button>Bikes</Button>
                     </div>
@@ -453,6 +450,18 @@ function Navbar1(props) {
                         directions_car
                       </span>
                       <Button>Cars</Button>
+                    </div>
+                    <div>
+                      <span class="material-symbols-outlined">Home</span>
+                      <Button>Home</Button>
+                    </div>
+                    <div>
+                      <span class="material-symbols-outlined">home_iot_device</span>
+                      <Button>Home Appliances</Button>
+                    </div>
+                    <div>
+                      <span class="material-symbols-outlined">villa</span>
+                      <Button>Real Estates</Button>
                     </div>
                   </div>
                   <hr />
@@ -470,8 +479,6 @@ function Navbar1(props) {
           </Navbar>
           <div className={nav2 ? "hidden" : "absolute w-full"}>
             <div className={color ? "second_nav" : "second_nav2"}></div>
-
-            <Nav_li_items props={li_content} item={default_item} />
           </div>
         </div>
       ))}

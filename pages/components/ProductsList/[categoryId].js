@@ -32,6 +32,7 @@ import RelatedtagsEstate from "../../../Check/Relatedtags/relatedtagsestate";
 import RelatedtagsYachts from "@/Check/Relatedtags/relatedtagsyachts";
 import RelatedMotorcycle from "@/Check/Relatedtags/relatedMotorcycle";
 import RelatedtagsCars from "@/Check/Relatedtags/relatedCars";
+import iotCarousel from "@/CarouselImageData/iotCarousel";
 const fontBebas = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
@@ -46,10 +47,10 @@ const fontUnica = Unica_One({
 export default function ProductsList() {
 
   const [showFilter, setShowFilter] = useState(false);
-  const [gridOrList,setGridOrList] = useState(false)
+  const [gridOrList, setGridOrList] = useState(false)
 
 
-// sample tags 
+  // sample tags 
 
   const router = useRouter();
   const categoryDetail = router.query.categoryId;
@@ -71,7 +72,11 @@ export default function ProductsList() {
       categoryDetail === "private islands" ||
       categoryDetail === "castle" ||
       categoryDetail === "land" ||
-      categoryDetail === "beachside properties"
+      categoryDetail === "beachside properties"||
+      categoryDetail === "Office Spaces"||
+      categoryDetail === "Apartments"||
+      categoryDetail === "Houses"||
+      categoryDetail === "Studio Spaces"
     ) {
       setCarouselImages("estateCarousel");
     } else if (
@@ -82,14 +87,14 @@ export default function ProductsList() {
     ) {
       setCarouselImages("jetCarousel");
     } else if (
-      categoryDetail === "superbike" ||
-      categoryDetail === "naked" ||
-      categoryDetail === "electric" ||
-      categoryDetail === "cruiser" ||
+      categoryDetail === "Super Bikes" ||
+      categoryDetail === "Naked Bikes" ||
+      categoryDetail === "Electric Bikes" ||
+      categoryDetail === "Cruiser Bikes" ||
       categoryDetail === "touring & adventure" ||
       categoryDetail === "dual sport" ||
-      categoryDetail === "cafe racer" ||
-      categoryDetail === "retro & classic"
+      categoryDetail === "EV Mopads" ||
+      categoryDetail === "Classic Bikes"
     ) {
       setCarouselImages("bikeCarousel");
     } else if (
@@ -100,12 +105,23 @@ export default function ProductsList() {
       categoryDetail === "Sedan Cars" ||
       categoryDetail === "SUV Cars" ||
       categoryDetail === "HatchBacks" ||
-      categoryDetail === "convertible"||
-      categoryDetail === "EV Cars"||
+      categoryDetail === "convertible" ||
+      categoryDetail === "EV Cars" ||
       categoryDetail === "Luxury Cars"
     ) {
       setCarouselImages("carCarousel");
-    } else if (categoryDetail === "submarines") {
+    } 
+    else if (
+      categoryDetail === "Microwave Ovens" ||
+      categoryDetail === "Air Conditioning" ||
+      categoryDetail === "Washing Machines" ||
+      categoryDetail === "Refrigertors" ||
+      categoryDetail === "Gaming Consoles" ||
+      categoryDetail === "Televisions" 
+    ) {
+      setCarouselImages("iotCarousel");
+    }
+    else if (categoryDetail === "submarines") {
       setCarouselImages("submarineCarousel");
     } else if (categoryDetail === "atv") {
       setCarouselImages("atvCarousel");
@@ -131,97 +147,80 @@ export default function ProductsList() {
   const [yacht, changeYacht] = useState(false);
   return (
     <div>
-    <Navbar2/>  {/*........................... navbar */}
-    <div>
-      
-      <div>
-      <div>
-        {carouselImages === "yachtCarousel" ? (
-          <><RelatedtagsYachts/><Modal
-      // {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        {/* <Button onClick={props.onHide}>Close</Button> */}
-      </Modal.Footer>
-    </Modal><CarouselPage CarouselImages={yachtCarousel} /></>
-        ) : carouselImages === "estateCarousel" ? (
-          <><RelatedtagsEstate /><CarouselPage CarouselImages={estateCarousel} /></>
-        ) : carouselImages === "jetCarousel" ? (
-          <CarouselPage CarouselImages={jetCarousel} />
-        ) : carouselImages === "bikeCarousel" ? (
-          <><RelatedMotorcycle/><CarouselPage CarouselImages={bikeCarousel} /></>
-        ) : carouselImages === "carCarousel" ? (
-          <><RelatedtagsCars/><CarouselPage CarouselImages={carCarousel} /></>
-        ) : carouselImages === "amphibiousCarousel" ? (
-          <CarouselPage CarouselImages={amphibiousCarousel} />
-        ) : carouselImages === "submarineCarousel" ? (
-          <CarouselPage CarouselImages={submarineCarousel} />
-        ) : carouselImages === "atvCarousel" ? (
-          <CarouselPage CarouselImages={atvCarousel} />
-        ) : (
-          <CarouselPage CarouselImages={rvCarousel} />
-        )}
+      <div className="nav2productlist">
+      <Navbar2/>
       </div>
+        
       <div>
-      <div className="flex flex-col absolute left-[10vw] top-[250px] w-[80%] text-neutral-50">
-          <h1 style={{fontSize:"8vw"}} className={`m-auto relative ${fontBebas.className}`}>{categoryDetail}.</h1>
-            <div className={`m-auto  ${classes.carousel_search}`}>
-              <div><input style={{width:"30vw"}}
-                type="text"
-                placeholder={`search for ${categoryDetail}...`}
-                className={` ${fontUnica.className}`}
-              /></div>
-              <div>
-              <button className="relative" type="submit">
-                <span className="material-symbols-outlined">search</span>
-              </button>
+
+        <div>
+          <div>
+            {carouselImages === "yachtCarousel" ? (
+              <CarouselPage CarouselImages={yachtCarousel} />
+            ) : carouselImages === "estateCarousel" ? (
+              <><CarouselPage CarouselImages={estateCarousel} /></>
+            ) : carouselImages === "jetCarousel" ? (
+              <CarouselPage CarouselImages={jetCarousel} />
+            ) : carouselImages === "bikeCarousel" ? (
+              <><CarouselPage CarouselImages={bikeCarousel} /></>
+            ) : carouselImages === "carCarousel" ? (
+              <><CarouselPage CarouselImages={carCarousel} /></>
+            ) :carouselImages === "iotCarousel" ? (
+              <><CarouselPage CarouselImages={iotCarousel} /></>
+            ) : carouselImages === "amphibiousCarousel" ? (
+              <CarouselPage CarouselImages={amphibiousCarousel} />
+            ) : carouselImages === "submarineCarousel" ? (
+              <CarouselPage CarouselImages={submarineCarousel} />
+            ) : carouselImages === "atvCarousel" ? (
+              <CarouselPage CarouselImages={atvCarousel} />
+            ) : (
+              <CarouselPage CarouselImages={rvCarousel} />
+            )}
+          </div>
+          <div>
+            <div className="flex flex-col absolute left-[10vw] top-[280px] w-[80%] text-neutral-50 text-opacity-80">
+              <h1 style={{ fontSize: "14rem", letterSpacing:"4px" }} className={`m-auto relative ${fontBebas.className}`}>{categoryDetail}.</h1>
+              <div className={`m-auto  ${classes.carousel_search}`}>
+                <div><input style={{ width: "33vw" }}
+                  type="text"
+                  placeholder={`search for ${categoryDetail}...`}
+                  className={` ${fontUnica.className}`}
+                /></div>
+                <div>
+                  <button className="relative" type="submit">
+                    <span className="material-symbols-outlined">search</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className={`   ${classes.carousel_icon_div}`}>
+                {subcategory.map((data) => (
+                  <div className={classes.subcategory_div}>
+                    <div
+                      className={
+                        yacht
+                          ? `${classes.carousel_icons} ${classes.selected}`
+                          : `${classes.carousel_icons}`
+                      }
+                    // onClick={yachtChangeHandler}
+                    >
+                      <span className="material-symbols-outlined">{data.icon}</span>
+                    </div>
+                    <h1
+                      className={`${classes.subcategory_name} ${fontUnica.className}`}
+                    >
+                      {data.name}
+                    </h1>
+                  </div>
+                ))}
               </div>
             </div>
-            
-            <div className={`   ${classes.carousel_icon_div}`}>
-              {subcategory.map((data) => (
-                <div className={classes.subcategory_div}>
-                  <div
-                    className={
-                      yacht
-                        ? `${classes.carousel_icons} ${classes.selected}`
-                        : `${classes.carousel_icons}`
-                    }
-                  // onClick={yachtChangeHandler}
-                  >
-                    <span className="material-symbols-outlined">{data.icon}</span>
-                  </div>
-                  <h1
-                    className={`${classes.subcategory_name} ${fontUnica.className}`}
-                  >
-                    {data.name}
-                  </h1>
-                </div>
-              ))}
-            </div>
           </div>
-      </div>
-      {/* <Topfilter show={showFilter} showFunc={setShowFilter} gridOrList={gridOrList} setGridOrList={setGridOrList} /> */}
-      <div className="mx-24 ">
-          <div className="py-12"><ProductCard products={yachtCarousel} view={true} /></div>
+          {/* <Topfilter show={showFilter} showFunc={setShowFilter} gridOrList={gridOrList} setGridOrList={setGridOrList} /> */}
+          <div className="bg-[#101010] py-11">
+            <ProductCard products={yachtCarousel} view={true} />
+          </div>
         </div>
-      </div>
 
       </div>
       <Footer />

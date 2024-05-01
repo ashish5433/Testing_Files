@@ -1,20 +1,19 @@
 import classes from "./../../styles/Home.module.css";
-import { Unica_One, Quicksand, Bebas_Neue, Raleway } from "next/font/google";
+import { Unica_One, Bebas_Neue, Raleway } from "next/font/google";
 import { useState } from "react";
 import CarouselPage from "./Carousel";
-import Link from "next/link";
 
-const fontUnica = Unica_One({
+const fontUnic = Unica_One({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
 });
-const fontBebas = Bebas_Neue({
+const fontBebus = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
 });
-const fontRaleway = Raleway({
+const fontRalewa = Raleway({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
@@ -54,11 +53,11 @@ export default function HomeGradient({
   const [submarine, changeSubmarines] = useState(false);
   const [atv, changeATVs] = useState(false);
   const [rv, changeRVs] = useState(false);
-  const [iot, changeIot] = useState(false);
+  const [iot, changeIot] = useState(false);  
 
   const scroller = () => {
     window.scrollTo({
-      top: 640,
+      top: 800,
       behavior: 'smooth',
     });
   }
@@ -100,6 +99,45 @@ export default function HomeGradient({
     }
   };
 
+  const homeChangeHandler = () => {
+    if (HomeProps) {
+      changeYacht(false);
+      changeEstate(false);
+      changeAircrafts(false);
+      changeHome(false);
+      changeBike(false);
+      changeCar(false);
+      changeAmphibious(false);
+      changeSubmarines(false);
+      changeATVs(false);
+      changeRVs(false);
+      changeIot(false);
+      YachtPropsFunction(false);
+    } else {
+      changeYacht(false);
+      changeEstate(false);
+      changeAircrafts(false);
+      changeHome(true);
+      changeBike(false);
+      changeCar(false);
+      changeAmphibious(false);
+      changeSubmarines(false);
+      changeATVs(false);
+      changeRVs(false);
+      changeIot(false);
+      IotPropsFunction(false);
+      YachtPropsFunction(false);
+      EstatePropsFunction(false);
+      AircraftsPropsFunction(false);
+      HomePropsFunction(true);
+      BikePropsFunction(false);
+      CarPropsFunction(false);
+      AmphibiousPropsFunction(false);
+      SubmarinePropsFunction(false);
+      ATVPropsFunction(false);
+      RVPropsFunction(false);
+    }
+  };
   const yachtChangeHandler = () => {
     if (YachtProps) {
       changeYacht(false);
@@ -536,14 +574,14 @@ export default function HomeGradient({
     <>
       <CarouselPage CarouselImages={homeCarouselImages} />
       <div className={classes.overlay_main_title}>
-        <h1 className={fontBebas.className}>KIR.AI</h1>
+        <h1 className={fontBebus.className}>KIR.AI</h1>
         <div className={classes.carousel_search}>
-          <input type="text" className={fontUnica.className} />
+          <input type="text" className={fontUnic.className} placeholder="search for products..."/>
           <button type="submit">
             <span className="material-symbols-outlined">search</span>
           </button>
         </div>
-        <div className={`${classes.line_span} ${fontRaleway.className}`}>
+        <div className={`${classes.line_span} ${fontUnic.className}`}>
           <span>ONE SEARCH</span>
           <span> • </span>
           <span>200,000+ LISTINGS</span>
@@ -563,16 +601,7 @@ export default function HomeGradient({
           >
             <span className="material-symbols-outlined">directions_boat</span>
           </div> */}
-          <div
-            className={
-              estate
-                ? `${classes.carousel_icons} ${classes.selected}`
-                : `${classes.carousel_icons}`
-            }
-            onClick={scrollAndChangeEstate}
-          >
-            <span className="material-symbols-outlined">villa</span>
-          </div>
+         
           {/* <div
             className={
               aircrafts
@@ -583,16 +612,7 @@ export default function HomeGradient({
           >
             <span className="material-symbols-outlined">helicopter</span>
           </div> */}
-          {/*  <div
-            className={
-              home
-                ? `${classes.carousel_icons} ${classes.selected}`
-                : `${classes.carousel_icons}`
-            }
-            onClick={homeChangeHandler}
-          >
-            <span className="material-symbols-outlined">Home</span>
-          </div>*/}
+           
           <div
             className={
               bike
@@ -615,6 +635,18 @@ export default function HomeGradient({
           </div>
           <div
             className={
+              home
+                ? `${classes.carousel_icons} ${classes.selected}`
+                : `${classes.carousel_icons}`
+            }
+            onClick={homeChangeHandler}
+            
+          >
+            <span className="material-symbols-outlined">Home</span>
+          </div>
+       
+          <div
+            className={
               iot
                 ? `${classes.carousel_icons} ${classes.selected}`
                 : `${classes.carousel_icons}`
@@ -622,6 +654,16 @@ export default function HomeGradient({
             onClick={scrollAndChangeIot}
           >
             <span className="material-symbols-outlined">home_iot_device</span>
+          </div>
+          <div
+            className={
+              estate
+                ? `${classes.carousel_icons} ${classes.selected}`
+                : `${classes.carousel_icons}`
+            }
+            onClick={scrollAndChangeEstate}
+          >
+            <span className="material-symbols-outlined">villa</span>
           </div>
           {/* <Link
             href="/components/ProductsList/amphibious"

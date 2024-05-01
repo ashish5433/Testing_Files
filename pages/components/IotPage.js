@@ -2,7 +2,7 @@ import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 import CategoryCard from "./CategoryCards";
 import CategoryCards2 from "./CategoryCards2";
 
-const play = Bebas_Neue({
+const player = Bebas_Neue({
     weight: ["400"],
     style: ["normal"],
     subsets: ["latin"],
@@ -42,7 +42,7 @@ export default function IotPage() {
         // },
             
           {
-            name: "TVs",
+            name: "Televisions",
             image: "/test/tvNo.png",
             bg: "/test/tv.jpg",
             title: "/test/texts/tvv.png"
@@ -64,14 +64,14 @@ export default function IotPage() {
                  
           
         {
-            name: "Refrigertor",
+            name: "Refrigertors",
             image: "/test/rfNo.png",
             bg: "/test/rf.jpg",
             title: "/test/texts/fdd.png"
       
           },
           {
-            name: "Washing Machine",
+            name: "Washing Machines",
             image: "/test/wmNo.png",
             bg: "/test/wm.jpg",
             title: "/test/texts/wmm.png"
@@ -86,7 +86,7 @@ export default function IotPage() {
       
           },
           {
-            name: "Ovens",
+            name: "Microwave Ovens",
             image: "/test/ovenNo.png",
             bg: "/test/oven.jpg",
             title: "/test/texts/ovenn.png"
@@ -97,7 +97,7 @@ export default function IotPage() {
 
     return (
         <div className="menu-titles new-trending-title">
-            <h1 className={play.className}>Appliances</h1>
+            <h1 className={player.className}>Appliances</h1>
             <hr className="hr_rule" />
             <div>
                 {/* <CategoryCard products={iots} /> */}

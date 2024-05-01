@@ -2,7 +2,7 @@ import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 import CategoryCard from "./CategoryCards";
 import CategoryCards2 from "./CategoryCards2";
 
-const play = Bebas_Neue({
+const player = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
@@ -57,7 +57,7 @@ export default function BikePage() {
     //   image: "/bike2.png",
     // },
     {
-      name: "mopad",
+      name: "EV Mopads",
       image: "/test/mopadNo.png",
       bg: "/test/mopad.jpg",
       title: "/test/texts/4.png"
@@ -65,7 +65,7 @@ export default function BikePage() {
     }
     ,
     {
-      name: "electric",
+      name: "Electric Bikes",
       image: "/test/electricNo.png",
       bg: "/test/electric.jpg",
       title: "/test/texts/3.png"
@@ -74,7 +74,7 @@ export default function BikePage() {
   ];
   const bikes2 = [
     {
-      name: "classic",
+      name: "Classic Bikes",
       image: "/test/classicNo.png",
       bg: "/test/classic.jpg",
       title: "/test/texts/1.png"
@@ -82,7 +82,7 @@ export default function BikePage() {
     }
     ,
     {
-      name: "cruiser",
+      name: "Cruiser Bikes",
       image: "/test/cruiserNo.png",
       bg: "/test/cruiser.jpg",
       title: "/test/texts/2.png"
@@ -90,7 +90,7 @@ export default function BikePage() {
     }
     ,
     {
-      name: "naked",
+      name: "Naked Bikes",
       image: "/test/nakedNo.png",
       bg: "/test/naked.jpg",
       title: "/test/texts/5.png"
@@ -98,7 +98,7 @@ export default function BikePage() {
     }
     ,
     {
-      name: "super",
+      name: "Super Bikes",
       image: "/test/superNo.png",
       bg: "/test/super.jpg",
       title: "/test/texts/6.png"
@@ -109,7 +109,7 @@ export default function BikePage() {
 
   return (
     <div className="menu-titles new-trending-title">
-      <h1 className={play.className}>Bikes</h1>
+      <h1 className={player.className}>Bikes</h1>
       <hr className="hr_rule" />
       <div>
         {/* <CategoryCard products={bikes} /> */}

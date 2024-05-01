@@ -2,7 +2,7 @@ import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 import CategoryCard from "./CategoryCards";
 import CategoryCards2 from "./CategoryCards2";
 
-const play = Bebas_Neue({
+const player = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
@@ -112,7 +112,7 @@ export default function CarPage() {
 
   return (
     <div className="menu-titles new-trending-title">
-      <h1 className={play.className}>Cars</h1>
+      <h1 className={player.className}>Cars</h1>
       <hr className="hr_rule" />
       <div>
         <CategoryCards2 products={cars} products2={cars2}/>

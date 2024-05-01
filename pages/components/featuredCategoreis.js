@@ -3,7 +3,7 @@ import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 
 
 
-const play = Bebas_Neue({
+const player = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
@@ -12,7 +12,7 @@ const play = Bebas_Neue({
 export default function midSection() {
   return (
     <div className="menu-titles">
-      <h1 className={play.className}>Featured Categories</h1>
+      <h1 className={player.className}>Featured Categories</h1>
       <hr className="hr_rule" />
       <div>
         <Card />

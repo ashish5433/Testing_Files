@@ -46,6 +46,9 @@ export default function Home() {
       });
     }, [isUser]);
 
+
+   
+
     
   return (
 
@@ -55,9 +58,12 @@ export default function Home() {
     // <HomeBeforelogin/>:
     
     // }
-    // </>
+    // </><>
     <>
-    
+    {/* <div className='cursor' id="cursor"></div>
+	<div className='cursor2' id="cursor2"></div>
+	<div className='cursor3' id="cursor3"></div>  */}
+
      <div className="nav1">
      <Navbar1 isShow={toShow} setToshow={SettoShow}/>
      {toShow &&<UserProfile Name={userName} Email={userEmail} />}

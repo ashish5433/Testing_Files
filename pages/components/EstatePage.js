@@ -3,7 +3,7 @@ import CategoryCard from "./CategoryCards";
 import Relatedtags from "@/Check/Relatedtags/relatedtagsestate";
 import CategoryCards2 from "./CategoryCards2";
 
-const play = Bebas_Neue({
+const player = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
@@ -58,14 +58,14 @@ export default function EstatePage() {
     // },
     ,
     {
-      name: "mansion",
+      name: "villas",
       image: "/test/mansionNo.png",
       bg: "/test/mansion.jpg",
       title: "/test/texts/villa.png"
 
     },
     {
-      name: "apartment",
+      name: "Apartments",
       image: "/test/houseNo.png",
       bg: "/test/house.jpg",
       title: "/test/texts/apart.png"
@@ -73,14 +73,14 @@ export default function EstatePage() {
     }
     ,
     {
-      name: "house",
+      name: "Houses",
       image: "/test/house2Nu.png",
       bg: "/test/house2.jpg",
       title: "/test/texts/house.png"
 
     },
     {
-      name: "studio",
+      name: "Studio Spaces",
       image: "/test/studioNo.png",
       bg: "/test/studio.jpg",
       title: "/test/texts/studd.png"
@@ -88,7 +88,7 @@ export default function EstatePage() {
     }
     ,
     {
-      name: "office",
+      name: "Office Spaces",
       image: "/test/officeNo.png",
       bg: "/test/office.jpg",
       title: "/test/texts/office.png"
@@ -101,7 +101,7 @@ export default function EstatePage() {
 
   return (
     <div className="menu-titles new-trending-title">
-      <h1 className={play.className}>Estates</h1>
+      <h1 className={player.className}>Estates</h1>
       <hr className="hr_rule" />
       <div>
         {/* <CategoryCard products={estate}  /> */}
