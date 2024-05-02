@@ -147,6 +147,7 @@ export default function ProductsList() {
   const [yacht, changeYacht] = useState(false);
   return (
     <div>
+    
       <div className="nav2productlist">
       <Navbar2/>
       </div>
@@ -218,11 +219,12 @@ export default function ProductsList() {
           </div>
           {/* <Topfilter show={showFilter} showFunc={setShowFilter} gridOrList={gridOrList} setGridOrList={setGridOrList} /> */}
           <div className="bg-[#101010] py-11">
-            <ProductCard products={yachtCarousel} view={true} />
+            <ProductCard products={carCarousel} view={true} />
           </div>
         </div>
 
       </div>
+      
       <Footer />
 
     </div>

@@ -2,12 +2,17 @@ import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 
 import Image from "next/image";
 import Link from "next/link.js";
+import { useRouter } from "next/router";
 const play=Bebas_Neue({
     weight: ["400"],
     style: ["normal"],
     subsets: ["latin"],
 });
 export default function Card() {
+    const router=useRouter();
+    const pusher=()=>{
+        router.push("/components/ProductPage2")
+    }
     const yo = false;
     return (
         <div>
@@ -22,7 +27,7 @@ export default function Card() {
                                 <span className={play.className}>&#x2022; 155cc</span>
                                 <span className={play.className}>&#x2022; 56.87 kmpl</span>
                             </div>
-                            <p className={play.className}>&#8377; 17,400* 
+                            <p className={play.className} onClick={pusher}>&#8377; 17,400* 
                             </p>
                         </div>
                     </div>
@@ -43,7 +48,7 @@ export default function Card() {
                                 <span className={play.className}>&#x2022; 5558 hp</span>
                                 <span className={play.className}>&#x2022; 5.7 litre</span>
                             </div>
-                            <p className={play.className}>&#8377; 1.6 lakh* 
+                            <p className={play.className} onClick={pusher}>&#8377; 1.6 lakh* 
                             </p>
                         </div>
                     </div>
@@ -62,7 +67,7 @@ export default function Card() {
                                 <span className={play.className}>&#x2022; 1200sqft</span>
                                 <span className={play.className}>&#x2022; balcony</span>
                             </div>
-                            <p className={play.className}>&#8377;  45,000*
+                            <p className={play.className} onClick={pusher}>&#8377;  45,000*
                             </p>
                         </div>
                     </div>
@@ -81,7 +86,7 @@ export default function Card() {
                                 <span className={play.className}>&#x2022; 3 disks</span>
                                 <span className={play.className}>&#x2022; 2 remote</span>
                             </div>
-                            <p className={play.className}>&#8377; 2,000*
+                            <p className={play.className} onClick={pusher} >&#8377; 2,000*
                             </p>
                         </div>
                     </div>

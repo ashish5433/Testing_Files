@@ -1,6 +1,7 @@
 import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 import { addOutline } from "../context/context";
 import { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 const player = Unica_One({
   weight: ["400"],
   style: ["normal"],
@@ -13,8 +14,21 @@ export default function Card() {
   // const [yess2, setYess2] = useState(false);
   // const [yess3, setYess3] = useState(false);
   // const [yess4, setYess4] = useState(false);
-
+  const router=useRouter();
+  const bikepusher=()=>{
+      router.push("/components/ProductsList/Classic%20Bikes")
+  }
+  const iotpusher=()=>{
+    router.push("/components/ProductsList/Washing%20Machines")
+}
+const carpusher=()=>{
+  router.push("/components/ProductsList/Sedan%20Cars")
+}
+const plotpusher=()=>{
+  router.push("/components/ProductsList/Office%20Spaces")
+}
   const scroller = () => {
+    
     window.scrollTo({
       top: 680,
       behavior: 'smooth',
@@ -44,7 +58,7 @@ export default function Card() {
   return (
     <div>
       <div className="card-div">
-        <div
+        <div onClick={plotpusher}
           className={
             yess
               ? `category_cards card_comp_1 outlinerr`
@@ -56,7 +70,7 @@ export default function Card() {
           <span className={player.className}>1000+ Listings</span>
           <p className={player.className}>╰┈➤</p>
         </div>
-        <div
+        <div  onClick={bikepusher} 
           className={
             yess
               ? `category_cards card_comp_2 outlinerr`
@@ -67,7 +81,7 @@ export default function Card() {
           <span className={player.className}>2000+ Listings</span>
           <p className={player.className}>╰┈➤</p>
         </div>
-        <div
+        <div  onClick={carpusher} 
           className={
             yess
               ? `category_cards card_comp_3 outlinerr`
@@ -78,7 +92,7 @@ export default function Card() {
           <span className={player.className}>1000+ Listings</span>
           <p className={player.className}>╰┈➤</p>
         </div>
-        <div
+        <div  onClick={iotpusher} 
           className={
             yess
               ? `category_cards card_comp_4 outlinerr`

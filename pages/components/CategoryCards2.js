@@ -1,9 +1,14 @@
 import Link from 'next/link'
+
 import Image from "next/image";
 import classes from "../../styles/CategoryCards2.module.css"
+import { useRouter } from 'next/router';
+// import { Link } from "react-router-dom";
 
 const CategoryCards2 = ({ products, products2 }) => {
     return (
+
+
         <div className={classes.bodies}>
             {products2?.map((data) => (
 
@@ -18,7 +23,6 @@ const CategoryCards2 = ({ products, products2 }) => {
                 </Link>
             ))}
             {products?.map((data) => (
-
                 <Link href={`/components/ProductsList/${data.name}`}>
                     <div className={classes.card}>
                         <div className={classes.wrapper}>

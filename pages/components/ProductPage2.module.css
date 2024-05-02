@@ -5,8 +5,9 @@ font-family: 'Cabinet Grotesk', sans-serif;
 font-size: 7rem;
 text-align: center;
 color: aquamarine;
-padding-top: 1rem;
+padding-top: 8rem;
 overflow: hidden;
+/* margin-top: 3rem; */
 }
 
 .first>div{
@@ -15,7 +16,7 @@ overflow: hidden;
 
 .first h1{
     position: relative;
-    z-index: 1000;
+    z-index: 10;
 font-size: 7rem;
 text-transform:capitalize;
 }
@@ -179,6 +180,7 @@ padding-top: 10px;
 }
 .icons2{
 opacity: 0.9;
+
 }
 .icons2_div>div:hover{
 transform: scale(1.2);
@@ -223,9 +225,12 @@ backdrop-filter: blur(4px);
 .agent_card_profile{
     position: relative;
 height: 300px;
-width: 300px;
-border-radius: 50%;
+width: 500px;
+border-radius: 50px;
 opacity: 0.85;
+box-shadow: 10px 10px 74px 0px rgba(0,0,0);
+-webkit-box-shadow: 10px 10px 74px 0px rgba(0,0,0);
+-moz-box-shadow: 10px 10px 74px 0px rgba(0,0,0);
 }
 .agent_card_membership{
 position: absolute;
