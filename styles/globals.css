@@ -2081,7 +2081,7 @@ color: #000;
 .outlinerr{
   /* outline: 20px solid rgb(255, 255, 255) !important; */
   transition-duration: 200ms;
-  box-shadow: 0px 0px 184px 5px rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 184px 5px rgba(255, 255, 255, 0.75) !important;
 -webkit-box-shadow: 0px 0px 184px 5px rgba(255, 255, 255, 0.75);
 -moz-box-shadow: 0px 0px 184px 5px rgba(255, 255, 255, 0.75);
   /* border: 20px solid rgb(255, 255, 255) !important; */

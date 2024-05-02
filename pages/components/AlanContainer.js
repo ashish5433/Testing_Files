@@ -31,7 +31,10 @@ const AlanContainer = ({ yo, setYo }) => {
           console.log(val);
           if (val === "product") {
             router.push("/components/ProductPage");
-          } else if (val === "login") {
+          }else if(val==="home"){
+            router.push("/");
+          } 
+          else if (val === "login") {
             router.push("/login");
           } else if (val === "Superbike") {
             router.push(`/components/ProductsList/Super%20Bikes`);
