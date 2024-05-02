@@ -1,4 +1,4 @@
-import { Raleway,Bebas_Neue } from "next/font/google";
+import { Raleway, Bebas_Neue } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
@@ -11,13 +11,12 @@ const play = Bebas_Neue({
   subsets: ["latin"],
 });
 
-const specifications = ["200HP |", " 2019 |", " 44km/l", " Electric"]
+const specifications = ["200HP |", " 2019 |", " 44km/l", " Electric"];
 
 // const ProductCardContent = ({ data, view }) => {
 //   // const [showBuy, setShowBuy] = useState(false);
 //   const [fillHeart, setFillHeart] = useState("#FFFFFF");
 //   const router = useRouter();
-
 
 //   return (
 //     <div>
@@ -109,26 +108,71 @@ const specifications = ["200HP |", " 2019 |", " 44km/l", " Electric"]
 // }
 
 const ProductCardContent = ({ data, view }) => {
+  // if (data.commonName === "bikeKanojia")
+  //   (data.commonName === "carKanojia")(data.commonName === "iotKanojia")(
+  //     data.commonName === "plotKanojia"
+  //   );
   return (
     <div>
       <div className="p-main">
         <div className="p-imagediv">
-          <Image src={data.image} className="p-image"
+          <Image
+            src={data.image}
+            className="p-image"
             width={350}
-            height={300} />
+            height={300}
+          />
         </div>
         <div className="p-detailsdiv">
-          <Link href={`/components/ProductPage2`} className="p-detailsdivlink">
-            <button className={play.className}>Rent Now</button>
-          </Link>
-          <div><p className={play.className}>Color:</p><p className={play.className}>Black</p></div>
-          <div><p className={play.className}>Year:</p><p className={play.className}>2019</p></div>
-          <div><p className={play.className}>Mileage:</p><p className={play.className}>44kmpl</p></div>
-          <div><p className={play.className}>Engine:</p><p className={play.className}>200HP</p></div>
+          {data.commonName === "bikeKanojia" ? (
+            <Link
+              href={`/components/bike_ProductPage2`}
+              className="p-detailsdivlink"
+            >
+              <button className={play.className}>Rent Now</button>
+            </Link>
+          ) : data.commonName === "carKanojia" ? (
+            <Link
+              href={`/components/ProductPage2`}
+              className="p-detailsdivlink"
+            >
+              <button className={play.className}>Rent Now</button>
+            </Link>
+          ) : data.commonName === "iotKanojia" ? (
+            <Link
+              href={`/components/appliances_ProductPage2`}
+              className="p-detailsdivlink"
+            >
+              <button className={play.className}>Rent Now</button>
+            </Link>
+          ) : (
+            <Link
+              href={`/components/estate_ProductPage2`}
+              className="p-detailsdivlink"
+            >
+              <button className={play.className}>Rent Now</button>
+            </Link>
+          )}
+          <div>
+            <p className={play.className}>Color:</p>
+            <p className={play.className}>Black</p>
+          </div>
+          <div>
+            <p className={play.className}>Year:</p>
+            <p className={play.className}>2019</p>
+          </div>
+          <div>
+            <p className={play.className}>Mileage:</p>
+            <p className={play.className}>44kmpl</p>
+          </div>
+          <div>
+            <p className={play.className}>Engine:</p>
+            <p className={play.className}>200HP</p>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProductCardContent;

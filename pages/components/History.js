@@ -4,7 +4,7 @@ import { Unica_One,Bebas_Neue } from "next/font/google";
 import classes from "../../styles/history.module.css"
 import Navbar2 from './navbar2'
 import { db,storage } from '@/firebase/firebase'
-import { collection,getDocs } from 'firebase/firestore';
+import { collection,getDocs,query,orderBy,limit } from 'firebase/firestore';
 const player = Bebas_Neue({
     weight: ["400"],
     style: ["normal"],
@@ -18,8 +18,9 @@ const player = Bebas_Neue({
 const History = () => {
     const [data,setData]=useState([])
     const orders=collection(db,"Order_Details")
+    const q=query(orders,orderBy("Date","desc"),)
     useEffect(()=>{
-        getDocs(orders).then((res)=>{
+        getDocs(q).then((res)=>{
             setData(res.docs.map((dta)=>({
                 ...dta.data(),id:dta.id
             })))

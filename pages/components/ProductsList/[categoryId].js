@@ -218,9 +218,15 @@ export default function ProductsList() {
             </div>
           </div>
           {/* <Topfilter show={showFilter} showFunc={setShowFilter} gridOrList={gridOrList} setGridOrList={setGridOrList} /> */}
-          <div className="bg-[#101010] py-11">
-            <ProductCard products={carCarousel} view={true} />
-          </div>
+          {
+            carouselImages === "bikeCarousel" ? (<div className="bg-[#101010] py-11">
+            <ProductCard products={bikeCarousel} view={true} /> </div>): carouselImages === "carCarousel" ? (<div className="bg-[#101010] py-11">
+            <ProductCard products={carCarousel} view={true} /> </div>):carouselImages === "iotCarousel" ?  (<div className="bg-[#101010] py-11">
+            <ProductCard products={iotCarousel} view={true} /> </div>):  (<div className="bg-[#101010] py-11">
+            <ProductCard products={estateCarousel} view={true} /> </div>)
+          }
+         
+          
         </div>
 
       </div>

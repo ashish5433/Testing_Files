@@ -35,7 +35,7 @@ export default function Home() {
   const [emailbyvoice, setEmailbyvoice] = useState("hello");
   const scroller = () => {
     window.scrollTo({
-      top: 680,
+      top: 730,
       behavior: "smooth",
     });
   };
@@ -73,11 +73,10 @@ export default function Home() {
 
   useEffect(() => {
     if (outline) {
-      scroller();
-    }
+    scroller();
+  }
     else{
       topscroller();
-
     }
   }, [outline]);
   return (

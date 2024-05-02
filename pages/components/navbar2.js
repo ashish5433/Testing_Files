@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 import Nav_li_items from "../../Check/nav_li_items";
+import Link from "next/link";
 
 const play = Bebas_Neue({
   weight: ["400"],
@@ -72,12 +73,14 @@ function Navbar2() {
                     />
                   </svg>
                 </Button>
+                <Link href="/">
                 <h1
                   style={{ fontSize: "1.5rem", fontWeight: "bold" }}
                   className={play.className}
-                >
+                  >
                   Kira.ai
                 </h1>
+                  </Link>
               </div>
 
               <div

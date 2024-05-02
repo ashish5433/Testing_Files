@@ -366,7 +366,7 @@ function Navbar1(props) {
                 <Button className="me-2 nav-btn">
                   <span className="nav-btns" onClick={
                     ()=>{
-                      {data.setEmailbyvoice("Asyush")}
+                      // {data.setEmailbyvoice("Asyush")}
                     }
                   } >List With Us</span>
                 </Button>

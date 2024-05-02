@@ -23,7 +23,7 @@ const AlanContainer = ({ yo, setYo }) => {
     // console.log(window);
     const alanBtn = require("@alan-ai/alan-sdk-web");
     alanBtn({
-      key: "589316a9898ff1f6d1c73093c0e1b59d2e956eca572e1d8b807a3e2338fdd0dc/stage",
+      key: "1cdedfed4a33db4bcf480ab8d6e5cfd92e956eca572e1d8b807a3e2338fdd0dc/stage",
       rootEl: document.getElementById("alan-btn"),
       onCommand: (commandData) => {
         if (commandData.command === "navigation") {

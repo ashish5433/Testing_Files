@@ -4,6 +4,7 @@ import ProductCardContent from "../../Check/ProductCardContent";
 
 
 export default function ProductCard({ products , view}) {
+// console.log(products)
 
   return (
     <div >

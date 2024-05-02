@@ -58,7 +58,7 @@ function HomeGradient({
 
   const scroller = () => {
     window.scrollTo({
-      top: 680,
+      top: 730,
       behavior: 'smooth',
     });
   }

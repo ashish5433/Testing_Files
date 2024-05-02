@@ -8,7 +8,7 @@ import {collection,getDocs,addDoc} from 'firebase/firestore'
 // import { getDocs } from "firebase/firestore";
 import { useState } from "react";
 import { useRouter } from "next/router";
-export default function ProductPage2({data}) {
+export default function lamborghini_ProductPage({data}) {
   const [productName,setProductName]=useState("")
   const orders=collection(db,"Order_Details");
   const date =new Date()
@@ -16,7 +16,7 @@ export default function ProductPage2({data}) {
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
   const createData=async()=>{
-    await addDoc(orders,{ProductName:"Porsche 918 Spyder", Seller:"Ashish Bhardwaj",price:18000,Time:showTime,Date:datenow})
+    await addDoc(orders,{ProductName:"lamborghini aventador", Seller:"Milind Palaria",price:19999,Time:showTime,Date:datenow})
     alert("Rented Successfully")
   }
   console.log(data);
@@ -31,8 +31,8 @@ export default function ProductPage2({data}) {
       <Navbar2 />
       </div>
       <div className={classes.first}>
-        <h1>Porsche 918 Spyder</h1>
-        <h3>~ Ashish Bhardwaj</h3>
+        <h1>lamborghini aventador</h1>
+        <h3>~ Milind Palaria</h3>
         <div>
           <div className={classes.big_image_div}>
             {/* <div className={classes.share_and_like}>
@@ -88,7 +88,7 @@ export default function ProductPage2({data}) {
           </div>
           <div className={classes.price_and_others}>
             <h1>
-              <span>&#8377; </span> 18,000 . 00 /day
+              <span>&#8377; </span> 19,999 . 00 /day
             </h1>
             <div className={classes.currencies}>
               <p>inr</p>
@@ -168,7 +168,7 @@ export default function ProductPage2({data}) {
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Ashish Bhardwaj</h1>
+              <h1>Milind Palaria</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image

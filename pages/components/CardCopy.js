@@ -13,6 +13,15 @@ export default function Card() {
     const pusher=()=>{
         router.push("/components/ProductPage2")
     }
+    const bikepusher=()=>{
+        router.push("/components/bike_ProductPage2")
+    }
+    const iotpusher=()=>{
+        router.push("/components/appliances_ProductPage2")
+    }
+    const plotpusher=()=>{
+        router.push("/components/estate_ProductPage2")
+    }
     const yo = false;
     return (
         <div>
@@ -27,7 +36,7 @@ export default function Card() {
                                 <span className={play.className}>&#x2022; 155cc</span>
                                 <span className={play.className}>&#x2022; 56.87 kmpl</span>
                             </div>
-                            <p className={play.className} onClick={pusher}>&#8377; 17,400* 
+                            <p className={play.className} onClick={bikepusher}>&#8377; 17,400* 
                             </p>
                         </div>
                     </div>
@@ -67,7 +76,7 @@ export default function Card() {
                                 <span className={play.className}>&#x2022; 1200sqft</span>
                                 <span className={play.className}>&#x2022; balcony</span>
                             </div>
-                            <p className={play.className} onClick={pusher}>&#8377;  45,000*
+                            <p className={play.className} onClick={plotpusher}>&#8377;  45,000*
                             </p>
                         </div>
                     </div>
@@ -86,7 +95,7 @@ export default function Card() {
                                 <span className={play.className}>&#x2022; 3 disks</span>
                                 <span className={play.className}>&#x2022; 2 remote</span>
                             </div>
-                            <p className={play.className} onClick={pusher} >&#8377; 2,000*
+                            <p className={play.className} onClick={iotpusher} >&#8377; 2,000*
                             </p>
                         </div>
                     </div>

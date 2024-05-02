@@ -30,11 +30,12 @@ const plotpusher=()=>{
   const scroller = () => {
     
     window.scrollTo({
-      top: 680,
+      top: 730,
       behavior: 'smooth',
     });
   }
   useEffect(() => {
+    // scroller();
     // if(ouliner.outline){
     //   scroller();
 
