@@ -1,19 +1,41 @@
 import Link from "next/link";
 import classes from "./ProductPage2.module.css";
-import Navbar1 from "../components/navbar";
+import Navbar1 from "./navbar";
 import Image from "next/image";
-import Navbar2 from "../components/navbar2";
+import Navbar2 from "./navbar2";
+import { db,storage } from "@/firebase/firebase";
+import {collection,getDocs,addDoc} from 'firebase/firestore'
+// import { getDocs } from "firebase/firestore";
+import { useState } from "react";
+import { useRouter } from "next/router";
+export default function ProductPage2({data}) {
+  const [productName,setProductName]=useState("")
+  const orders=collection(db,"Order_Details");
+  const date =new Date()
+  const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
-export default function ProductPage2() {
+  const createData=async()=>{
+    await addDoc(orders,{ProductName:"Porsche 918 Spyder", Seller:"Ashish Bhardwaj",price:18000,Time:showTime,Date:datenow})
+    alert("Rented Successfully")
+  }
+  console.log(data);
+  const router=useRouter();
+  const pusher=()=>{
+    router.push("/components/History");
+  }
   return (
     <div>
+      <div className="nav2productlist">
+
       <Navbar2 />
+      </div>
       <div className={classes.first}>
-        <h1>product name</h1>
-        <h3>~ seller name</h3>
+        <h1>Porsche 918 Spyder</h1>
+        <h3>~ Ashish Bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
-            <div className={classes.share_and_like}>
+            {/* <div className={classes.share_and_like}>
               <Image
                 className={classes.icons}
                 src="/share_4.png"
@@ -26,10 +48,10 @@ export default function ProductPage2() {
                 width={35}
                 height={35}
               />
-            </div>
+            </div> */}
             <Image
               className={classes.big_image}
-              src="/yachtcarousel4.jpg"
+              src="/carcarousel3.jpg"
               width={1920}
               height={1080}
             />
@@ -37,25 +59,25 @@ export default function ProductPage2() {
             <div className={classes.small_image_div}>
               <Image
                 className={classes.small_image}
-                src="/yachtcarousel1.jpg"
+                src="/carcarousel4.jpg"
                 width={1920}
                 height={1080}
               />
               <Image
                 className={classes.small_image}
-                src="/yachtcarousel3.jpg"
+                src="/carcarousel5.jpg"
                 width={1920}
                 height={1080}
               />
               <Image
                 className={classes.small_image}
-                src="/yachtcarousel7.jpg"
+                src="/carcarousel7.jpg"
                 width={1920}
                 height={1080}
               />
               <Image
                 className={classes.small_image}
-                src="/yachtcarousel5.jpg"
+                src="/carcarousel6.jpg"
                 width={1920}
                 height={1080}
               />
@@ -66,15 +88,15 @@ export default function ProductPage2() {
           </div>
           <div className={classes.price_and_others}>
             <h1>
-              <span>$</span>500,000,000
+              <span>&#8377; </span> 18,000 . 00
             </h1>
             <div className={classes.currencies}>
-              <p>usd</p>
               <p>inr</p>
+              <p>usd</p>
               <p>eur</p>
             </div>
-            <button>buy now</button>
-            <button>add to cart</button>
+            <button onClick={createData}>rent now</button>
+            <button onClick={pusher}>View History</button>
             <h3>add to wishlist</h3>
             <div className={classes.icons2_div}>
               <div>
@@ -130,7 +152,7 @@ export default function ProductPage2() {
         <div>
           <Image
             className={classes.agent_card_img}
-            src="/yachtcarousel4.jpg"
+            src="/carcarousel3.jpg"
             width={1920}
             height={1080}
           />
@@ -138,20 +160,15 @@ export default function ProductPage2() {
           <div className={classes.agent_profile}>
             <Image
               className={classes.agent_card_profile}
-              src="/yachtcarousel4.jpg"
+              src="/carcarousel3.jpg"
               width={500}
               height={500}
             />
-            <Image
-              className={classes.agent_card_membership}
-              src="/diamond_1.png"
-              width={80}
-              height={80}
-            />
+            
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Agent Name</h1>
+              <h1>Ashish Bhardwaj</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image
