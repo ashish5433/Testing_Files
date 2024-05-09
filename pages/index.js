@@ -33,20 +33,8 @@ export default function Home() {
   const [isUser, setisUser] = useState(false);
   const [toShow, SettoShow] = useState(false);
   const [emailbyvoice, setEmailbyvoice] = useState("hello");
-  const scroller = () => {
-    window.scrollTo({
-      top: 730,
-      behavior: "smooth",
-    });
-  };
-  const topscroller = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-  
-  
+ 
+
   const auth = getAuth(app);
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -70,12 +58,24 @@ export default function Home() {
   const [iotclassAdder, setiotclassAdder] = useState(false);
 
   const [outline, setOutline] = useState(false);
+  const scroller = () => {
+    window.scrollTo({
+      top: 700,
+      behavior: "smooth",
+    });
+  };
+  const topscroller = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
-    if (outline) {
-    scroller();
-  }
-    else{
+    if (!outline) {
+      scroller();
+    }
+    else {
       topscroller();
     }
   }, [outline]);

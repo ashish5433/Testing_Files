@@ -56,9 +56,17 @@ function HomeGradient({
   const [rv, changeRVs] = useState(false);
   const [iot, changeIot] = useState(false);  
 
+let unit;
+  useEffect(() => {
+    
+ unit = (window.innerHeight)-73;
+  // console.log(unit)
+
+  }, [])
+  
   const scroller = () => {
     window.scrollTo({
-      top: 730,
+      top: unit,
       behavior: 'smooth',
     });
   }
