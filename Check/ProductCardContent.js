@@ -121,6 +121,7 @@ const ProductCardContent = ({ data, view }) => {
             className="p-image"
             width={350}
             height={300}
+            alt="Product"
           />
         </div>
         <div className="p-detailsdiv">

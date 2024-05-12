@@ -44,7 +44,7 @@ export default function Product() {
             <li className="li2">Similar Products</li>
           </ul>
         </div>
-          <div>
+          {/* <div>
             <div className="progressbar">
               <ProgressBar position="bottom" height={10} color="black" />
             </div>
@@ -301,7 +301,7 @@ export default function Product() {
               </div>
             </div>
           </div>
-        
+         */}
       </div>
     </>
   );

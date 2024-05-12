@@ -11,6 +11,7 @@ export default function AgentProfile() {
             src="/yachtcarousel4.jpg"
             width={800}
             height={800}
+            alt="Agent Cover"
           />
           <div className={classes.overlay}></div>
           <div className={classes.dash}>
@@ -55,6 +56,7 @@ export default function AgentProfile() {
                   src="/location-svgrepo-com.svg"
                   width={30}
                   height={30}
+                  alt="Contact Icons"
                 />
                 <p>visit</p>
               </div>
@@ -64,6 +66,7 @@ export default function AgentProfile() {
                   src="/call-phone-heart-svgrepo-com.svg"
                   width={30}
                   height={30}
+                  alt="Contact Icons"
                 />
                 <p>call</p>
               </div>
@@ -73,6 +76,7 @@ export default function AgentProfile() {
                   src="/chat-svgrepo-com.svg"
                   width={30}
                   height={30}
+                  alt="Contact Icons"
                 />
                 <p>chat</p>
               </div>
@@ -82,6 +86,7 @@ export default function AgentProfile() {
                   src="/live-svgrepo-com.svg"
                   width={30}
                   height={30}
+                  alt="Contact Icons"
                 />
                 <p>live view</p>
               </div>
@@ -91,6 +96,7 @@ export default function AgentProfile() {
                   src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
                   width={30}
                   height={30}
+                  alt="Contact Icons"
                 />
                 <p>meet</p>
               </div>
@@ -101,12 +107,14 @@ export default function AgentProfile() {
                 src="/profilepic.jpg"
                 width={150}
                 height={150}
+                alt="Profile Picture"
               />
               <Image
                 className={`${classes.icons_mem}`}
                 src="/diamond_1.png"
                 width={50}
                 height={50}
+                alt="Membership Icon"
               />
               <h4>Admin Name</h4>
             </div>

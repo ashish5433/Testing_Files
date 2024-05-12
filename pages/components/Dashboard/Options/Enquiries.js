@@ -257,7 +257,7 @@ export default function Enquiries() {
                 <div className="flex  flex-row">
                   <div className="flex flex-col  mx-3">
                     <span className="m-auto">
-                      <Image src={profilepic} width={50} height={50} />
+                      <Image src={profilepic} width={50} height={50} alt="profile"/>
                     </span>
                     <span className="flex flex-col">
                       <span className="font-semibold">ANONYMOUS</span>

@@ -11,6 +11,7 @@ export default function Listingcard() {
             src="/carcarousel1.jpg"
             width={500}
             height={500}
+            alt='Agent Product'
           />
           <div className={classes.agent_product_detail}>
             <div>

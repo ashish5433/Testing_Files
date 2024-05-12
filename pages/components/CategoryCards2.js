@@ -7,18 +7,16 @@ import { useRouter } from 'next/router';
 
 const CategoryCards2 = ({ products, products2 }) => {
     return (
-
-
         <div className={classes.bodies}>
             {products2?.map((data) => (
 
                 <Link href={`/components/ProductsList/${data.name}`}>
                     <div className={classes.card}>
                         <div className={classes.wrapper}>
-                            <Image src={data.bg} className={classes.coverimage} height={1000} width={1050} />
+                            <Image src={data.bg} className={classes.coverimage} height={1000} width={1050} alt='Product Image'/>
                         </div>
-                        <Image src={data.title} className={classes.title} height={300} width={450} />
-                        <Image src={data.image} className={classes.character2} height={1000} width={1050} />
+                        <Image src={data.title} className={classes.title} height={300} width={450} alt='Product Title'/>
+                        <Image src={data.image} className={classes.character2} height={1000} width={1050} alt='Product Cutout'/>
                     </div>
                 </Link>
             ))}
@@ -26,10 +24,10 @@ const CategoryCards2 = ({ products, products2 }) => {
                 <Link href={`/components/ProductsList/${data.name}`}>
                     <div className={classes.card}>
                         <div className={classes.wrapper}>
-                            <Image src={data.bg} className={classes.coverimage} height={1000} width={1050} />
+                            <Image src={data.bg} className={classes.coverimage} height={1000} width={1050}  alt='Product Image'/>
                         </div>
-                        <Image src={data.title} className={classes.title} height={300} width={450} />
-                        <Image src={data.image} className={classes.character} height={1000} width={1050} />
+                        <Image src={data.title} className={classes.title} height={300} width={450} alt='Product Title'/>
+                        <Image src={data.image} className={classes.character} height={1000} width={1050}  alt='Product Cutout'/>
                     </div>
                 </Link>
             ))}
