@@ -11,14 +11,16 @@ export default function AgentProfile() {
             src="/yachtcarousel2.jpg"
             width={1000}
             height={200}
+            alt="Cover Pic"
           />
           <div className={classes.membership_div}>
-          <Image
-          className={classes.membership_image}
-          src="/diamond_1.png"
-          width={80}
-          height={80}
-          />
+            <Image
+              className={classes.membership_image}
+              src="/diamond_1.png"
+              width={80}
+              height={80}
+              alt="member badge"
+            />
           </div>
 
           {/*<div className={classes.bg_overlay}></div>*/}
@@ -29,6 +31,7 @@ export default function AgentProfile() {
             src="/profilepic.jpg"
             width={250}
             height={250}
+            alt="Profile Image"
           />
           <div className={classes.Agent_details}>
             <h1>Agent Name </h1>
@@ -48,18 +51,21 @@ export default function AgentProfile() {
               src="/black_facebook.png"
               width={40}
               height={40}
+              alt="Socials"
             />
             <Image
               className={classes.social_image}
               src="/black_twitter.png"
               width={40}
               height={40}
+              alt="Socials"
             />
             <Image
               className={classes.social_image}
               src="/black_instagram.png"
               width={40}
               height={40}
+              alt="Socials"
             />
           </div>
         </div>
@@ -73,6 +79,7 @@ export default function AgentProfile() {
               src="/yachtcarousel1.jpg"
               width={250}
               height={150}
+              alt="product"
             />
             <div>
               <div>
@@ -88,7 +95,9 @@ export default function AgentProfile() {
               className={classes.product_related_image}
               src="/yachtcarousel2.jpg"
               width={250}
-              height={150}
+              height={150} 
+              alt="product"
+
             />
             <div>
               <div>
@@ -104,6 +113,8 @@ export default function AgentProfile() {
               src="/yachtcarousel3.jpg"
               width={250}
               height={150}
+              alt="product"
+
             />
             <div>
               <div>
@@ -119,6 +130,8 @@ export default function AgentProfile() {
               src="/yachtcarousel4.jpg"
               width={250}
               height={150}
+              alt="product"
+
             />
             <div>
               <div>
@@ -144,6 +157,8 @@ export default function AgentProfile() {
               src="/yachtcarousel5.jpg"
               width={250}
               height={150}
+              alt="product"
+
             />
             <div>
               <div>
@@ -159,6 +174,8 @@ export default function AgentProfile() {
               src="/yachtcarousel6.jpg"
               width={250}
               height={150}
+              alt="product"
+
             />
             <div>
               <div>
@@ -174,6 +191,8 @@ export default function AgentProfile() {
               src="/yachtcarousel7.jpg"
               width={250}
               height={150}
+              alt="product"
+
             />
             <div>
               <div>
@@ -217,6 +236,8 @@ export default function AgentProfile() {
           src="/message.png"
           width={32}
           height={32}
+          alt="Message Icon"
+
         />
       </div>
       <div className={classes.fourth_div}>

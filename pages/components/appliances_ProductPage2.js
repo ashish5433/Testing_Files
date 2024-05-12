@@ -54,6 +54,7 @@ export default function appliances_ProductPage2({data}) {
               src="/iotcarousel3.jpg"
               width={1920}
               height={1080}
+              alt="Main Product"
             />
             <div className={classes.overlay_big}></div>
             <div className={classes.small_image_div}>
@@ -62,24 +63,28 @@ export default function appliances_ProductPage2({data}) {
                 src="/iotcarousel4.jpg"
                 width={1920}
                 height={1080}
+                alt="Small Product Image"
               />
               <Image
                 className={classes.small_image}
                 src="/iotcarousel5.jpg"
                 width={1920}
                 height={1080}
+                alt="Small Product Image"
               />
               <Image
                 className={classes.small_image}
                 src="/iotcarousel2.jpg"
                 width={1920}
                 height={1080}
+                alt="Small Product Image"
               />
               <Image
                 className={classes.small_image}
                 src="/iotcarousel6.jpg"
                 width={1920}
                 height={1080}
+                alt="Small Product Image"
               />
               <div className={classes.more_div}>
                 <h3>more photos</h3>
@@ -105,6 +110,7 @@ export default function appliances_ProductPage2({data}) {
                   src="/location-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
                 />
                 <p>visit</p>
               </div>
@@ -114,6 +120,7 @@ export default function appliances_ProductPage2({data}) {
                   src="/call-phone-heart-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
                 />
                 <p>call</p>
               </div>
@@ -123,6 +130,7 @@ export default function appliances_ProductPage2({data}) {
                   src="/chat-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
                 />
                 <p>chat</p>
               </div>
@@ -132,6 +140,7 @@ export default function appliances_ProductPage2({data}) {
                   src="/live-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
                 />
                 <p>live view</p>
               </div>
@@ -141,6 +150,7 @@ export default function appliances_ProductPage2({data}) {
                   src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
                 />
                 <p>meet</p>
               </div>
@@ -155,6 +165,7 @@ export default function appliances_ProductPage2({data}) {
             src="/iotcarousel3.jpg"
             width={1920}
             height={1080}
+            alt="Agent Cover"
           />
           <div className={classes.agent_card_overlay}></div>
           <div className={classes.agent_profile}>
@@ -163,6 +174,7 @@ export default function appliances_ProductPage2({data}) {
               src="/iotcarousel3.jpg"
               width={500}
               height={500}
+              alt="Agent Image"
             />
             
           </div>
@@ -176,6 +188,7 @@ export default function appliances_ProductPage2({data}) {
                     src="/call-phone-heart-svgrepo-com.svg"
                     width={50}
                     height={50}
+                    alt="Contact Image"
                   />
                   <p>call</p>
                 </div>
@@ -185,6 +198,7 @@ export default function appliances_ProductPage2({data}) {
                     src="/chat-svgrepo-com.svg"
                     width={50}
                     height={50}
+                    alt="Contact Image"
                   />
                   <p>chat</p>
                 </div>
@@ -194,6 +208,7 @@ export default function appliances_ProductPage2({data}) {
                     src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
                     width={50}
                     height={50}
+                    alt="Contact Image"
                   />
                   <p>meet</p>
                 </div>
@@ -233,6 +248,7 @@ export default function appliances_ProductPage2({data}) {
                 src="/company.png"
                 width={200}
                 height={200}
+                alt="Company Logo"
               />
               <div>
                 <h2>Company Name</h2>

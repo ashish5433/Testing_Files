@@ -36,8 +36,8 @@ const Banner = () => {
                         </Link>
                    
                 </div>
-                <Image src="/carCarousel3.jpg" className="banner-bg" height={2000} width={3050} />
-                <Image src="/carCarousel3.jpg" className="banner-side" height={200} width={1000} />
+                <Image src="/carCarousel3.jpg" className="banner-bg" height={2000} width={3050} alt="Banner Cover"/>
+                <Image src="/carCarousel3.jpg" className="banner-side" height={200} width={1000} alt="Banner Image"/>
             </div>
         </div>
     )

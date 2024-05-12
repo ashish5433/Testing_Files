@@ -3,32 +3,32 @@ import classes from "./ProductPage2.module.css";
 import Navbar1 from "./navbar";
 import Image from "next/image";
 import Navbar2 from "./navbar2";
-import { db,storage } from "@/firebase/firebase";
-import {collection,getDocs,addDoc} from 'firebase/firestore'
+import { db, storage } from "@/firebase/firebase";
+import { collection, getDocs, addDoc } from 'firebase/firestore'
 // import { getDocs } from "firebase/firestore";
 import { useState } from "react";
 import { useRouter } from "next/router";
-export default function bike_ProductPage2({data}) {
-  const [productName,setProductName]=useState("")
-  const orders=collection(db,"Order_Details");
-  const date =new Date()
+export default function bike_ProductPage2({ data }) {
+  const [productName, setProductName] = useState("")
+  const orders = collection(db, "Order_Details");
+  const date = new Date()
   const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
-  const createData=async()=>{
-    await addDoc(orders,{ProductName:"Suzuki Hayabusa", Seller:"Milind Palaria",price:4500,Time:showTime,Date:datenow})
+  const createData = async () => {
+    await addDoc(orders, { ProductName: "Suzuki Hayabusa", Seller: "Milind Palaria", price: 4500, Time: showTime, Date: datenow })
     alert("Rented Successfully")
   }
   console.log(data);
-  const router=useRouter();
-  const pusher=()=>{
+  const router = useRouter();
+  const pusher = () => {
     router.push("/components/History");
   }
   return (
     <div>
       <div className="nav2productlist">
 
-      <Navbar2 />
+        <Navbar2 />
       </div>
       <div className={classes.first}>
         <h1>Suzuki Hayabusa</h1>
@@ -54,6 +54,8 @@ export default function bike_ProductPage2({data}) {
               src="/bikecarousel4.jpg"
               width={1920}
               height={1080}
+              alt="Main Product"
+
             />
             <div className={classes.overlay_big}></div>
             <div className={classes.small_image_div}>
@@ -62,24 +64,32 @@ export default function bike_ProductPage2({data}) {
                 src="/bikecarousel3.jpg"
                 width={1920}
                 height={1080}
+                alt="Small Product Image"
+
               />
               <Image
                 className={classes.small_image}
                 src="/bikecarousel5.jpg"
                 width={1920}
                 height={1080}
+                alt="Small Product Image"
+
               />
               <Image
                 className={classes.small_image}
                 src="/bikecarousel7.jpg"
                 width={1920}
                 height={1080}
+                alt="Small Product Image"
+
               />
               <Image
                 className={classes.small_image}
                 src="/bikecarousel6.jpg"
                 width={1920}
                 height={1080}
+                alt="Small Product Image"
+
               />
               <div className={classes.more_div}>
                 <h3>more photos</h3>
@@ -88,7 +98,7 @@ export default function bike_ProductPage2({data}) {
           </div>
           <div className={classes.price_and_others}>
             <h1>
-              <span>&#8377; </span> 4,500 . 00 /day 
+              <span>&#8377; </span> 4,500 . 00 /day
             </h1>
             <div className={classes.currencies}>
               <p>inr</p>
@@ -105,6 +115,8 @@ export default function bike_ProductPage2({data}) {
                   src="/location-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
+
                 />
                 <p>visit</p>
               </div>
@@ -114,6 +126,8 @@ export default function bike_ProductPage2({data}) {
                   src="/call-phone-heart-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
+
                 />
                 <p>call</p>
               </div>
@@ -123,6 +137,8 @@ export default function bike_ProductPage2({data}) {
                   src="/chat-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
+
                 />
                 <p>chat</p>
               </div>
@@ -132,6 +148,8 @@ export default function bike_ProductPage2({data}) {
                   src="/live-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
+
                 />
                 <p>live view</p>
               </div>
@@ -141,6 +159,7 @@ export default function bike_ProductPage2({data}) {
                   src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
                   width={50}
                   height={50}
+                  alt="small icons"
                 />
                 <p>meet</p>
               </div>
@@ -155,6 +174,8 @@ export default function bike_ProductPage2({data}) {
             src="/bikecarousel3.jpg"
             width={1920}
             height={1080}
+            alt="Agent Cover"
+
           />
           <div className={classes.agent_card_overlay}></div>
           <div className={classes.agent_profile}>
@@ -163,8 +184,10 @@ export default function bike_ProductPage2({data}) {
               src="/bikecarousel3.jpg"
               width={500}
               height={500}
+              alt="Agent Image"
+
             />
-            
+
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
@@ -176,6 +199,8 @@ export default function bike_ProductPage2({data}) {
                     src="/call-phone-heart-svgrepo-com.svg"
                     width={50}
                     height={50}
+                    alt="Contact Image"
+
                   />
                   <p>call</p>
                 </div>
@@ -185,6 +210,8 @@ export default function bike_ProductPage2({data}) {
                     src="/chat-svgrepo-com.svg"
                     width={50}
                     height={50}
+                    alt="Contact Image"
+
                   />
                   <p>chat</p>
                 </div>
@@ -194,6 +221,8 @@ export default function bike_ProductPage2({data}) {
                     src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
                     width={50}
                     height={50}
+                    alt="Contact Image"
+
                   />
                   <p>meet</p>
                 </div>
@@ -233,6 +262,8 @@ export default function bike_ProductPage2({data}) {
                 src="/company.png"
                 width={200}
                 height={200}
+                alt="Company Logo"
+
               />
               <div>
                 <h2>Company Name</h2>
