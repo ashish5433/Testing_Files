@@ -295,9 +295,8 @@ function Navbar1(props) {
         theme="colored"
       />
       {["lg"].map((expand) => (
-        <div>
+        <div key={expand}>
           <Navbar
-            key={expand}
             expand={expand}
             className={color ? "mb-3 navbar nav-bg" : "mb-3 navbar nav"}
           >
