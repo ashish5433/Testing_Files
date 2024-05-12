@@ -25,6 +25,7 @@ export default function CarouselPage({CarouselImages}) {
             width={1920}
             height={1080}
             priority={true}
+            alt="Carousel Image"
             />
             </div>
           ))}

@@ -22,6 +22,7 @@ export default function CategoryCard({ products }) {
             src={data.bg}
             width={450}
             height={300}
+            alt="Category Card Cover Image"
           />
 
           
@@ -33,6 +34,7 @@ export default function CategoryCard({ products }) {
                   src={data.image}
                   width={200}
                   height={200}
+                  alt="Category Card Image"
                 />
               </div>
               <h1>{data.name}</h1>

@@ -42,7 +42,7 @@ export default function Card() {
                     </div>
                     <div>
 
-                        <Image src="/yamaha.jpg" className="trending-bg" height={800} width={800} />
+                        <Image src="/yamaha.jpg" className="trending-bg" height={800} width={800} alt="Bestseller Product Image"/>
                     </div>
                 </div>
 
@@ -63,7 +63,7 @@ export default function Card() {
                     </div>
                     <div>
 
-                        <Image src="/porche.jpg" className="trending-bg" height={800} width={800} />
+                        <Image src="/porche.jpg" className="trending-bg" height={800} width={800} alt="Bestseller Product Image"/>
                     </div>
                 </div>
                 <div className="trending_cards ">
@@ -82,7 +82,7 @@ export default function Card() {
                     </div>
                     <div>
 
-                        <Image src="/house.jpg" className="trending-bg" height={800} width={800} />
+                        <Image src="/house.jpg" className="trending-bg" height={800} width={800} alt="Bestseller Product Image"/>
                     </div>
                 </div>
                 <div className="trending_cards ">
@@ -101,7 +101,7 @@ export default function Card() {
                     </div>
                     <div>
 
-                        <Image src="/ps5.jpg" className="trending-bg" height={800} width={800} />
+                        <Image src="/ps5.jpg" className="trending-bg" height={800} width={800} alt="Bestseller Product Image"/>
                     </div>
                 </div>
             </div>
