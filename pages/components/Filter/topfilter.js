@@ -16,7 +16,7 @@ export default function Topfilter({ show, showFunc , gridOrList, setGridOrList }
     return (
         <div className='m-2'>
             <div className='flex justify-start'>
-                <div style={{color:"black"}} onClick={() => { showPrice ? setShowPrice(false) : setShowPrice(true) }} className={` flex px-2 pointer ${filter.topfilter_btn}`}><div className='mt-2 ml-2' >Price </div><div><span class="material-symbols-outlined ml-auto scale-75 -mt-1 ">expand_more</span>
+                <div style={{color:"black"}} onClick={() => { showPrice ? setShowPrice(false) : setShowPrice(true) }} className={` flex px-2 pointer ${filter.topfilter_btn}`}><div className='mt-2 ml-2' >Price </div><div><span className="material-symbols-outlined ml-auto scale-75 -mt-1 ">expand_more</span>
                 </div></div>
                 <div className={` flex px-2 pointer ${filter.topfilter_btn}`}><div className='mt-2 ml-2' >
                     <label for="year">Year:</label>
@@ -40,11 +40,11 @@ export default function Topfilter({ show, showFunc , gridOrList, setGridOrList }
                 </div></div>
             </div>
             <div className='flex justify-end ml-full -mt-[60px]'>
-                <div onClick={() => { show ? showFunc(false) : showFunc(true) }} className={` flex px-2 pointer ${filter.topfilter_btn_all}`}><div className='mt-2' >More Filters</div><div><span class="material-symbols-outlined -mt-1 ">filter_list   </span></div></div>
-                <div onClick={() => { showLength ? setShowLength(false) : setShowLength(true) }} className={` flex px-2 pointer ${filter.topfilter_btn}`}><div className='mt-2 ml-2' >Length</div><div><span class="material-symbols-outlined ml-auto">expand_more</span></div></div>
-                <div className={` flex px-2 pointer ${filter.topfilter_btn}`}><div className='mt-2 ml-2' >Volume</div><div><span class="material-symbols-outlined ml-auto">expand_more</span></div></div>
+                <div onClick={() => { show ? showFunc(false) : showFunc(true) }} className={` flex px-2 pointer ${filter.topfilter_btn_all}`}><div className='mt-2' >More Filters</div><div><span className="material-symbols-outlined -mt-1 ">filter_list   </span></div></div>
+                <div onClick={() => { showLength ? setShowLength(false) : setShowLength(true) }} className={` flex px-2 pointer ${filter.topfilter_btn}`}><div className='mt-2 ml-2' >Length</div><div><span className="material-symbols-outlined ml-auto">expand_more</span></div></div>
+                <div className={` flex px-2 pointer ${filter.topfilter_btn}`}><div className='mt-2 ml-2' >Volume</div><div><span className="material-symbols-outlined ml-auto">expand_more</span></div></div>
                 <div className='pointer'>
-                    <span onClick={()=>{gridOrList===false ? setGridOrList(true) : setGridOrList(false)}} class="material-symbols-outlined">
+                    <span onClick={()=>{gridOrList===false ? setGridOrList(true) : setGridOrList(false)}} className="material-symbols-outlined">
                         grid_view
                     </span>
                 </div>

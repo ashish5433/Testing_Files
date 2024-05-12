@@ -57,7 +57,7 @@ export default function Filter() {
                     <div>
                         <div className="flex">
                             <h5>Sale Status</h5>
-                            <span onClick={()=>collapse(saleStatus,setSaleStatus,"saleStatus")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(saleStatus,setSaleStatus,"saleStatus")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>
@@ -70,7 +70,7 @@ export default function Filter() {
                     {/* <div>
                     <div className="flex">
                             <h5>Yacht Type</h5>
-                            <span onClick={()=>collapse(yachtType,setYachtType,"yachtType")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(yachtType,setYachtType,"yachtType")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>
@@ -84,7 +84,7 @@ export default function Filter() {
                     <div>
                     <div className="flex">
                             <h5>Length</h5>
-                            <span onClick={()=>collapse(length_filter,setLength,"length_filter")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(length_filter,setLength,"length_filter")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>
@@ -97,7 +97,7 @@ export default function Filter() {
                     <div>
                     <div className="flex">
                             <h5>Builder</h5>
-                            <span onClick={()=>collapse(builder,setBuilder,"builder")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(builder,setBuilder,"builder")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>
@@ -110,7 +110,7 @@ export default function Filter() {
                     <div>
                     <div className="flex">
                             <h5>Year</h5>
-                            <span onClick={()=>collapse(year,setYear,"year")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(year,setYear,"year")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>
@@ -123,7 +123,7 @@ export default function Filter() {
                     <div>
                     <div className="flex">
                             <h5>Price</h5>
-                            <span onClick={()=>collapse(price,setPrice,"price")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(price,setPrice,"price")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>
@@ -136,7 +136,7 @@ export default function Filter() {
                     <div>
                     <div className="flex">
                             <h5>Country</h5>
-                            <span onClick={()=>collapse(country,setCountry,"country")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(country,setCountry,"country")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>
@@ -149,7 +149,7 @@ export default function Filter() {
                     <div>
                     <div className="flex">
                             <h5>Subtype</h5>
-                            <span onClick={()=>collapse(subtype,setSubtype,"subtype")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(subtype,setSubtype,"subtype")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>
@@ -162,7 +162,7 @@ export default function Filter() {
                     <div>
                     <div className="flex">
                             <h5>Volume</h5>
-                            <span onClick={()=>collapse(volume,setVolume,"volume")} class="material-symbols-outlined -mt-2 ml-auto pointer">
+                            <span onClick={()=>collapse(volume,setVolume,"volume")} className="material-symbols-outlined -mt-2 ml-auto pointer">
                                 expand_more
                             </span>
                         </div>

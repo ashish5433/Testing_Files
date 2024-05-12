@@ -79,56 +79,56 @@ export default function Explorer() {
               <div>
                 <ul className="-ml-14">
                   <li className="flex ">
-                    <span class="material-symbols-outlined p-1 text-neutral-400">
+                    <span className="material-symbols-outlined p-1 text-neutral-400">
                       album
                     </span>
                     <span className="text-lg ">Recieve Quick Enquiries</span>
                   </li>
 
                   <li className="flex ">
-                    <span class="material-symbols-outlined p-1 text-neutral-400">
+                    <span className="material-symbols-outlined p-1 text-neutral-400">
                       album
                     </span>
                     <span className="text-lg ">Sell any Products and Services in seconds</span>
                   </li>
 
                   <li className="flex ">
-                    <span class="material-symbols-outlined p-1 text-neutral-400">
+                    <span className="material-symbols-outlined p-1 text-neutral-400">
                       album
                     </span>
                     <span className="text-lg ">Repair and Maintenance</span>
                   </li>
 
                   <li className="flex ">
-                    <span class="material-symbols-outlined p-1 text-neutral-400">
+                    <span className="material-symbols-outlined p-1 text-neutral-400">
                       album
                     </span>
                     <span className="text-lg ">Connect and Collaborate with Businesses</span>
                   </li>
 
                   <li className="flex ">
-                    <span class="material-symbols-outlined p-1 text-neutral-400">
+                    <span className="material-symbols-outlined p-1 text-neutral-400">
                       album
                     </span>
                     <span className="text-lg ">Unlimited Categories</span>
                   </li>
 
                   <li className="flex ">
-                    <span class="material-symbols-outlined p-1 text-neutral-400">
+                    <span className="material-symbols-outlined p-1 text-neutral-400">
                       album
                     </span>
                     <span className="text-lg ">Worldwide Listing</span>
                   </li>
 
                   <li className="flex ">
-                    <span class="material-symbols-outlined p-1 text-neutral-400">
+                    <span className="material-symbols-outlined p-1 text-neutral-400">
                       album
                     </span>
                     <span className="text-lg ">Raise a Request and Hire a Professional</span>
                   </li>
 
                   <li className="flex ">
-                    <span class="material-symbols-outlined p-1 text-neutral-400">
+                    <span className="material-symbols-outlined p-1 text-neutral-400">
                       album
                     </span>
                     <span className="text-lg ">Earn from Shaukeens</span>

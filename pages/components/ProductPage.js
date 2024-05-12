@@ -356,7 +356,7 @@ export default function ProductPage() {
                   <ul>
                     <li>
                       <div className="flex">
-                        <span class="material-symbols-outlined scale-150">
+                        <span className="material-symbols-outlined scale-150">
                           location_on
                         </span>
                         <span>
@@ -366,7 +366,7 @@ export default function ProductPage() {
                     </li>
                     <li>
                       <div className="flex">
-                        <span class="material-symbols-outlined scale-150">
+                        <span className="material-symbols-outlined scale-150">
                           location_on
                         </span>
                         <span>
@@ -376,7 +376,7 @@ export default function ProductPage() {
                     </li>
                     <li>
                       <div className="flex">
-                        <span class="material-symbols-outlined scale-150">
+                        <span className="material-symbols-outlined scale-150">
                           location_on
                         </span>
                         <span>
@@ -386,7 +386,7 @@ export default function ProductPage() {
                     </li>
                     <li>
                       <div className="flex">
-                        <span class="material-symbols-outlined scale-150">
+                        <span className="material-symbols-outlined scale-150">
                           location_on
                         </span>
                         <span>
@@ -396,7 +396,7 @@ export default function ProductPage() {
                     </li>
                     <li>
                       <div className="flex">
-                        <span class="material-symbols-outlined scale-150">
+                        <span className="material-symbols-outlined scale-150">
                           location_on
                         </span>
                         <span>

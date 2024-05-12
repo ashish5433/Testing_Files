@@ -14,7 +14,7 @@ function HomeBeforelogin() {
       <div className="px-16">
         <div className="flex justify-between mb-3">
           <div>
-            <h3> <span class="material-symbols-outlined">
+            <h3> <span className="material-symbols-outlined">
 radio_button_checked
 </span>Market Place</h3>
           </div>
@@ -45,7 +45,7 @@ radio_button_checked
               variant="secondary"
             >
               <span>Condition</span>{" "}
-              <span class="p-0 m material-symbols-outlined ">expand_more</span>
+              <span className="p-0 m material-symbols-outlined ">expand_more</span>
             </Button>
             <Button
               style={{
@@ -57,7 +57,7 @@ radio_button_checked
               variant="secondary"
             >
               Sort By Relevence{" "}
-              <span class="p-0 m-0 material-symbols-outlined">expand_more</span>
+              <span className="p-0 m-0 material-symbols-outlined">expand_more</span>
             </Button>
           </div>
         </div>

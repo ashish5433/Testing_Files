@@ -80,7 +80,7 @@ export default function Home() {
                 <span>500</span>
                 <span
                   style={{ color: "indigo", scale: "1.5", marginLeft: "30px" }}
-                  class="material-symbols-outlined"
+                  className="material-symbols-outlined"
                 >
                   phone_in_talk
                 </span>

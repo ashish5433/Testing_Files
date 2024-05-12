@@ -488,7 +488,7 @@ const Seller = () => {
                                     <div>
                                         <ul className="-ml-14">
                                             <li className="flex ">
-                                                <span class="material-symbols-outlined p-1 text-neutral-400">
+                                                <span className="material-symbols-outlined p-1 text-neutral-400">
                                                     album
                                                 </span>
                                                 <span className="text-lg ">
@@ -497,7 +497,7 @@ const Seller = () => {
                                             </li>
 
                                             <li className="flex ">
-                                                <span class="material-symbols-outlined p-1 text-neutral-400">
+                                                <span className="material-symbols-outlined p-1 text-neutral-400">
                                                     album
                                                 </span>
                                                 <span className="text-lg ">
@@ -506,7 +506,7 @@ const Seller = () => {
                                             </li>
 
                                             <li className="flex ">
-                                                <span class="material-symbols-outlined p-1 text-neutral-400">
+                                                <span className="material-symbols-outlined p-1 text-neutral-400">
                                                     album
                                                 </span>
                                                 <span className="text-lg ">
@@ -515,7 +515,7 @@ const Seller = () => {
                                             </li>
 
                                             <li className="flex ">
-                                                <span class="material-symbols-outlined p-1 text-neutral-400">
+                                                <span className="material-symbols-outlined p-1 text-neutral-400">
                                                     album
                                                 </span>
                                                 <span className="text-lg ">
@@ -524,7 +524,7 @@ const Seller = () => {
                                             </li>
 
                                             <li className="flex ">
-                                                <span class="material-symbols-outlined p-1 text-neutral-400">
+                                                <span className="material-symbols-outlined p-1 text-neutral-400">
                                                     album
                                                 </span>
                                                 <span className="text-lg ">
@@ -533,14 +533,14 @@ const Seller = () => {
                                             </li>
 
                                             <li className="flex ">
-                                                <span class="material-symbols-outlined p-1 text-neutral-400">
+                                                <span className="material-symbols-outlined p-1 text-neutral-400">
                                                     album
                                                 </span>
                                                 <span className="text-lg ">Worldwide Listing</span>
                                             </li>
 
                                             <li className="flex ">
-                                                <span class="material-symbols-outlined p-1 text-neutral-400">
+                                                <span className="material-symbols-outlined p-1 text-neutral-400">
                                                     album
                                                 </span>
                                                 <span className="text-lg ">
@@ -549,7 +549,7 @@ const Seller = () => {
                                             </li>
 
                                             <li className="flex ">
-                                                <span class="material-symbols-outlined p-1 text-neutral-400">
+                                                <span className="material-symbols-outlined p-1 text-neutral-400">
                                                     album
                                                 </span>
                                                 <span className="text-lg ">

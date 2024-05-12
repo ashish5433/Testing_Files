@@ -271,11 +271,11 @@ function NavbarL() {
                       width="20"
                       height="20"
                       fill="white"
-                      class="bi bi-list"
+                      
                       viewBox="0 0 16 16"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
                       />
                     </svg>
@@ -325,10 +325,10 @@ function NavbarL() {
                   </div>
                 </div>
                 <div className={`${classes.small} all-nav-btns`}>
-                  <span class="material-symbols-outlined">chat</span>
-                  <span class="material-symbols-outlined">notifications</span>
-                  <span onClick={()=>{router.push("/login")}} class="material-symbols-outlined pointer">account_circle</span>
-                  <span class="material-symbols-outlined">settings</span>
+                  <span className="material-symbols-outlined">chat</span>
+                  <span className="material-symbols-outlined">notifications</span>
+                  <span onClick={()=>{router.push("/login")}} className="material-symbols-outlined pointer">account_circle</span>
+                  <span className="material-symbols-outlined">settings</span>
                 </div>
                 <Offcanvas show={show} onHide={handleClose}>
                   <Offcanvas.Header>
@@ -340,14 +340,14 @@ function NavbarL() {
                       onClick={handleClose}
                       className="me-2 nav-close-btn"
                     >
-                      <span class="material-symbols-outlined">close</span>
+                      <span className="material-symbols-outlined">close</span>
                     </Button>
                   </Offcanvas.Header>
                   <Offcanvas.Body>
                     <hr />
                     <div className="btn-div">
                       <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                           account_circle
                         </span>
                         {isUser ? (
@@ -361,11 +361,11 @@ function NavbarL() {
                         )}
                       </div>
                       <div>
-                        <span class="material-symbols-outlined">recommend</span>
+                        <span className="material-symbols-outlined">recommend</span>
                         <Button>Just For You</Button>
                       </div>
                       <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                           fact_check
                         </span>
                         <Button>List With Us</Button>
@@ -374,35 +374,35 @@ function NavbarL() {
                     <hr />
                     <div className="btn-div">
                       <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                           directions_boat
                         </span>
                         <Button>Yachts</Button>
                       </div>
                       <div>
-                        <span class="material-symbols-outlined">villa</span>
+                        <span className="material-symbols-outlined">villa</span>
                         <Button>Real Estates</Button>
                       </div>
                       <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                           helicopter
                         </span>
                         <Button>Helicopters</Button>
                       </div>
                       <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                           flight_takeoff
                         </span>
                         <Button>Jets</Button>
                       </div>
                       <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                           two_wheeler
                         </span>
                         <Button>Bikes</Button>
                       </div>
                       <div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                           directions_car
                         </span>
                         <Button>Cars</Button>
@@ -429,16 +429,16 @@ function NavbarL() {
           </div>
           <div className="w-full navbarl -z-10 flex justify-center">
             <div className="flex justify-between">
-            <span class="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">
+            <span className="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">
                         directions_boat
                       </span>
-                      <span class="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">villa</span>
-                      <span class="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">helicopter</span>
-                      <span class="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">
+                      <span className="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">villa</span>
+                      <span className="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">helicopter</span>
+                      <span className="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">
                         flight_takeoff
                       </span>
-                      <span class="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">two_wheeler</span>
-              <span class="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">
+                      <span className="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">two_wheeler</span>
+              <span className="material-symbols-outlined p-2.5 mx-2 my-2 bg-gray-300 rounded-full">
                 minor_crash
               </span>
             </div>
