@@ -10,7 +10,7 @@ const play = Bebas_Neue({
 export default function midSection() {
   return (
     <div className="product-gallery-container">
-      <div className="gallery-container gallery-image-w-3 gallery-image-h-2">
+      {/* <div className="gallery-container gallery-image-w-3 gallery-image-h-2">
         <div className="gallery-item">
           <div className="gallery-image">
             <Image src="/big-image-1.jpg" width={1920} height={1080} />
@@ -56,7 +56,7 @@ export default function midSection() {
             <Image src="/small-image-1.jpg" width={1920} height={1080} />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

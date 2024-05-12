@@ -116,6 +116,7 @@ export default function Agents() {
               src="/carcarousel1.jpg"
               width={500}
               height={500}
+              alt="Agent Product"
             />
             <div className={classes.agent_product_detail}>
               <div>
@@ -247,6 +248,7 @@ export default function Agents() {
               src="/carcarousel5.jpg"
               width={500}
               height={500}
+              alt="Agent Product"
             />
             <div className={classes.agent_product_detail}>
               <div>
@@ -378,6 +380,8 @@ export default function Agents() {
               src="/carcarousel3.jpg"
               width={500}
               height={500}
+              alt="Agent Product"
+
             />
             <div className={classes.agent_product_detail}>
               <div>
@@ -509,6 +513,8 @@ export default function Agents() {
               src="/carcarousel4.jpg"
               width={500}
               height={500}
+              alt="Agent Product"
+
             />
             <div className={classes.agent_product_detail}>
               <div>
@@ -646,6 +652,7 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -666,18 +673,21 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <span>more &rarr;</span>
 
@@ -694,6 +704,7 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -714,18 +725,21 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <span>more &rarr;</span>
 
@@ -742,6 +756,7 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -762,18 +777,21 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
                 />
                 <span>more &rarr;</span>
 
@@ -790,6 +808,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -810,18 +830,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -838,6 +864,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -858,18 +886,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -886,6 +920,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -906,18 +942,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -934,6 +976,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -954,18 +998,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -982,6 +1032,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -1002,18 +1054,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -1035,6 +1093,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -1067,18 +1127,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -1097,6 +1163,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -1129,18 +1197,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -1159,6 +1233,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -1191,18 +1267,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -1221,6 +1303,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -1253,18 +1337,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -1283,6 +1373,8 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
+
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -1315,18 +1407,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 
@@ -1345,6 +1443,7 @@ export default function Agents() {
                 src="/profilepic.jpg"
                 width={200}
                 height={200}
+                alt="Agent Profile"
               />
               <div className={classes.inner_agent_image_div}>
                 <h5>Agent Name</h5>
@@ -1377,18 +1476,24 @@ export default function Agents() {
                   src="/facebook.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/youtube.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <Image
                   className={classes.icons}
                   src="/instagram.png"
                   width={26}
                   height={26}
+                  alt="Social Icons"
+
                 />
                 <span>more &rarr;</span>
 

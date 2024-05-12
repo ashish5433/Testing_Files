@@ -33,6 +33,7 @@ export default function ProductPage() {
                   src="/share_4.png"
                   width={50}
                   height={50}
+                  alt="Socials"
                 />
               </div>
               <div className={classes.like}>
@@ -41,6 +42,7 @@ export default function ProductPage() {
                   src="/share_4.png"
                   width={50}
                   height={50}
+                  alt="Socials"
                 />
               </div>
             </div>
@@ -104,6 +106,7 @@ export default function ProductPage() {
                   src="/map_1.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>VISIT</p>
               </button>
@@ -113,6 +116,7 @@ export default function ProductPage() {
                   src="/call_2.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>CALL</p>
               </button>
@@ -122,6 +126,7 @@ export default function ProductPage() {
                   src="/chat_1.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>CHAT</p>
               </button>
@@ -131,6 +136,7 @@ export default function ProductPage() {
                   src="/liveview_2.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>LIVE VIEW</p>
               </button>
@@ -140,6 +146,7 @@ export default function ProductPage() {
                   src="/bookavisit_2.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>BOOK A VISIT</p>
               </button>
@@ -158,6 +165,7 @@ export default function ProductPage() {
                     src="/cart_2.png"
                     width={64}
                     height={64}
+                    alt="Contact Icons"
                   />
                   <p>Add To Cart</p>
                 </button>
@@ -337,6 +345,7 @@ export default function ProductPage() {
                 src="/atvcarousel6.jpg"
                 width={1920}
                 height={1080}
+                alt="Agent Cover"
               />
             </div>
             <div className={classes.about_agent_img}>
@@ -345,6 +354,7 @@ export default function ProductPage() {
                 src="/profilepic.jpg"
                 width={1920}
                 height={1080}
+                alt="Agent Profile"
               />
             </div>
             <div className={classes.about_agent_details}>
@@ -420,6 +430,7 @@ export default function ProductPage() {
                       src="/call_2.png"
                       width={64}
                       height={64}
+                      alt="Contact Icons"
                     />
                     <p>CALL</p>
                   </button>
@@ -429,6 +440,7 @@ export default function ProductPage() {
                       src="/chat_1.png"
                       width={64}
                       height={64}
+                      alt="Contact Icons"
                     />
                     <p>CHAT</p>
                   </button>
@@ -438,6 +450,7 @@ export default function ProductPage() {
                       src="/bookavisit_2.png"
                       width={64}
                       height={64}
+                      alt="Contact Icons"
                     />
                     <p>BOOK A VISIT</p>
                   </button>
@@ -462,6 +475,7 @@ export default function ProductPage() {
                   src="/map_1.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>VISIT</p>
               </button>
@@ -471,6 +485,7 @@ export default function ProductPage() {
                   src="/call_2.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>CALL</p>
               </button>
@@ -480,6 +495,7 @@ export default function ProductPage() {
                   src="/chat_1.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>CHAT</p>
               </button>
@@ -489,6 +505,7 @@ export default function ProductPage() {
                   src="/liveview_2.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>LIVE VIEW</p>
               </button>
@@ -498,6 +515,7 @@ export default function ProductPage() {
                   src="/bookavisit_2.png"
                   width={64}
                   height={64}
+                  alt="Contact Icons"
                 />
                 <p>BOOK A VISIT</p>
               </button>
@@ -516,6 +534,7 @@ export default function ProductPage() {
                     src="/cart_2.png"
                     width={64}
                     height={64}
+                    alt="Contact Icons"
                   />
                   <p>Add To Cart</p>
                 </button>
