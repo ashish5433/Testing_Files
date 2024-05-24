@@ -11,7 +11,7 @@ const player = Bebas_Neue({
 });
 const Banner = () => {
     return (
-        <div className="menu-titles">
+        <div className="menu-titles outer-banner">
         <h1 className={player.className}>Bestseller</h1>
 
             <hr className="hr_rule" />

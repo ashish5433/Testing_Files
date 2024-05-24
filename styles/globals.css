@@ -181,6 +181,7 @@ body::-webkit-scrollbar {
   color: white !important;
 }
 
+
 @media screen and (max-width: 680px) {
   .navbar {
     padding-left: 0rem !important;
@@ -598,7 +599,6 @@ nav {
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.444);
-
 }
 
 .banner-bg {
@@ -2233,59 +2233,33 @@ text-decoration: underline;
         border-radius: 50% !important;
       }
     }
-    @media only screen and (max-width: 395px){
+    @media only screen and (max-width: 385px){
       .trending_cards {
         height: 300px;
         width: 225px;
-        transition-duration: 500ms;
-        background: #000;
-        overflow: hidden !important;
-        border: 1px solid rgba(255, 255, 255, 0.175);
       }
       .trending-bg {
-        position: absolute;
         height: 300px;
         width: 225px;
-        transition-duration: 500ms;
-        /* overflow: hidden; */
-        /* transform: scale(2); */
       }
       .trending-inner {
 
         height: 300px;
         width: 225px;
-        /* padding: 1rem; */
-        position: absolute;
-        z-index: 100;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        flex-direction: column;
-        color: #ffffffa9;
       
       }
       .trending-inner>div{
         height: 90px;
         width: 100%;
-
       padding: 1rem;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        border: 1px solid rgba(255, 255, 255, 0.175);
       }
       .spandiv{
         width: 55%;
-        display: flex;
-        justify-content: space-between;
         transform: translateY(-21px);
       
       }
       .trending-inner h1 {
-        padding: 0;
         font-size: 1.4rem;
-        transform: translateY(-10px);
-        color: rgba(255, 255, 255, 0.729);
       }
       
       .trending-inner span {
@@ -2295,8 +2269,6 @@ text-decoration: underline;
       
       .trending-inner p {
         font-size: 1rem;
-      padding: 0px 12px;
-      transform: translateY(-17px);
       }
     }
     @media only screen and (max-width: 360px){
@@ -2322,4 +2294,327 @@ text-decoration: underline;
     padding: 10%;
 }
     }
+    @media only screen and (max-width: 1450px){
+
+      .banner-main {
+        width: 90%;
+        height: 400px;
+        
+      }
+      .banner-bg-div>h1 {
+        font-size: 4rem !important;
+        color: #000000c6;
+      
+      }
+      
+      .banner-bg-div>h2 {
+        font-size: 2rem !important;
+        padding-left: 2rem;
+        margin-top: -1.5rem !important;
+      }
+      
+      .banner-bg-div>p {
+        font-size: 1rem !important;
+        /* padding-left: 3rem; */
+        margin-left: 2rem;
+        margin-bottom: -1rem !important;
+        margin-top: 1.5rem !important;
+        padding: 0px;
+        transform: translateY(-10px);
+        /* margin-top: -0.5rem; */
+        width: 50%;
+        color: rgb(56, 56, 56);
+        
+        /* background-color: #000000; */
+      }
+      .banner-bg-div> p >span{
+        width: 3000px !important;
+        background: #00000069;
+        color: rgba(255, 255, 255, 0.845);
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+      
+      }
+      
+      .banner-btn {
+        position: absolute;
+        bottom: 10%;
+        right: 4%;
+     
+        font-size: 2rem;
+        padding: 0.5rem 1.3rem;
+     
+      }
+    }
+    @media only screen and (max-width: 1250px){
+      .banner-bg-div {
+        position: absolute;
+        z-index: 100;
+        padding: 1rem !important;
+        border: 1px solid rgba(0, 0, 0, 0.444);
+        width: 96% !important;
+        height: 90% !important;
+        margin: 1rem !important;
+        color: rgba(8, 8, 8, 0.722);
+        /* border-radius: 30px; */
+      }
+      .banner-main {
+        width: 90%;
+        height: 400px;
+        
+      }
+      .banner-bg-div>h1 {
+        font-size: 4rem !important;
+        color: #000000c6;
+      padding-top: 2rem;
+      padding-left: 1rem !important;
     
+      }
+      
+      .banner-bg-div>h2 {
+        font-size: 2rem !important;
+        padding-left: 1rem !important;
+        margin-top: -1.5rem !important;
+        padding-bottom: 1rem;
+      }
+      
+      .banner-bg-div>p {
+        font-size: 1rem !important;
+        /* padding-left: 3rem; */
+        margin-left: 1rem !important;
+        margin-bottom: -1rem !important;
+        margin-top: 1.5rem !important;
+        padding: 0px;
+        transform: translateY(-10px);
+        /* margin-top: -0.5rem; */
+        width: 50%;
+        color: rgb(56, 56, 56);
+        
+        /* background-color: #000000; */
+      }
+      .banner-bg-div> p >span{
+        width: 3000px !important;
+        background: #00000069;
+        color: rgba(255, 255, 255, 0.845);
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+      
+      }
+      
+      .banner-btn {
+        position: absolute;
+        bottom: 10%;
+        right: 4%;
+     
+        font-size: 2rem;
+        padding: 0.5rem 1.3rem;
+     
+      }
+      .banner-side {
+        position: absolute;
+        width: 300px;
+        height: 150px !important;
+        right: 6% !important;
+        border: 2px solid rgba(255, 255, 255, 0.732);
+        top: 18%;
+      }
+      
+    }
+    @media only screen and (max-width: 1150px){
+      .banner-bg-div>h1 {
+    word-wrap: break-word;
+    width: 60%;
+    line-height: 85%;
+    padding-bottom: 1rem;
+      }
+      .banner-bg-div>h2 {
+        padding-bottom: 0rem;
+          }
+    }
+    @media only screen and (max-width: 850px){
+      .banner-main {
+        width: 90%;
+        height: 790px !important;
+    
+      }
+      
+      .banner-bg {
+        width: 100%;
+        height: 900px;
+        transform: translate(0, -4rem);
+        z-index: 0;
+        filter: blur(9px);
+        /* background-size:contain; */
+  /* margin: 0rem; */
+
+      }
+      
+      .banner-bg-div {
+        position: absolute;
+        z-index: 100;
+        padding: 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.444);
+        width: 93%;
+        height: 95% !important;
+        margin: 2rem;
+        color: rgba(8, 8, 8, 0.722);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border-radius: 30px; */
+      }
+      
+      .banner-side {
+        position: absolute;
+        width: 500px !important;
+        height: 300px !important;
+        
+        border: 2px solid rgba(255, 255, 255, 0.732);
+        right: 12% !important;
+        top: 44%;
+        margin-left: auto !important;
+margin-right: auto !important;
+left: 0 !important;
+right: 0 !important;
+text-align: center;
+      }
+      .banner-btn {
+        position: absolute;
+        /* 
+        right: 25%;
+      */
+        font-size: 2rem;
+        /* padding: 0.5rem 1.3rem; */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        text-align: center;
+        width: 54%;bottom: 3%;
+      }
+      .banner-bg-div>h1 {
+        word-wrap: break-word;
+        width: 100%;
+        text-align: center;
+        line-height: 85%;
+        padding-bottom: 1rem;
+        padding-left: 0rem !important;
+
+          }
+           
+      .banner-bg-div>h2 {
+        font-size: 2rem !important;
+        padding-left: 0rem !important;
+        margin-top: -1.5rem !important;
+        padding-bottom: 0rem;
+        text-align: center;
+      }
+      
+      .banner-bg-div>p {
+        font-size: 1rem !important;
+        /* padding-left: 3rem; */
+        margin-left: 1rem !important;
+        margin-bottom: -1rem !important;
+        margin-top: 1.5rem !important;
+        padding: 0px;
+        transform: translateY(-10px);
+        /* margin-top: -0.5rem; */
+        width: 100%;
+        text-align:center ;
+        color: rgb(0, 0, 0);
+        letter-spacing: 2px;
+        
+        /* background-color: #000000; */
+      }
+      .banner-bg-div> p >span{
+        width: 3000px !important;
+        background: #00000069;
+        color: rgba(255, 255, 255, 0.845);
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+      
+      }
+    }
+    @media only screen and (max-width: 750px){
+      .banner-main {
+        width: 90%;
+        height: 680px !important;
+      }
+      
+      .banner-bg {
+        width: 100%;
+        height: 800px;
+      }
+      .banner-bg-div>h1 {
+        font-size: 3rem !important;
+      }
+      .banner-bg-div>h2 {
+        font-size: 1.5rem !important;}
+        .banner-btn {
+     
+          font-size: 1.5rem;
+          padding: 0.2rem 0.2rem !important;
+         width: 45%;
+        }
+        .banner-side {
+          position: absolute;
+          width: 400px !important;
+          height: 230px !important;
+        top: 47%;
+
+        }  
+    }
+    @media only screen and (max-width: 665px){
+
+      .banner-btn {
+     
+        font-size: 1.2rem;
+        padding: 0.5rem !important;
+        bottom: 0%;
+       width: 100%;
+      }
+    }
+    @media only screen and (max-width: 592px){
+      .banner-bg-div>h1 {
+        font-size: 2.5rem !important;
+      }
+      .banner-side {
+        position: absolute;
+        width: 80% !important;
+        height: 30% !important;
+      top: 47%;
+
+      }  
+    }
+    @media only screen and (max-width: 510px){
+      .outer-banner{
+        padding: 3rem 1rem !important;
+      }
+      .banner-bg-div>h1 {
+        font-size: 2.9rem !important;
+      }
+      .banner-side {
+        position: absolute;
+        width: 90% !important;
+        height: 30% !important;
+      top: 50%;
+
+      }  
+      .banner-bg-div>p {
+     
+        color: rgb(255, 255, 255);
+      }
+      .banner-btn {
+     
+        font-size: 1.2rem;
+        padding: 0.1rem !important;
+        padding-bottom: 0.25rem !important;
+        padding-left: 0.5rem !important;
+        bottom: 0%;
+        letter-spacing: 2px;
+       width: 100%;
+      }
+    }
