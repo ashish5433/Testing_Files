@@ -15,6 +15,7 @@ export default function CarouselPage({CarouselImages}) {
           autoFocus={true}
           showThumbs={false}
           stopOnHover={false}
+          swipeable={false}
         >
         {CarouselImages?.map((data) => (
           <div key={data.image}>      

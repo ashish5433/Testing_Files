@@ -234,8 +234,8 @@ function Navbar1(props) {
         });
       });
   };
- 
-  
+
+
   // const [li_content, set_li_content] = useState(li_default);
 
   const [nav2, setNav2] = useState(false);
@@ -274,15 +274,15 @@ function Navbar1(props) {
   const Explorer_account = () => {
     router.push("/components/Explorer");
   };
-  const ShowDetails =()=>{
+  const ShowDetails = () => {
     props.setToshow(true)
   }
-  const HideDetails =()=>{
+  const HideDetails = () => {
     props.setToshow(false)
   }
   return (
     <>
-       <ToastContainer
+      <ToastContainer
         position="top-center"
         autoClose={5000}
         hideProgressBar={false}
@@ -323,7 +323,7 @@ function Navbar1(props) {
                   </svg>
                 </Button>
                 <h1
-                  style={{ fontSize: "1.5rem", fontWeight: "bold", letterSpacing:"2px"}}
+                  style={{ fontSize: "1.5rem", fontWeight: "bold", letterSpacing: "2px" }}
                   className={player.className}
                 >
                   KIR.AI
@@ -331,7 +331,7 @@ function Navbar1(props) {
                 {/* <h3>{data.emailbyvoice}</h3> */}
               </div>
 
-              <div
+              {/* <div
                 className={
                   searchbar ? "hidden fadeout" : "flex justify-end fadein"
                 }
@@ -355,7 +355,7 @@ function Navbar1(props) {
                     </span>
                   </button>
                 </div>
-              </div>
+              </div> */}
               <div className={`${classes.small} all-nav-btns`}>
                 <Button className="me-2 nav-btn">
                   <span onClick={Explorer_account} className="nav-btns">
@@ -364,14 +364,14 @@ function Navbar1(props) {
                 </Button>
                 <Button className="me-2 nav-btn">
                   <span className="nav-btns" onClick={
-                    ()=>{
+                    () => {
                       // {data.setEmailbyvoice("Asyush")}
                     }
                   } >List With Us</span>
                 </Button>
                 <Button
                   className="me-2 nav-btn login-name-button"
-                  // disabled={btnDisable}
+                // disabled={btnDisable}
                 >
                   {isUser ? (
                     <span
@@ -410,7 +410,7 @@ function Navbar1(props) {
                             className="focus:bg-slate-100"
                             //href="#/action-2"
                             onClick={sign_Out}
-                           
+
 
                           >
                             Sign Out
@@ -422,7 +422,7 @@ function Navbar1(props) {
                 </Button>
               </div>
               <Offcanvas show={show} onHide={handleClose}>
-                <Offcanvas.Header>
+                <Offcanvas.Header >
                   <Offcanvas.Title className={player.className}>
                     KIR.AI
                   </Offcanvas.Title>
@@ -443,9 +443,9 @@ function Navbar1(props) {
                       </span>
                       {isUser ? (
                         <Button
-                         onClick={signInClick}
-                         
-                         >
+                          onClick={signInClick}
+
+                        >
                           Sign in / Register
                         </Button>
                       ) : (
@@ -471,7 +471,7 @@ function Navbar1(props) {
                       </span>
                       <Button>Yachts</Button>
                     </div> */}
-                    
+
                     {/* <div>
                       <span className="material-symbols-outlined">helicopter</span>
                       <Button>Helicopters</Button>
@@ -482,7 +482,7 @@ function Navbar1(props) {
                       </span>
                       <Button>Jets</Button>
                     </div>*/}
-                    <div> 
+                    <div>
                       <span className="material-symbols-outlined">two_wheeler</span>
                       <Button>Bikes</Button>
                     </div>

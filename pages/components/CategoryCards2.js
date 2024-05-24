@@ -10,7 +10,7 @@ const CategoryCards2 = ({ products, products2 }) => {
         <div className={classes.bodies}>
             {products2?.map((data) => (
 
-                <Link href={`/components/ProductsList/${data.name}`}>
+                <Link key={data.title} href={`/components/ProductsList/${data.name}`}>
                     <div className={classes.card}>
                         <div className={classes.wrapper}>
                             <Image src={data.bg} className={classes.coverimage} height={1000} width={1050} alt='Product Image'/>
@@ -21,7 +21,7 @@ const CategoryCards2 = ({ products, products2 }) => {
                 </Link>
             ))}
             {products?.map((data) => (
-                <Link href={`/components/ProductsList/${data.name}`}>
+                <Link key={data.title}  href={`/components/ProductsList/${data.name}`}>
                     <div className={classes.card}>
                         <div className={classes.wrapper}>
                             <Image src={data.bg} className={classes.coverimage} height={1000} width={1050}  alt='Product Image'/>

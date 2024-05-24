@@ -72,7 +72,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (!outline) {
+    if (outline) {
       scroller();
     }
     else {
@@ -146,7 +146,7 @@ export default function Home() {
             IotProps={iot}
           />
           <Footer />
-          <ProgressBar color="black" height={10} position="bottom" />
+          <ProgressBar color="white" height={10} position="bottom" />
           {/* </emailContext.Provider>  */}
         </addClass.Provider>
       </addOutline.Provider>

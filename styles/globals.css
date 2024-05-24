@@ -4,13 +4,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  background-color: rgb(180, 13, 13);
-  color: white;
-  overflow-x: hidden;
+*{
 }
-
+body {
+  /* background-color: red; */
+  /* background-color: rgb(180, 13, 13);
+  color: white; */
+  overflow-x: hidden;
+  /* width: 100vw; */
+}
+body::-webkit-scrollbar {
+  display: none; 
+  }
 .navbar {
   padding-left: 3rem !important;
   padding-right: 3rem !important;
@@ -82,7 +87,13 @@ body {
 .offcanvas-xl,
 .offcanvas-xxl {
   --bs-offcanvas-width: 350px !important;
+  background:  rgba(255, 255, 255, 0.49) !important;
+  backdrop-filter: blur(10px);
+  
 }
+.offcanvas-body::-webkit-scrollbar {
+  display: none !important; 
+  }
 
 .nav-btn {
   background: none !important;
@@ -435,6 +446,7 @@ nav {
   background: hsl(0, 0%, 7%);
   z-index: 100;
   position: relative;
+  overflow-x: hidden;
 }
 
 .grid {
@@ -913,7 +925,9 @@ nav {
   height: 25px;
 }
 
+
 @media only screen and (max-width: 480px) {
+  
   .responsive_nav2 {
     display: none;
   }
@@ -2176,3 +2190,136 @@ text-decoration: underline;
   letter-spacing: 4px;
 
 }
+
+@media only screen and (max-width: 800px){
+  .carousel .control-dots .dot{
+    width: 30px !important;
+  }
+}
+@media only screen and (max-width: 500px){
+  .menu-titles>h1 {
+    /* padding-left: 2rem; */
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.326); */
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+    letter-spacing: 1px;
+    color: rgba(127, 255, 212, 0.725);
+  }
+  .maps{
+    width: 100%;
+    height: 300px;
+    /* background: #000; */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    opacity: 0.8;
+    border: 1px solid black;
+  }
+  
+}
+    @media only screen and (max-width: 480px){
+      .img-slider {
+        height: 93vh;
+        z-index: 3;
+        object-fit: cover;
+        /* aspect-ratio: 4/3; */
+      }
+      .carousel .control-dots .dot{
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50% !important;
+      }
+    }
+    @media only screen and (max-width: 395px){
+      .trending_cards {
+        height: 300px;
+        width: 225px;
+        transition-duration: 500ms;
+        background: #000;
+        overflow: hidden !important;
+        border: 1px solid rgba(255, 255, 255, 0.175);
+      }
+      .trending-bg {
+        position: absolute;
+        height: 300px;
+        width: 225px;
+        transition-duration: 500ms;
+        /* overflow: hidden; */
+        /* transform: scale(2); */
+      }
+      .trending-inner {
+
+        height: 300px;
+        width: 225px;
+        /* padding: 1rem; */
+        position: absolute;
+        z-index: 100;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        color: #ffffffa9;
+      
+      }
+      .trending-inner>div{
+        height: 90px;
+        width: 100%;
+
+      padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid rgba(255, 255, 255, 0.175);
+      }
+      .spandiv{
+        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-21px);
+      
+      }
+      .trending-inner h1 {
+        padding: 0;
+        font-size: 1.4rem;
+        transform: translateY(-10px);
+        color: rgba(255, 255, 255, 0.729);
+      }
+      
+      .trending-inner span {
+        font-size: 0.8rem !important;
+       
+      }
+      
+      .trending-inner p {
+        font-size: 1rem;
+      padding: 0px 12px;
+      transform: translateY(-17px);
+      }
+    }
+    @media only screen and (max-width: 360px){
+      .carousel .control-dots .dot{
+        width: 7px !important;
+        height: 7px !important;
+        border-radius: 50% !important;
+      }
+      .category_cards h1 {
+       font-size: 1.4rem;
+        top: 75%;
+        padding: 10%;
+    }
+    .category_cards span{
+      
+      top: 65%;
+      padding: 10%;
+  }
+  .category_cards p{
+      font-size: 1.2rem;
+      left: 62%;
+    top: 50%;
+    padding: 10%;
+}
+    }
+    

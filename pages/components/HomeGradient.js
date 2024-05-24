@@ -1,6 +1,6 @@
 import classes from "./../../styles/Home.module.css";
 import { Unica_One, Bebas_Neue, Raleway } from "next/font/google";
-import { useState ,useContext, useEffect} from "react";
+import { useState, useContext, useEffect } from "react";
 import CarouselPage from "./Carousel";
 import { addClass } from "../context/context";
 // import { useEffect } from "react";
@@ -54,68 +54,60 @@ function HomeGradient({
   const [submarine, changeSubmarines] = useState(false);
   const [atv, changeATVs] = useState(false);
   const [rv, changeRVs] = useState(false);
-  const [iot, changeIot] = useState(false);  
+  const [iot, changeIot] = useState(false);
 
-let unit;
-  useEffect(() => {
-    
- unit = (window.innerHeight)-73;
-  // console.log(unit)
-
-  }, [])
-  
   const scroller = () => {
     window.scrollTo({
-      top: unit,
+      top: 700,
       behavior: 'smooth',
     });
   }
   const scrollAndChangeEstate = () => {
-    if(!estate){
+    if (!estate) {
       scroller();
       estateChangeHandler();
-            classAdd.setplotclassAdder(false);
-    }else{
+      classAdd.setplotclassAdder(false);
+    } else {
       estateChangeHandler();
-            classAdd.setplotclassAdder(false);
+      classAdd.setplotclassAdder(false);
     }
   };
   const scrollAndChangeBike = () => {
-    if(!bike){
+    if (!bike) {
       scroller();
       bikeChangeHandler();
       classAdd.setbikeclassAdder(false);
     }
-    else{
+    else {
       bikeChangeHandler();
       classAdd.setbikeclassAdder(false);
 
     }
   };
   const scrollAndChangeCar = () => {
-    if(!car){
+    if (!car) {
 
       scroller();
       carChangeHandler();
       classAdd.setcarclassAdder(false);
-      
+
     }
-    else{
+    else {
       carChangeHandler();
       classAdd.setcarclassAdder(false);
-      
+
 
     }
   };
   const scrollAndChangeIot = () => {
-    if(!iot){
+    if (!iot) {
       scroller();
       iotChangeHandler();
-            classAdd.setiotclassAdder(false);
+      classAdd.setiotclassAdder(false);
     }
-    else{
+    else {
       iotChangeHandler();
-            classAdd.setiotclassAdder(false);
+      classAdd.setiotclassAdder(false);
     }
   };
 
@@ -314,7 +306,7 @@ let unit;
       RVPropsFunction(false);
     }
   };
-   const carChangeHandler = () => {
+  const carChangeHandler = () => {
     if (CarProps) {
       changeYacht(false);
       changeEstate(false);
@@ -590,29 +582,29 @@ let unit;
 
 
   ];
-  const classAdd=useContext(addClass);
-  useEffect(()=>{
-    if(classAdd.bikeclassAdder){
+  const classAdd = useContext(addClass);
+  useEffect(() => {
+    if (classAdd.bikeclassAdder) {
       scrollAndChangeBike();
       console.log(classAdd.bikeclassAdder);
 
     }
-    else if(classAdd.carclassAdder){
+    else if (classAdd.carclassAdder) {
       scrollAndChangeCar();
       console.log(classAdd.carclassAdder);
 
     }
-    else if(classAdd.plotclassAdder){
+    else if (classAdd.plotclassAdder) {
       scrollAndChangeEstate();
       console.log(classAdd.plotclassAdder);
 
     }
-    else if(classAdd.iotclassAdder){
+    else if (classAdd.iotclassAdder) {
       scrollAndChangeIot();
       console.log(classAdd.iotclassAdder);
-        }
-    
-  },[classAdd.bikeclassAdder,classAdd.carclassAdder,classAdd.plotclassAdder,classAdd.iotclassAdder]);
+    }
+
+  }, [classAdd.bikeclassAdder, classAdd.carclassAdder, classAdd.plotclassAdder, classAdd.iotclassAdder]);
 
   return (
     <>
@@ -620,7 +612,7 @@ let unit;
       <div className={classes.overlay_main_title}>
         <h1 className={fontBebus.className}>KIR.AI</h1>
         <div className={classes.carousel_search}>
-          <input type="text" className={fontUnic.className} placeholder="search for products..."/>
+          <input type="text" className={fontUnic.className} placeholder="search for products..." />
           <button type="submit">
             <span className="material-symbols-outlined">search</span>
           </button>
@@ -645,7 +637,7 @@ let unit;
           >
             <span className="material-symbols-outlined">directions_boat</span>
           </div> */}
-         
+
           {/* <div
             className={
               aircrafts
@@ -656,7 +648,7 @@ let unit;
           >
             <span className="material-symbols-outlined">helicopter</span>
           </div> */}
-           
+
           <div
             className={
               bike
@@ -684,11 +676,11 @@ let unit;
                 : `${classes.carousel_icons}`
             }
             onClick={homeChangeHandler}
-            
+
           >
             <span className="material-symbols-outlined">Home</span>
           </div>
-       
+
           <div
             className={
               iot
