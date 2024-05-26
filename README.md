@@ -1,11 +1,101 @@
-"Welcome to Kir.ai – Your Gateway to Smart Renting!
+# Kir.AI - Your AI-Driven Rental Experience
 
-At Kir.ai, we revolutionize the renting experience by seamlessly integrating cutting-edge Artificial Intelligence (AI) and Augmented Reality (AR) technologies. Our platform offers an extensive array of rental services, including real estate, bikes, cars, and home appliances, all designed to cater to your diverse needs with utmost convenience and efficiency.
+![Kir.AI Banner](images/kir-ai-banner.jpg)
 
-With Kir.ai, finding your perfect rental is effortless. Our AI-powered recommendation engine analyzes your preferences, past choices, and lifestyle to curate personalized suggestions tailored just for you. Whether you're seeking a cozy apartment, a stylish bike for your urban commute, a reliable car for your weekend getaway, or state-of-the-art home appliances to elevate your living space, Kir.ai has you covered.
+**"Rent Smart, Live Luxuriously."**
 
-But we don't stop there. Our innovative AR features allow you to virtually explore and visualize rental properties and products in stunning detail, right from the comfort of your own home. Say goodbye to endless property visits and uncertainty – with Kir.ai, you can confidently make informed decisions before you even step foot through the door.
+Welcome to the Kir.AI repository! Kir.AI revolutionizes the rental marketplace by integrating cutting-edge AI technology, offering a seamless and intelligent rental experience for accommodations, vehicles, and home appliances. Our platform provides full website navigation through AI voice commands, bringing convenience and luxury to your fingertips.
 
-What sets Kir.ai apart is our commitment to excellence and customer satisfaction. We prioritize transparency, security, and reliability in every transaction, ensuring a seamless and trustworthy renting experience for both renters and owners alike.
+## Table of Contents
 
-Whether you're a tenant in search of your dream rental or a property owner looking to maximize your assets, Kir.ai empowers you to unlock the full potential of renting with the latest advancements in AI and AR technology. Join us today and embark on a journey towards smarter, hassle-free renting with Kir.ai!"
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+Kir.AI is an AI-driven rental platform designed to provide a premium, user-friendly experience. Whether you're looking to rent a cozy apartment, a sleek vehicle, or the latest home appliances, Kir.AI caters to all your needs with the added luxury of voice command navigation.
+
+## Features
+
+- **AI Voice Navigation**: Control the entire website using intuitive voice commands.
+- **Luxurious Rentals**: High-end accommodations, vehicles, and home appliances available for rent.
+- **Smart Search**: AI-powered search functionality that understands your needs and preferences.
+- **User Authentication**: Secure login and registration system.
+- **Seamless Booking**: Easy and quick booking process with real-time availability checks.
+- **Payment Integration**: Secure and flexible payment options.
+- **Admin Panel**: Comprehensive admin panel for managing listings, users, and orders.
+
+## Technologies Used
+
+- **Frontend**: Next.JS, tailwind CSS
+- **Backend** $ **Database**: Firebase
+- **Voice Command API**: Alan AI
+- **Payment Gateway**: Stripe
+- **Deployment**: Vercel
+
+## Installation
+
+To get a local copy up and running, follow these simple steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/kir-ai.git
+    cd kir-ai
+    ```
+
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+4. **Run the application**:
+    ```bash
+    npm run dev
+    ```
+
+The application will be running on `http://localhost:3000`.
+
+## Usage
+
+- **Exploring Rentals**: Use the AI voice navigation or traditional search to explore our premium listings.
+- **Booking a Rental**: Select your desired rental and follow the seamless booking process.
+- **Managing Rentals**: Use the user dashboard to manage your current and past rentals.
+- **Admin Access**: Access the admin panel to manage the platform’s operations (admin credentials required).
+
+## Contributing
+
+We welcome contributions to enhance the Kir.AI platform. To contribute:
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, please contact us at:
+
+- **Email**: palaria23@gmail.com
+<!-- - **Website**: [www.kir.ai](http://www.kir.ai) -->
+- **GitHub**: [Kir.AI Repository](https://github.com/Milind-Palaria/kir.ai)
+
+---
+
+We hope you enjoy the luxurious and intelligent rental experience with Kir.AI as much as we enjoyed building it. Live smart, rent smart.
+
+![Kir.AI Banner](images/kir-ai-banner-2.jpg)
+
+---
+
+Replace `images/kir-ai-banner.jpg` and `images/kir-ai-banner-2.jpg` with the actual paths to your images in the repository.
