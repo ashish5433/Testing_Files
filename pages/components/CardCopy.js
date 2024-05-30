@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const play = Bebas_Neue({
     subsets: ["latin"],
     display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 export default function Card() {
     const router = useRouter();

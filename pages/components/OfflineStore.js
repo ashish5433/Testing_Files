@@ -3,7 +3,7 @@ import {Bebas_Neue } from "next/font/google";
 const play = Bebas_Neue({
     subsets: ["latin"],
     display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 const OfflineStore = () => {

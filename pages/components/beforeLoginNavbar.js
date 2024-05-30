@@ -14,7 +14,7 @@ import { app } from "../../firebase/firebase";
 const play = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 function NavbarL() {

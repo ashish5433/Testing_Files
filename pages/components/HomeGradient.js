@@ -7,17 +7,17 @@ import { addClass } from "../context/context";
 const fontUnic = Unica_One({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 const fontBebus = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 const fontRalewa = Raleway({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 function HomeGradient({

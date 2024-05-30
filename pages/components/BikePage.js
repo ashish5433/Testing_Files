@@ -5,7 +5,7 @@ import CategoryCards2 from "./CategoryCards2";
 const player = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 export default function BikePage() {

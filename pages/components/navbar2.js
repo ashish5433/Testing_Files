@@ -11,7 +11,7 @@ import Link from "next/link";
 const play = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 function Navbar2() {

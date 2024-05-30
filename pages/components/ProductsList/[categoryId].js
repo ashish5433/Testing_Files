@@ -36,12 +36,12 @@ import iotCarousel from "@/CarouselImageData/iotCarousel";
 const fontBebas = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 const fontUnica = Unica_One({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 export default function ProductsList() {

@@ -6,7 +6,7 @@ import dashboard from "./dashboard.module.css";
 const play = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 export default function Navdash({dashoption,setDashOption}) {

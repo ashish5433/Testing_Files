@@ -4,7 +4,7 @@ import Image from "next/image";
 const play = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 export default function midSection() {

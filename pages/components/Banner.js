@@ -7,7 +7,7 @@ import Link from "next/link.js";
 const player = Bebas_Neue({
     subsets: ["latin"],
     display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 const Banner = () => {
     return (

@@ -8,12 +8,12 @@ import { collection,getDocs,query,orderBy,limit } from 'firebase/firestore';
 const player = Bebas_Neue({
     subsets: ["latin"],
     display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
   });
   const play = Unica_One({
     subsets: ["latin"],
     display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
   });
 const History = () => {
     const [data,setData]=useState([])

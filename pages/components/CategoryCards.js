@@ -4,7 +4,7 @@ import Link from "next/link";
 const play = Raleway({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 export default function CategoryCard({ products }) {

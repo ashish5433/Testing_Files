@@ -19,7 +19,7 @@ import { emailContext } from "../context/context";
 const player = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 function Navbar1(props) {

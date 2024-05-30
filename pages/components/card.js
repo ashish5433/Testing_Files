@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const player = Unica_One({
   subsets: ["latin"],
   display: 'swap', 
-  adjustFontFallback: false,
+  adjustFontFallback: false, weight: '400'
 });
 
 export default function Card() {
