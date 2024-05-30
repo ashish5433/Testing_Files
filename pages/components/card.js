@@ -6,6 +6,8 @@ const player = Unica_One({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
+  display: 'swap', 
+  adjustFontFallback: false,
 });
 
 export default function Card() {

@@ -8,7 +8,8 @@ import Link from "next/link";
 const play = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
-  subsets: ["latin"],
+  subsets: ["latin"], 
+  
 });
 
 const specifications = ["200HP |", " 2019 |", " 44km/l", " Electric"];

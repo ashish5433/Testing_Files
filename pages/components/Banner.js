@@ -8,6 +8,8 @@ const player = Bebas_Neue({
     weight: ["400"],
     style: ["normal"],
     subsets: ["latin"],
+    display: 'swap', 
+  adjustFontFallback: false,
 });
 const Banner = () => {
     return (

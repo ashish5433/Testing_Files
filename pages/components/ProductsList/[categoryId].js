@@ -37,11 +37,15 @@ const fontBebas = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
+  display: 'swap', 
+  adjustFontFallback: false,
 });
 const fontUnica = Unica_One({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
+  display: 'swap', 
+  adjustFontFallback: false,
 });
 
 export default function ProductsList() {

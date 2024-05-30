@@ -5,6 +5,8 @@ const play = Bebas_Neue({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
+  display: 'swap', 
+  adjustFontFallback: false,
 });
 
 export default function YachtPage() {

@@ -5,6 +5,8 @@ const play = Raleway({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
+  display: 'swap', 
+  adjustFontFallback: false,
 });
 
 export default function CategoryCard({ products }) {
