@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link.js";
 import { useRouter } from "next/router";
 const play = Bebas_Neue({
-    weight: ["400"],
-    style: ["normal"],
     subsets: ["latin"],
     display: 'swap', 
   adjustFontFallback: false,

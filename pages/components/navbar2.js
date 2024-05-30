@@ -9,8 +9,6 @@ import Nav_li_items from "../../Check/nav_li_items";
 import Link from "next/link";
 
 const play = Bebas_Neue({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,

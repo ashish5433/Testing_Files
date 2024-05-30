@@ -2,8 +2,6 @@ import { Unica_One, Quicksand, Bebas_Neue, Raleway } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 const play = Raleway({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,

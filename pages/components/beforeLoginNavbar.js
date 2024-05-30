@@ -12,8 +12,6 @@ import classes from "./../../styles/responsive.module.css";
 import Nav_li_items from "../../Check/nav_li_items";
 import { app } from "../../firebase/firebase";
 const play = Bebas_Neue({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,

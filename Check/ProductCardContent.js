@@ -6,10 +6,9 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 const play = Bebas_Neue({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"], 
-  
+  display: 'swap', 
+  adjustFontFallback: false,
 });
 
 const specifications = ["200HP |", " 2019 |", " 44km/l", " Electric"];

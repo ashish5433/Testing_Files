@@ -3,8 +3,6 @@ import { addOutline } from "../context/context";
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 const player = Unica_One({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,

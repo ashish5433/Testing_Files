@@ -2,8 +2,6 @@ import { Unica_One, Quicksand, Bebas_Neue } from "next/font/google";
 import Image from "next/image";
 
 const play = Bebas_Neue({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,

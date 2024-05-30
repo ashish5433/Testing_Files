@@ -6,15 +6,11 @@ import Navbar2 from './navbar2'
 import { db,storage } from '@/firebase/firebase'
 import { collection,getDocs,query,orderBy,limit } from 'firebase/firestore';
 const player = Bebas_Neue({
-    weight: ["400"],
-    style: ["normal"],
     subsets: ["latin"],
     display: 'swap', 
   adjustFontFallback: false,
   });
   const play = Unica_One({
-    weight: ["400"],
-    style: ["normal"],
     subsets: ["latin"],
     display: 'swap', 
   adjustFontFallback: false,

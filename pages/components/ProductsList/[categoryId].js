@@ -34,15 +34,11 @@ import RelatedMotorcycle from "@/Check/Relatedtags/relatedMotorcycle";
 import RelatedtagsCars from "@/Check/Relatedtags/relatedCars";
 import iotCarousel from "@/CarouselImageData/iotCarousel";
 const fontBebas = Bebas_Neue({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,
 });
 const fontUnica = Unica_One({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,

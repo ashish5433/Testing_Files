@@ -4,8 +4,6 @@ import { Button } from 'react-bootstrap';
 import dashboard from "./dashboard.module.css";
 
 const play = Bebas_Neue({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,

@@ -3,8 +3,6 @@ import CategoryCard from "./CategoryCards";
 import CategoryCards2 from "./CategoryCards2";
 
 const player = Bebas_Neue({
-  weight: ["400"],
-  style: ["normal"],
   subsets: ["latin"],
   display: 'swap', 
   adjustFontFallback: false,
