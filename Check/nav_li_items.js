@@ -1,8 +1,7 @@
 export default function Nav_li_items({ props,item}) {
     const item_val= item;
     return (
-        <div onMouseLeave={() => { console.log(document.getElementsByClassName("li_1_div")[0].style.visibility = "hidden") }}
-            className="bg-white -mt-4 pl-10 pt-4 li_1_div ">
+        <div className="bg-white -mt-4 pl-10 pt-4 li_1_div ">
             <div className="flex">
                 {props.map((items) => {
                     return( 

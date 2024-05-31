@@ -127,28 +127,28 @@ const ProductCardContent = ({ data, view }) => {
         <div className="p-detailsdiv">
           {data.commonName === "bikeKanojia" ? (
             <Link
-              href={`/components/bike_ProductPage2`}
+              href={`/Products/bike_ProductPage2`}
               className="p-detailsdivlink"
             >
               <button className={play.className}>Rent Now</button>
             </Link>
           ) : data.commonName === "carKanojia" ? (
             <Link
-              href={`/components/ProductPage2`}
+              href={`/Products/ProductPage2`}
               className="p-detailsdivlink"
             >
               <button className={play.className}>Rent Now</button>
             </Link>
           ) : data.commonName === "iotKanojia" ? (
             <Link
-              href={`/components/appliances_ProductPage2`}
+              href={`/Products/appliances_ProductPage2`}
               className="p-detailsdivlink"
             >
               <button className={play.className}>Rent Now</button>
             </Link>
           ) : (
             <Link
-              href={`/components/estate_ProductPage2`}
+              href={`/Products/estate_ProductPage2`}
               className="p-detailsdivlink"
             >
               <button className={play.className}>Rent Now</button>

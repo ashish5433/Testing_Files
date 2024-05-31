@@ -1,4 +1,4 @@
-import Seller from "@/pages/components/SellerLogin";
+import Seller from "@/components/SellerLogin";
 
 const carCarousel = [
   {

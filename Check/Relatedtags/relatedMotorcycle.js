@@ -136,7 +136,7 @@ export default function RelatedMotorcycle() {
             <option value="manufacturer">Manufacturer</option>
             <option value="dealer">Dealer</option>
           </select>
-          <button onClick={()=>{setYachtCategory(!yachtCategory);console.log(yachtCategory)}} className="px-3 rounded-full bg-white">More filter</button>
+          <button onClick={()=>{setYachtCategory(!yachtCategory);}} className="px-3 rounded-full bg-white">More filter</button>
           <YachtMoreFilter show={modalShow} onHide={() => setModalShow(false)}/>
         </div>
       </div>

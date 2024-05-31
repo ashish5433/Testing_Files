@@ -5,12 +5,12 @@ const checkEmailExistence = async (email) => {
 
   try {
     const response = await axios.get(apiUrl);
-    console.log(response.status)
+    // console.log(response.status)
     const { data } = response;
 
     return data.status === 'Valid';
   } catch (error) {
-    console.log('Error checking email existence:', error);
+    // console.log('Error checking email existence:', error);
     return false;
   }
 

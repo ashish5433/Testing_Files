@@ -14,7 +14,7 @@ import {
 } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import axios from "axios";
-import Toast from "@/pages/components/Toast";
+import Toast from "@/components/Toast";
 
 /////////////////////////// Email Verification...........///////////////////////////////
 
@@ -29,7 +29,7 @@ const checkEmailExistence = async (email) => {
     // Check if email exists based on ZeroBounce API response
     return response.data.status === "valid";
   } catch (error) {
-    console.log("Error checking email existence:", error);
+    // console.log("Error checking email existence:", error);
     return false;
   }
 };
@@ -133,7 +133,7 @@ const SignUp = () => {
             });
         }
         sendEmailVerification(auth.currentUser).then(() => {
-          console.log("Email Sent");
+          // console.log("Email Sent");
         });
         updateProfile(auth.currentUser, {
           displayName: registerName,
@@ -144,9 +144,9 @@ const SignUp = () => {
           .catch((error) => {
             console.log(error);
           });
-        console.log(user);
+        // console.log(user);
       } catch (e) {
-        console.log(e);
+        // console.log(e);
         alert(e);
       }
     }

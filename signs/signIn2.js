@@ -58,14 +58,14 @@ function SignIn() {
       // Check if email exists based on ZeroBounce API response
       return response.data.status === "valid";
     } catch (error) {
-      console.log("Error checking email existence:", error);
+      // console.log("Error checking email existence:", error);
       return false;
     }
   };
   const signInwithgoogle = async () => {
     try {
       const user = await signInWithPopup(auth, provider);
-      console.log(user);
+      // console.log(user);
       toast.success("Signed In Successfully ", {
         position: "top-center",
         autoClose: 5000,
@@ -150,8 +150,8 @@ function SignIn() {
               progress: undefined,
               theme: "colored",
             });
-            console.log(user);
-            console.log(user.user.auth.displayName);
+            // console.log(user);
+            // console.log(user.user.auth.displayName);
             router.push({
               pathname: "/",
             });
@@ -167,7 +167,7 @@ function SignIn() {
             progress: undefined,
             theme: "colored",
           });
-          console.log(e);
+          // console.log(e);
         }
       }
     }
@@ -178,9 +178,9 @@ function SignIn() {
         // setUserName(auth.currentUser.displayName);
         // setisUser(false);
         // setbtnDisable(true);
-        console.log(auth.currentUser.displayName);
+        // console.log(auth.currentUser.displayName);
       } else {
-        console.log("User Not Found");
+        // console.log("User Not Found");
       }
     });
   }, []);
