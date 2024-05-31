@@ -388,19 +388,19 @@ nav {
 }
 
 .card_comp_1 {
-  background: url("../images/card_1.jpg") center center no-repeat;
+  background: url("/test/card_1.jpg") center center no-repeat;
 }
 
 .card_comp_2 {
-  background: url("../images/midsection-bike.jpg") center center no-repeat;
+  background: url("/test/midsection-bike.jpg") center center no-repeat;
 }
 
 .card_comp_3 {
-  background: url("../images/card_3.jpg") center center no-repeat;
+  background: url("/test/card_3.jpg") center center no-repeat;
 }
 
 .card_comp_4 {
-  background: url("../images/midsection-iot.jpg") center center no-repeat;
+  background: url("/test/midsection-iot.jpg") center center no-repeat;
   overflow: hidden !important;
 }
 
