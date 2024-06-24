@@ -2,7 +2,7 @@ import Link from "next/link";
 import classes from "./ProductPage2.module.css";
 import Navbar1 from "./navbar";
 import Image from "next/image";
-import Navbar2 from "./navbar2";
+// import Navbar2 from "./navbar2";
 import { db,storage } from "@/firebase/firebase";
 import {collection,getDocs,addDoc} from 'firebase/firestore'
 // import { getDocs } from "firebase/firestore";

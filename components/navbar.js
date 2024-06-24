@@ -420,6 +420,8 @@ function Navbar1(props) {
                   )}
                 </Button>
               </div>
+              <div className=" z-[1000000000000000000]">
+
               <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header >
                   <Offcanvas.Title className={player.className}>
@@ -515,6 +517,8 @@ function Navbar1(props) {
                   <hr />
                 </Offcanvas.Body>
               </Offcanvas>
+              </div>
+
             </Container>
           </Navbar>
           <div className={nav2 ? "hidden" : "absolute w-full"}>

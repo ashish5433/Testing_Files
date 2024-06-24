@@ -78,7 +78,7 @@ function Navbar2() {
                   style={{ fontSize: "1.5rem", fontWeight: "bold" }}
                   className={play.className}
                   >
-                  Kira.ai
+                  KIR.AI
                 </h1>
                   </Link>
               </div>
@@ -124,10 +124,11 @@ function Navbar2() {
                 List With Us
                 </Button>
               </div>
+
               <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header>
                   <Offcanvas.Title className={play.className}>
-                    kira.ai
+                    KIRA.AI
                   </Offcanvas.Title>
                   <Button
                     variant="primary"
@@ -212,6 +213,8 @@ function Navbar2() {
                   <hr />
                 </Offcanvas.Body>
               </Offcanvas>
+             
+
             </Container>
           </Navbar>
           </div>

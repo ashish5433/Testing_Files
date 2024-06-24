@@ -28,7 +28,7 @@ export default function ProductPage2({data}) {
     <div>
       <div className="nav2productlist">
 
-      <Navbar2 />
+      <Navbar1 />
       </div>
       <div className={classes.first}>
         <h1>Porsche 918 Spyder</h1>

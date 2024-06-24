@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarL from "./beforeLoginNavbar";
+import Navbar from "./beforeLoginNavbar";
 import ProductCard from "./ProductCards";
 import { Button } from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -8,7 +8,7 @@ function HomeBeforelogin() {
   return (
     <div>
       <div>
-        <NavbarL />
+        <Navbar />
       </div>
       <div className="top-40 p-16">lkjlkjl</div>
       <div className="px-16">
