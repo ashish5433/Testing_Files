@@ -101,11 +101,12 @@ export default function Home() {
       }}
       >
         {/* <emailContext.Provider value={{emailbyvoice,setEmailbyvoice}}>  */}
-        <div className="nav1">
+        {/* <div className="nav1">
           <Navbar1 isShow={toShow} setToshow={SettoShow} />
           {toShow && <UserProfile Name={userName} Email={userEmail} />}
-        </div>
-        <AlanContainer />
+        </div> */}
+        {/* <AlanContainer /> */}
+        
         <div className="cor1">
           <HomeGradient
             YachtProps={yachts}
