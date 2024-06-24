@@ -106,7 +106,7 @@ const MainNav = (props) => {
     };
 
     return (
-        <div className='bg-black z-50 sticky top-0'>
+            <div className='w-screen z-[200] fixed'>
              <Navbar
             className={color ? "mb-3 navbar nav-bg" : "mb-3 navbar nav"}
           >
