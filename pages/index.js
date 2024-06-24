@@ -16,6 +16,7 @@ import { createConnection } from "net";
 import { createContext } from "vm";
 // import addClass from "./context/context";
 import { addClass } from "@/contexts/context";
+import MainNav from "@/components/MainNav";
 
 export default function Home() {
   const [yachts, setYachts] = useState(false);
@@ -105,8 +106,9 @@ export default function Home() {
           <Navbar1 isShow={toShow} setToshow={SettoShow} />
           {toShow && <UserProfile Name={userName} Email={userEmail} />}
         </div> */}
+        <MainNav/>
         {/* <AlanContainer /> */}
-        
+
         <div className="cor1">
           <HomeGradient
             YachtProps={yachts}

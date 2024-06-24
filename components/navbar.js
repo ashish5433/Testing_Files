@@ -25,8 +25,8 @@ function Navbar1(props) {
   const [userName, setUserName] = useState("");
   const [show, setShow] = useState(false);
   const [isUser, setisUser] = useState(true);
-  const [btnDisable, setbtnDisable] = useState(false);
   const [color, setColor] = useState(false);
+  const [btnDisable, setbtnDisable] = useState(false);
   // const data=useContext(emailContext)
   // const li_default = [[[]]];
 
