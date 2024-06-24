@@ -330,7 +330,7 @@ function Navbar1(props) {
                 {/* <h3>{data.emailbyvoice}</h3> */}
               </div>
 
-              {/* <div
+              <div
                 className={
                   searchbar ? "hidden fadeout" : "flex justify-end fadein"
                 }
@@ -354,7 +354,7 @@ function Navbar1(props) {
                     </span>
                   </button>
                 </div>
-              </div> */}
+              </div>
               <div className={`${classes.small} all-nav-btns`}>
                 <Button className="me-2 nav-btn">
                   <span onClick={Explorer_account} className="nav-btns">
