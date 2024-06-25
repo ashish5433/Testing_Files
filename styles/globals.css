@@ -119,9 +119,9 @@ body::-webkit-scrollbar {
   opacity: 0.6 !important;
 }
 
-.all-nav-btns {
+/* .all-nav-btns {
   margin-right: 30px;
-}
+} */
 
 .nav-btns {
   color: whitesmoke;
@@ -130,7 +130,7 @@ body::-webkit-scrollbar {
 }
 
 .nav-btns:hover {
-  padding-bottom: 20px;
+  padding-bottom: 3.45vh;
   border-bottom: 2px solid whitesmoke;
 }
 
@@ -163,6 +163,11 @@ body::-webkit-scrollbar {
 .sign-in-btn span:nth-child(1) {
   transform: translateY(4px);
   padding-right: 5px !important;
+}
+.nav-container{
+  display: flex !important;
+  justify-content:space-between !important;
+  width: 100%;
 }
 
 .left-nav h1 {
@@ -328,7 +333,7 @@ body::-webkit-scrollbar {
 
 }
 
-nav {
+.transparent-nav {
   background-color: rgba(255, 255, 255, 0) !important;
   height: 10vh !important;
   color: white !important;
@@ -336,13 +341,16 @@ nav {
   transition: 700ms;
 }
 
-.nav-bg {
+.black-nav {
   background-color: rgb(2, 1, 1) !important;
   height: 10vh !important;
   transition: 300ms;
   border-bottom: 1px solid rgba(255, 255, 255, 0.339);
 }
 
+/* nav {
+  background-color: rgba(0, 0, 0, 0.144) !important;
+} */
 .carousel .control-dots .dot {
   border-radius: 0 !important;
   width: 60px !important;
@@ -1014,9 +1022,6 @@ nav {
   width: 100vw;
 }
 
-nav {
-  background-color: rgba(0, 0, 0, 0.144) !important;
-}
 
 .nav2 {
   position: relative;
@@ -1872,6 +1877,9 @@ ame_n_loc>div>label {
 
 .login-name-button {
   background-color: transparent;
+  color: whitesmoke;
+  font-size: 0.9rem !important;
+  margin-right: 2px;
 }
 
 .login-name-button :focus {
@@ -1883,6 +1891,7 @@ ame_n_loc>div>label {
   background-color: transparent !important;
   border-color: #00000000 !important;
 }
+
 
 .btn {
   --bs-btn-color: #fff;
