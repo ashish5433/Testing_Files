@@ -2,21 +2,34 @@
 
 ![Kir.AI Home Page](/images/ss_home.png)
 
+<div align="center">
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-Firebase-black?style=for-the-badge&logoColor=white&logo=firebase&color=DD2C00" alt="Firebase" />
+    <img src="https://img.shields.io/badge/-Vercel-black?style=for-the-badge&logoColor=white&logo=vercel&color=000000" alt="vercel" />
+    <img src="https://img.shields.io/badge/-Alan_AI-black?style=for-the-badge&logoColor=white&logo=airbrake&color=18BFFF" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+
+  </div>
+
+
 ## **"Rent Smart, Live Luxuriously."**
 
 Welcome to the Kir.AI repository! Kir.AI revolutionizes the rental marketplace by integrating cutting-edge AI technology, offering a seamless and intelligent rental experience for accommodations, vehicles, and home appliances. Our platform provides full website navigation through AI voice commands, bringing convenience and luxury to your fingertips.
 
+
 ## 📋 Table of Contents 📋
-- [Site Preview](#sitepreview)
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributors](#contributors)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+
+- [📷 Site Preview 📷](#📷sitepreview📷)
+- [🐙 Introduction 🐙](#🐙-introduction-🐙)
+- [🔋 Features 🔋](#🔋-features-🔋)
+- [⚙️ Technologies Used ⚙️](#⚙️-technologies-used-⚙️)
+- [💿 Installation 💿](#💿-installation-💿)
+- [🕸️ Usage 🕸️](#🕸️-usage-🕸️)
+- [👨‍🎓 Contributors 👨‍🎓](#👨‍🎓-contributors-👨‍🎓)
+- [🚀 Contributing 🚀](#🚀-contributing-🚀)
+- [📜 License 📜](#📜-license-📜)
+- [🔗 Contact 🔗](#🔗-contact-🔗)
 
 
 ## 📷 Site Preview 📷
