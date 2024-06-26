@@ -10,7 +10,12 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     const handleRouteChangeStart = () => setLoading(true);
-    const handleRouteChangeComplete = () => setLoading(false);
+    const handleRouteChangeComplete = () => {
+      setInterval(()=>{
+
+        setLoading(false);
+      },10000)
+    }
 
     Router.events.on('routeChangeStart', handleRouteChangeStart);
     Router.events.on('routeChangeComplete', handleRouteChangeComplete);
@@ -44,7 +49,7 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <>
-    {loading && <Loading />}
+      {loading && <Loading />}
       <Component {...pageProps} />
     </>
   );
