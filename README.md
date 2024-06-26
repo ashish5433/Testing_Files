@@ -1,12 +1,12 @@
-# Kir.AI - Your AI-Driven Rental Experience
+# 🤖 Kir.AI - Your AI-Driven Rental Experience 🤖 
 
 ![Kir.AI Home Page](/images/ss_home.png)
 
-**"Rent Smart, Live Luxuriously."**
+## **"Rent Smart, Live Luxuriously."**
 
 Welcome to the Kir.AI repository! Kir.AI revolutionizes the rental marketplace by integrating cutting-edge AI technology, offering a seamless and intelligent rental experience for accommodations, vehicles, and home appliances. Our platform provides full website navigation through AI voice commands, bringing convenience and luxury to your fingertips.
 
-## Table of Contents
+## 📋 Table of Contents 📋
 - [Site Preview](#sitepreview)
 - [Introduction](#introduction)
 - [Features](#features)
@@ -19,13 +19,13 @@ Welcome to the Kir.AI repository! Kir.AI revolutionizes the rental marketplace b
 - [Contact](#contact)
 
 
-## Site Preview
+## 📷 Site Preview 📷
 
 ![Kir.AI Bike Section](/images/ss_bikes.png)
 ![Kir.AI Bike Page](/images/ss_bikepage.png)
 
 
-## Introduction
+## 🐙 Introduction 🐙
 
 Kir.AI is an AI-driven rental platform designed to provide a premium, user-friendly experience. Whether you're looking to rent a cozy apartment, a sleek vehicle, or the latest home appliances, Kir.AI caters to all your needs with the added luxury of voice command navigation.
 
@@ -33,7 +33,7 @@ Kir.AI is an AI-driven rental platform designed to provide a premium, user-frien
 
 
 
-## Features
+## 🔋 Features 🔋
 
 - **AI Voice Navigation**: Control the entire website using intuitive voice commands.
 - **Luxurious Rentals**: High-end accommodations, vehicles, and home appliances available for rent.
@@ -46,7 +46,7 @@ Kir.AI is an AI-driven rental platform designed to provide a premium, user-frien
 ![Kir.AI Product Page](/images/ss_productpage.png)
 
 
-## Technologies Used
+## ⚙️ Technologies Used ⚙️
 
 - **Frontend**: Next.JS, tailwind CSS
 - **Backend** $ **Database**: Firebase
@@ -54,7 +54,7 @@ Kir.AI is an AI-driven rental platform designed to provide a premium, user-frien
 - **Payment Gateway**: Stripe
 - **Deployment**: Vercel
 
-## Installation
+## 💿 Installation 💿 
 
 To get a local copy up and running, follow these simple steps:
 
@@ -76,7 +76,7 @@ To get a local copy up and running, follow these simple steps:
 
 The application will be running on `http://localhost:3000`.
 
-## Usage
+## 🕸️ Usage 🕸️
 
 - **Exploring Rentals**: Use the AI voice navigation or traditional search to explore our premium listings.
 - **Booking a Rental**: Select your desired rental and follow the seamless booking process.
@@ -85,7 +85,7 @@ The application will be running on `http://localhost:3000`.
 
 ![Kir.AI Owner Details](/images/ss_ownerdetail.png)
 
-## Contributors
+## 👨‍🎓 Contributors 👨‍🎓
 
 We would like to thank the following contributors for their efforts and contributions to the Kir.AI project:
 
@@ -93,7 +93,7 @@ We would like to thank the following contributors for their efforts and contribu
 - [Harsh Kanojia](https://github.com/Eyesnatcher-coder)
 - [Rishav Kumar](https://github.com/RockingRishav)
 
-## Contributing
+## 🚀 Contributing 🚀
 
 We welcome contributions to enhance the Kir.AI platform. To contribute:
 
@@ -107,18 +107,18 @@ We welcome contributions to enhance the Kir.AI platform. To contribute:
 
 
 
-## License
+## 📜 License 📜
 
 This project is licensed under the MIT License - see the [LICENSE](/License) file for details.
 
-## Contact
+## 🔗 Contact 🔗
 
 For any inquiries or feedback, please contact us at:
 
 - **Email**: palaria23@gmail.com
-<!-- - **Website**: [www.kir.ai](http://www.kir.ai) -->
+- **Website**: [www.kir.ai](kirai.vercel.app)
 - **GitHub**: [Kir.AI Repository](https://github.com/Milind-Palaria/kir.ai)
 
 ---
 
-We hope you enjoy the luxurious and intelligent rental experience with Kir.AI as much as we enjoyed building it. Live smart, rent smart.
+✨✨ We hope you enjoy the luxurious and intelligent rental experience with Kir.AI as much as we enjoyed building it. Live smart, rent smart. ✨✨
