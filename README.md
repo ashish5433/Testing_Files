@@ -20,7 +20,7 @@ Welcome to the Kir.AI repository! Kir.AI revolutionizes the rental marketplace b
 
 ## 📋 Table of Contents 📋
 
-- [📷 Site Preview 📷](#📷sitepreview📷)
+- [📷 Site Preview 📷](#📷-site-preview-📷)
 - [🐙 Introduction 🐙](#🐙-introduction-🐙)
 - [🔋 Features 🔋](#🔋-features-🔋)
 - [⚙️ Technologies Used ⚙️](#⚙️-technologies-used-⚙️)
