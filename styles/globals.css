@@ -484,7 +484,7 @@ body::-webkit-scrollbar {
 .blur {
   height: 17rem;
   width: 17rem;
-  background-color: hsla(155, 100%, 65%, 0.626);
+  background-color: #4dffb5a0;
   filter: blur(100px);
   border-radius: 100px;
   z-index: 0;

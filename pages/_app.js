@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
       setInterval(()=>{
 
         setLoading(false);
-      },10000)
+      },11000)
     }
 
     Router.events.on('routeChangeStart', handleRouteChangeStart);

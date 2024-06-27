@@ -39,7 +39,7 @@ const Loading = () => {
       },
     });
     t1.to("#text", {
-      filter: "blur(20px)", duration: 0.6,
+      filter: "blur(20px)", duration: 1,
       ease: Expo.easeOut, opacity: 0,
     }).to("#text", {
       display: "none", duration: 0.4, delay: 0.3,
@@ -49,10 +49,19 @@ const Loading = () => {
       ease: Expo.easeInOut,
       duration: 0.7,
       delay: 0,
-  }).to(".bar", {
+    }).to(".bar", {
       x: "100vw", duration: 0.75, ease: Expo.easeInOut,
-  })
-  .to(".loading-screen", { opacity: 0, duration: 1, delay: 1, display: "none" })
+    }).to("#maintxt", {
+      opacity: 0.8,delay:0.5,
+      ease: Expo.easeInOut,
+    }).to("#maintxt2", {
+      opacity: 0.8,
+      ease: Expo.easeInOut, delay: 0.7,
+    }).to(".main-div", {
+      opacity: 0,
+      ease: Expo.easeInOut, delay: 0.5,
+    })
+      .to(".loading-screen", { opacity: 0, duration: 1, delay: 1, display: "none" })
 
   };
   const blinker = () => {
@@ -108,8 +117,12 @@ const Loading = () => {
       <div className="battu posi--3"><span className="spanu"></span></div>
       {/* <div className="battu posi--4"><span className="spanu"></span></div> */}
       {/* <div className="spinner"></div> */}
-      <div>
-        <p className={player.className} id="para">Loading...</p>
+      <div className="absolute h-screen flex flex-col justify-center items-center gap-[2rem] text-center main-div">
+        <span className={` ${player.className} w-full text-[5rem]`} id="maintxt">Welcome To</span>
+        <h1 className={`${player.className} text-[16rem] w-screen`} id="maintxt2">KIR.AI</h1>
+      </div>
+      <p className={`${player.className} `} id="para">Loading...</p>
+      <div className="fixed">
         <h1 className={player.className} id="text">{counter}%</h1>
       </div>
       <div
@@ -127,13 +140,15 @@ const Loading = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: black; 
+  background: hsl(0, 0%, 7%);
+  background: rgb(11, 11, 11);
+
           z-index: 9999999;
         }
           #para{
           position:absolute;
           bottom:0;
-          right:0;
+          right:2%;
           font-size:4rem;
            color:white;
           line-height: 0.65;
@@ -145,10 +160,32 @@ const Loading = () => {
           line-height: 0.65;
           opacity:0.8
           }
+          #maintxt{
+          position:absolute
+          font-size:20rem !important;
+          color:white;
+          line-height: 0.65;
+          opacity:0;
+          }
+           #maintxt2{
+          position:absolute
+          font-size:20rem !important;
+          color:white;
+          line-height: 0.65;
+          opacity:0;
+          }
+            #maintxt + span{
+            width:100%
+          font-size:6rem;
+          color:white;
+          line-height: 0.65;
+          opacity:0.8
+          }
           .bar{
           position: absolute;
           left: 0;
-          background-color: #fff;
+          background-color: #4dffb5;
+filter: brightness(0.75);
           height: 2px;
           width: 0;
           transition: 0.4s ease-out;
