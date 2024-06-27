@@ -4,9 +4,12 @@ import { useState, useEffect } from 'react';
 import Loading from '@/components/loading';
 import FontFaceObserver from 'fontfaceobserver';
 
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
 export default function App({ Component, pageProps }) {
+  
   const [loading, setLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleRouteChangeStart = () => setLoading(true);
@@ -17,7 +20,6 @@ export default function App({ Component, pageProps }) {
       },11000)
     }
 
-    Router.events.on('routeChangeStart', handleRouteChangeStart);
     Router.events.on('routeChangeComplete', handleRouteChangeComplete);
     Router.events.on('routeChangeError', handleRouteChangeComplete);
 
@@ -28,25 +30,34 @@ export default function App({ Component, pageProps }) {
 
         materialIconsObserver.load(null, 10000).then(() => {
           resolve();
+          setIsLoaded(true);
         }).catch(() => {
           resolve(); // Resolve even if it fails to prevent getting stuck
+          setIsLoaded(true);
         });
       });
     };
 
     const onLoad = async () => {
+      await new Promise((resolve) => {
+        setTimeout(resolve, 3000); // Ensure at least 3 seconds of loading
+      });
+
       await loadMaterialIcons();
       handleRouteChangeComplete();
     };
 
-    onLoad(); // Trigger the initial load check
+    if (router.pathname === '/') {
+      onLoad(); // Trigger the initial load check only for the main landing page
+    } else {
+      setLoading(false);
+    }
 
     return () => {
-      Router.events.off('routeChangeStart', handleRouteChangeStart);
       Router.events.off('routeChangeComplete', handleRouteChangeComplete);
       Router.events.off('routeChangeError', handleRouteChangeComplete);
     };
-  }, []);
+  }, [router.pathname]);
   return (
     <>
       {loading && <Loading />}

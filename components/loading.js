@@ -193,8 +193,8 @@ filter: brightness(0.75);
         }
              @media screen and (max-width: 680px) {
       #para{  
-      bottom:5%;
-        right:2%;
+      bottom:2%;
+        right:4%;
         font-size:10vw !important;
         }
         #text{
