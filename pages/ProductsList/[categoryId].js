@@ -152,7 +152,7 @@ export default function ProductsList() {
       {/* <div className="nav2productlist">
       <Navbar2/>
       </div> */}
-      <MainNav />
+      {/* <MainNav /> */}
       <div>
 
         <div>

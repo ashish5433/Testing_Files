@@ -26,10 +26,10 @@ export default function ProductPage2({data}) {
   }
   return (
     <div>
-      <div className="nav2productlist">
+      {/* <div className="nav2productlist">
 
       <Navbar2 />
-      </div>
+      </div> */}
       <div className={classes.first}>
         <h1>Porsche 918 Spyder</h1>
         <h3>~ Ashish Bhardwaj</h3>

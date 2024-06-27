@@ -7,9 +7,9 @@ import yachtCarousel from "@/CarouselImageData/yachtCarousel";
 function HomeBeforelogin() {
   return (
     <div>
-      <div>
+      {/* <div>
         <Navbar />
-      </div>
+      </div> */}
       <div className="top-40 p-16">lkjlkjl</div>
       <div className="px-16">
         <div className="flex justify-between mb-3">

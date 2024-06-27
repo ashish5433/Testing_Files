@@ -26,10 +26,10 @@ export default function lamborghini_ProductPage({data}) {
   }
   return (
     <div>
-      <div className="nav2productlist">
+      {/* <div className="nav2productlist">
 
       <Navbar2 />
-      </div>
+      </div> */}
       <div className={classes.first}>
         <h1>lamborghini aventador</h1>
         <h3>~ Milind Palaria</h3>

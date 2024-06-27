@@ -26,10 +26,10 @@ export default function estate_ProductPage2({data}) {
   }
   return (
     <div>
-      <div className="nav2productlist">
+      {/* <div className="nav2productlist">
 
       <Navbar2 />
-      </div>
+      </div> */}
       <div className={classes.first}>
         <h1>Eiffel 2BHK Apartments</h1>
         <h3>~ Rishav Kumar</h3>

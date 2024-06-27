@@ -5,6 +5,7 @@ import Loading from '@/components/loading';
 import FontFaceObserver from 'fontfaceobserver';
 
 import Router, { useRouter } from 'next/router';
+import MainNav from '@/components/MainNav';
 export default function App({ Component, pageProps }) {
   
   const [loading, setLoading] = useState(true);
@@ -61,6 +62,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {loading && <Loading />}
+      <MainNav/>
       <Component {...pageProps} />
     </>
   );

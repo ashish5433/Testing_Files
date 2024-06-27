@@ -11,9 +11,9 @@ import yachtCarousel from "@/CarouselImageData/yachtCarousel";
 export default function ProductPage() {
   return (
     <>
-      <div className={`fixed w-full -mt-14 ${classes.navfix}`}>
+      {/* <div className={`fixed w-full -mt-14 ${classes.navfix}`}>
         <Navbar2 />
-      </div>
+      </div> */}
 
       <div>
         <div className={`mt-14 ${classes.main_info_div}`}>

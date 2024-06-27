@@ -148,10 +148,10 @@ export default function ProductsList() {
   return (
     <div>
     
-      <div className="nav2productlist">
+      {/* <div className="nav2productlist">
       <Navbar1/>
       </div>
-        
+         */}
       <div>
 
         <div>
