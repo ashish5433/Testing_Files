@@ -161,25 +161,14 @@ const Loading = () => {
           opacity:0.8
           }
           #maintxt{
-          position:absolute
-          font-size:20rem !important;
           color:white;
           line-height: 0.65;
           opacity:0;
           }
            #maintxt2{
-          position:absolute
-          font-size:20rem !important;
           color:white;
           line-height: 0.65;
           opacity:0;
-          }
-            #maintxt + span{
-            width:100%
-          font-size:6rem;
-          color:white;
-          line-height: 0.65;
-          opacity:0.8
           }
           .bar{
           position: absolute;
@@ -202,6 +191,21 @@ filter: brightness(0.75);
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
+             @media screen and (max-width: 680px) {
+      #para{  
+        right:2%;
+        font-size:10vw !important;
+        }
+        #text{
+          font-size:50vw !important;
+          }
+          #maintxt{
+          font-size: 13vw !important;
+          }
+          #maintxt2{
+            font-size:45vw !important;
+            }
+    }
       `}</style>
     </div>
   );

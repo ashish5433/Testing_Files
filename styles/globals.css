@@ -2688,3 +2688,9 @@ text-align: center;
        width: 100%;
       }
     }
+    @media screen and (max-width: 680px) {
+      .blur {
+        height: 10rem;
+        width: 10rem;
+      }
+    }
