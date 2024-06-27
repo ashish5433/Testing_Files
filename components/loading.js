@@ -193,7 +193,7 @@ const Loading = () => {
         }
              @media screen and (max-width: 680px) {
       #para{  
-      bottom:2%;
+      bottom:0;
         right:4%;
         font-size:10vw !important;
         }

@@ -15,17 +15,17 @@
     -ms-overflow-style: none !important; /* disables default scrollbar */
   }
   
-@media only screen and (max-width: 1190px){
+@media only screen and (max-width: 680px){
     .small{
         visibility: hidden;
     }
 }
-@media only screen and (min-width: 1200px){
+/* @media only screen and (min-width: 1200px){
     .small{
         visibility: visible;
     }
 }
-
+ */
 
 @media only screen and (max-width: 990px){
     .smallnav{

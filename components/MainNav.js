@@ -17,7 +17,7 @@ import { useRouter } from "next/router";
 
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { app } from "../firebase/firebase";
-import { Bebas_Neue } from "next/font/google";
+import { Bebas_Neue, Unica_One } from "next/font/google";
 
 
 const player = Bebas_Neue({
@@ -25,7 +25,11 @@ const player = Bebas_Neue({
     display: 'swap',
     adjustFontFallback: false, weight: '400'
 });
-
+const unica = Unica_One({
+    subsets: ["latin"],
+    display: 'swap', 
+    adjustFontFallback: false, weight: '400'
+  });
 const MainNav = (props) => {
     const [userName, setUserName] = useState("");
     const [show, setShow] = useState(false);
@@ -170,19 +174,19 @@ const MainNav = (props) => {
                     </div> */}
                     <div className={`${classes.small} all-nav-btns`}>
                         <Button className="me-2 nav-btn">
-                            <span className="nav-btns">
+                            <span className={`${unica.className} nav-btns`}>
                                 Just For You
                             </span>
                         </Button>
                         <Button className="me-2 nav-btn">
-                            <span className="nav-btns" onClick={
+                            <span className={`${unica.className} nav-btns`} onClick={
                                 () => {
                                     // {data.setEmailbyvoice("Asyush")}
                                 }
                             } >List With Us</span>
                         </Button>
                         <Button
-                            className="me-2 nav-btn login-name-button"
+                            className="me-2 nav-btn login-name-button translate-y-[1.5px]"
                         // disabled={btnDisable}
                         >
                             {isUser ? (
@@ -191,7 +195,7 @@ const MainNav = (props) => {
                                     onClick={() => {
                                         router.push("/login");
                                     }}
-                                    className='nav-btns'
+                                    className={`${unica.className} nav-btns`}
                                 >
                                     Login
                                 </span>
@@ -220,7 +224,7 @@ const MainNav = (props) => {
                                                 Account Details
                                             </Dropdown.Item>
                                             <Dropdown.Item
-                                                className="focus:bg-slate-100"
+                                                className={`${unica.className} focus:bg-slate-100`}
                                                 //href="#/action-2"
                                                 onClick={sign_Out}
 
@@ -234,6 +238,58 @@ const MainNav = (props) => {
                             )}
                         </Button>
                     </div>
+                        <Button
+                            className="me-2 nav-btn login-name-button-2"
+                        // disabled={btnDisable}
+                        >
+                            {isUser ? (
+                                <span
+                                    id="signin"
+                                    onClick={() => {
+                                        router.push("/login");
+                                    }}
+                                    className={`${unica.className} nav-btns`}
+                                >
+                                    Login
+                                </span>
+                            ) : (
+                                <span>
+                                    <Dropdown className="mt-3.5">
+                                        <Dropdown.Toggle
+                                            variant="transparent"
+                                            id="dropdown-basic"
+                                        >
+                                            <p className="inline-flex  text-neutral-50">
+                                                <span className="material-symbols-outlined py-3">
+                                                    person
+                                                </span>
+                                                <span className="py-3">{userName}</span>
+                                            </p>
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu className="hover:bg-slate-100">
+                                            <Dropdown.Item
+                                                className={`${unica.className} focus:bg-slate-100`}
+                                                href="#/action-1"
+                                                onMouseEnter={ShowDetails}
+                                                onMouseLeave={HideDetails}
+                                            >
+                                                Account Details
+                                            </Dropdown.Item>
+                                            <Dropdown.Item
+                                                className="focus:bg-slate-100"
+                                                //href="#/action-2"
+                                                onClick={sign_Out}
+
+
+                                            >
+                                                Sign Out
+                                            </Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </span>
+                            )}
+                        </Button>
                     <div className=" z-[1000000000000000000] absolute">
 
                         <Offcanvas show={show} onHide={handleClose}>
@@ -251,7 +307,7 @@ const MainNav = (props) => {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <hr />
-                                <div className="btn-div">
+                                <div className={`${unica.className} btn-div`}>
                                     <div>
                                         <span className="material-symbols-outlined">
                                             account_circle
@@ -279,7 +335,7 @@ const MainNav = (props) => {
                                     </div>
                                 </div>
                                 <hr />
-                                <div className="btn-div">
+                                <div className={`${unica.className} btn-div`}>
                                     {/* <div>
                       <span className="material-symbols-outlined">
                         directions_boat
@@ -321,7 +377,7 @@ const MainNav = (props) => {
                                     </div>
                                 </div>
                                 <hr />
-                                <div className="btn-div-2">
+                                <div className={`${unica.className} btn-div-2`}>
                                     {/* <Button onClick={dashboardClick}>Dashboard</Button> */}
                                     <Button>List With Us</Button>
                                     <Button>Help & FAQ</Button>

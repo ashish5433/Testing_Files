@@ -64,7 +64,7 @@ export default function IotPage() {
                  
           
         {
-            name: "Refrigertors",
+            name: "Fridges",
             image: "/test/rfNo.png",
             bg: "/test/rf.jpg",
             title: "/test/texts/fdd.png"

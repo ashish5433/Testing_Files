@@ -33,14 +33,15 @@ import RelatedtagsYachts from "@/Check/Relatedtags/relatedtagsyachts";
 import RelatedMotorcycle from "@/Check/Relatedtags/relatedMotorcycle";
 import RelatedtagsCars from "@/Check/Relatedtags/relatedCars";
 import iotCarousel from "@/CarouselImageData/iotCarousel";
+import MainNav from "@/components/MainNav";
 const fontBebas = Bebas_Neue({
   subsets: ["latin"],
-  display: 'swap', 
+  display: 'swap',
   adjustFontFallback: false, weight: '400'
 });
 const fontUnica = Unica_One({
   subsets: ["latin"],
-  display: 'swap', 
+  display: 'swap',
   adjustFontFallback: false, weight: '400'
 });
 
@@ -72,10 +73,10 @@ export default function ProductsList() {
       categoryDetail === "private islands" ||
       categoryDetail === "castle" ||
       categoryDetail === "land" ||
-      categoryDetail === "beachside properties"||
-      categoryDetail === "Office Spaces"||
-      categoryDetail === "Apartments"||
-      categoryDetail === "Houses"||
+      categoryDetail === "beachside properties" ||
+      categoryDetail === "Office Spaces" ||
+      categoryDetail === "Apartments" ||
+      categoryDetail === "Houses" ||
       categoryDetail === "Studio Spaces"
     ) {
       setCarouselImages("estateCarousel");
@@ -110,14 +111,14 @@ export default function ProductsList() {
       categoryDetail === "Luxury Cars"
     ) {
       setCarouselImages("carCarousel");
-    } 
+    }
     else if (
       categoryDetail === "Microwave Ovens" ||
       categoryDetail === "Air Conditioning" ||
       categoryDetail === "Washing Machines" ||
-      categoryDetail === "Refrigertors" ||
+      categoryDetail === "Fridges" ||
       categoryDetail === "Gaming Consoles" ||
-      categoryDetail === "Televisions" 
+      categoryDetail === "Televisions"
     ) {
       setCarouselImages("iotCarousel");
     }
@@ -147,11 +148,11 @@ export default function ProductsList() {
   const [yacht, changeYacht] = useState(false);
   return (
     <div>
-    
-      <div className="nav2productlist">
+
+      {/* <div className="nav2productlist">
       <Navbar2/>
-      </div>
-        
+      </div> */}
+      <MainNav />
       <div>
 
         <div>
@@ -166,7 +167,7 @@ export default function ProductsList() {
               <><CarouselPage CarouselImages={bikeCarousel} /></>
             ) : carouselImages === "carCarousel" ? (
               <><CarouselPage CarouselImages={carCarousel} /></>
-            ) :carouselImages === "iotCarousel" ? (
+            ) : carouselImages === "iotCarousel" ? (
               <><CarouselPage CarouselImages={iotCarousel} /></>
             ) : carouselImages === "amphibiousCarousel" ? (
               <CarouselPage CarouselImages={amphibiousCarousel} />
@@ -179,22 +180,24 @@ export default function ProductsList() {
             )}
           </div>
           <div>
-            <div className="flex flex-col absolute left-[10vw] top-[280px] w-[80%] text-neutral-50 text-opacity-80">
-              <h1 style={{ fontSize: "10rem", letterSpacing:"4px" }} className={`m-auto relative ${fontBebas.className}`}>{categoryDetail}.</h1>
-              <div className={`m-auto  ${classes.carousel_search}`}>
-                <div><input style={{ width: "33vw" }}
-                  type="text"
-                  placeholder={`search for ${categoryDetail}...`}
-                  className={` ${fontUnica.className}`}
-                /></div>
+            <div className="flex flex-col absolute left-[10vw] top-[280px] w-[80%] text-neutral-50 text-opacity-80 max-sm:top-[35vh] max-sm:!w-full max-sm:!left-0">
+              <h1 style={{ fontSize: "10rem", letterSpacing: "4px" }} className={`m-auto relative ${fontBebas.className} text-center max-sm:!text-[23vw] max-sm:leading-[1] !break-words`}>{categoryDetail}</h1>
+              <div className={`${classes.carousel_search} max-sm:!w-full`}>
+                <div>
+                  <input style={{ width: "33vw" }}
+                    type="text"
+                    placeholder={`search for ${categoryDetail}...`}
+                    className={` ${fontUnica.className} max-sm:!text-[3vw] max-sm:!w-[50vw] `}
+                  />
+                </div>
                 <div>
                   <button className="relative" type="submit">
-                    <span className="material-symbols-outlined">search</span>
+                    <span className="material-symbols-outlined max-sm:!text-[3vw]">search</span>
                   </button>
                 </div>
               </div>
 
-              <div className={`   ${classes.carousel_icon_div}`}>
+              {/* <div className={`   ${classes.carousel_icon_div}`}>
                 {subcategory.map((data) => (
                   <div className={classes.subcategory_div}>
                     <div
@@ -214,7 +217,7 @@ export default function ProductsList() {
                     </h1>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
           {/* <Topfilter show={showFilter} showFunc={setShowFilter} gridOrList={gridOrList} setGridOrList={setGridOrList} /> */}
@@ -225,12 +228,12 @@ export default function ProductsList() {
             <ProductCard products={iotCarousel} view={true} /> </div>):  (<div className="bg-[#101010] py-11">
             <ProductCard products={estateCarousel} view={true} /> </div>)
           }
-         
-          
+
+
         </div>
 
       </div>
-      
+
       <Footer />
 
     </div>

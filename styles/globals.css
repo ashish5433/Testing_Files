@@ -151,7 +151,8 @@ body::-webkit-scrollbar {
 .nav-btns {
   color: whitesmoke;
   font-size: 0.9rem !important;
-  margin-right: 2px;
+  margin-right: 10px;
+  letter-spacing: 1px;
 }
 
 .nav-btns:hover {
@@ -201,11 +202,6 @@ body::-webkit-scrollbar {
   letter-spacing: 1px;
   color: white;
 }
-@media screen and (max-width: 680px) {
-  .left-nav{
-    width: 100% !important;
-  }
-}
 
 .offcanvas-title {
   font-size: 2rem !important;
@@ -214,14 +210,6 @@ body::-webkit-scrollbar {
 
 .hamburger-menu {
   color: white !important;
-}
-
-
-@media screen and (max-width: 680px) {
-  .navbar {
-    padding-left: 0rem !important;
-    padding-right: 0rem !important;
-  }
 }
 
 .mt-18 {
@@ -1968,6 +1956,7 @@ ame_n_loc>div>label {
   margin-right: 2px;
 }
 
+
 .login-name-button :focus {
   background-color: transparent !important;
   border-color: #00000000 !important;
@@ -2713,3 +2702,121 @@ text-align: center;
        width: 100%;
       }
     }
+    .login-name-button-2 {
+      background-color: transparent;
+      color: whitesmoke;
+      font-size: 0.9rem !important;
+      margin-right: 2px;
+      display: none !important;
+    }
+    
+    @media screen and (max-width: 680px) {
+      .left-nav{
+        width: 100% !important;
+      }
+      
+    .transparent-nav {
+      height: 7vh !important;
+    }
+    
+    .black-nav {
+      height: 7vh !important;
+    }
+    .login-name-button-2 {
+      background-color: transparent;
+      color: whitesmoke;
+      font-size: 0.9rem !important;
+      margin-right: 2px;
+      display: block !important;
+    }
+    .nav-btns:hover {
+      padding-bottom: 2.43vh;
+      border-bottom: 2px solid whitesmoke;
+    }
+    .nav-btns {
+      margin-right: 2px;
+    }
+    .navbar {
+      padding-left: 1vw !important;
+      padding-right: 1vw !important;
+    }
+        
+.p-main{
+  width: 90vw;
+  height: 25vh;
+  background-color: #ffffff00;
+  display: flex;
+}
+.p-imagediv{
+  width: 65%;
+  height: 100%;
+  background: #000;
+}
+.p-image{
+  height: 100%;
+  width: 100%;
+}
+.p-detailsdiv{
+  width: 35%;
+  /* background-color: rgba(255, 255, 255, 0.378);
+  
+  backdrop-filter: blur(10px); */
+  background: #000;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+.p-detailsdivlink{
+  width: 100%;
+height: 250px;
+}
+.p-detailsdivlink button{
+  text-decoration: none;
+  /* font-size: 2rem;
+
+  background: white;
+  color: #000; */
+  font-size: 1rem;
+  /* padding-top: 10px; */
+  /* transform: translateY(-17px); */
+  background: rgba(255, 255, 255, 0.611);
+  transition-duration:200ms;
+  border: 1px solid rgba(255, 255, 255, 0.444);
+  width: 100%;
+  
+  padding: 0px 8px;
+  color: #000;
+  /* margin-top: 2rem; */
+  margin-bottom: 0;
+  letter-spacing: 2px;
+
+}
+.p-detailsdiv>div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+}
+.p-detailsdiv>div>p{
+  font-size: 0.5rem;
+  text-decoration: underline;
+  color: rgba(127, 255, 212, 0.695);
+  letter-spacing: 2px;
+  
+}
+/* .p-detailsdivlink button:hover{
+text-decoration: underline;
+  background: rgb(0, 0, 0);
+  transition-duration:300ms;
+  border: 1px solid rgba(255, 255, 255, 0.444);
+
+  color: rgba(255, 255, 255, 0.611);
+ 
+  letter-spacing: 4px;
+
+} */
+    }
+    
