@@ -582,7 +582,7 @@ body::-webkit-scrollbar {
   top: -7rem;
 right: -5rem;
 animation-name: battu-anime-1;
-animation-duration: 5000ms;
+animation-duration: 10000ms;
 animation-timing-function: ease-in-out;
 }
 @keyframes battu-anime-1 {
@@ -601,7 +601,7 @@ animation-timing-function: ease-in-out;
   bottom: 15rem;
   left: -13rem;
 animation-name: battu-anime;
-animation-duration: 5000ms;
+animation-duration: 10000ms;
 animation-timing-function: ease-in-out;
 }
 @keyframes battu-anime {
@@ -620,7 +620,7 @@ animation-timing-function: ease-in-out;
   top: -18rem;
   left: 6rem;
 animation-name: battu-anime-2;
-animation-duration: 5000ms;
+animation-duration: 10000ms;
 animation-timing-function: ease-in-out;
 }
 @keyframes battu-anime-2 {

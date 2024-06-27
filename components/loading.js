@@ -44,7 +44,16 @@ const Loading = () => {
     }).to("#text", {
       display: "none", duration: 0.4, delay: 0.3,
       ease: Expo.easeInOut,
-    })
+    }).to(".bar", {
+      height: "100%",
+      ease: Expo.easeInOut,
+      duration: 0.7,
+      delay: 0,
+  }).to(".bar", {
+      x: "100vw", duration: 0.75, ease: Expo.easeInOut,
+  })
+  .to(".loading-screen", { opacity: 0, duration: 1, delay: 1, display: "none" })
+
   };
   const blinker = () => {
     const t2 = gsap.timeline({
