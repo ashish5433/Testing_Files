@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
     const handleRouteChangeComplete = () => {
       setInterval(()=>{
 
-        setLoading(false);
+        setLoading(true);
       },10000)
     }
 

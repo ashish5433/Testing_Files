@@ -482,9 +482,9 @@ body::-webkit-scrollbar {
 }
 
 .blur {
-  height: 12rem;
-  width: 12rem;
-  background-color: hsl(155, 100%, 65%);
+  height: 17rem;
+  width: 17rem;
+  background-color: hsla(155, 100%, 65%, 0.626);
   filter: blur(100px);
   border-radius: 100px;
   z-index: 0;
@@ -577,7 +577,63 @@ body::-webkit-scrollbar {
   z-index: 1;
   opacity: 100%;
 }
+.posi--1{
+  position: absolute;
+  top: -7rem;
+right: -5rem;
+animation-name: battu-anime-1;
+animation-duration: 5000ms;
+animation-timing-function: ease-in-out;
+}
+@keyframes battu-anime-1 {
+  0%{
+    top: -13rem;
+    right: -19rem;
+  }
 
+  100%{
+    top: -7rem;
+    right: -5rem;
+  }
+}
+.posi--2{
+  position: absolute;
+  bottom: 15rem;
+  left: -13rem;
+animation-name: battu-anime;
+animation-duration: 5000ms;
+animation-timing-function: ease-in-out;
+}
+@keyframes battu-anime {
+  0%{
+    bottom: 6rem;
+    left: 2rem;
+  }
+
+  100%{
+    bottom: 15rem;
+    left: -13rem;
+  }
+}
+.posi--3{
+  position: absolute;
+  top: -18rem;
+  left: 6rem;
+animation-name: battu-anime-2;
+animation-duration: 5000ms;
+animation-timing-function: ease-in-out;
+}
+@keyframes battu-anime-2 {
+  0%{
+    top:-18rem;
+    left: 0rem;
+  }
+
+  100%{
+    top:-18rem;
+    left: 6rem;
+  }
+}
 .spanu {
   width: 300px;
   height: 300px;
