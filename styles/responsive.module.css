@@ -1,3 +1,20 @@
+/* Hide scrollbar for a particular component */
+
+/* For WebKit browsers */
+.no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  /* For Firefox */
+  .no-scrollbar {
+    scrollbar-width: none !important; /* hides scrollbar */
+  }
+  
+  /* For IE and Edge */
+  .no-scrollbar {
+    -ms-overflow-style: none !important; /* disables default scrollbar */
+  }
+  
 @media only screen and (max-width: 1190px){
     .small{
         visibility: hidden;

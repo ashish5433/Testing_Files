@@ -52,7 +52,7 @@ const Loading = () => {
     }).to(".bar", {
       x: "100vw", duration: 0.75, ease: Expo.easeInOut,
     }).to("#maintxt", {
-      opacity: 0.8,delay:0.5,
+      opacity: 0.8, delay: 0.5,
       ease: Expo.easeInOut,
     }).to("#maintxt2", {
       opacity: 0.8,
@@ -174,7 +174,7 @@ const Loading = () => {
           position: absolute;
           left: 0;
           background-color: #4dffb5;
-filter: brightness(0.75);
+          filter: brightness(0.75);
           height: 2px;
           width: 0;
           transition: 0.4s ease-out;

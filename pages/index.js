@@ -149,7 +149,7 @@ export default function Home() {
           IotProps={iot}
         />
         <Footer />
-        <ProgressBar color="white" height={10} position="bottom" />
+        <ProgressBar color="#4dffb5" height={10} position="bottom" />
         {/* </emailContext.Provider>  */}
       </addClass.Provider>
     </>
