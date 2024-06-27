@@ -193,6 +193,7 @@ filter: brightness(0.75);
         }
              @media screen and (max-width: 680px) {
       #para{  
+      bottom:5%;
         right:2%;
         font-size:10vw !important;
         }
@@ -205,6 +206,10 @@ filter: brightness(0.75);
           #maintxt2{
             font-size:45vw !important;
             }
+            .blur {
+        height: 10rem;
+        width: 10rem;
+      }
     }
       `}</style>
     </div>
