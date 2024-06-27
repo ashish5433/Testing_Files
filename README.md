@@ -7,8 +7,7 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
     <img src="https://img.shields.io/badge/-Firebase-black?style=for-the-badge&logoColor=white&logo=firebase&color=DD2C00" alt="Firebase" />
     <img src="https://img.shields.io/badge/-Vercel-black?style=for-the-badge&logoColor=white&logo=vercel&color=000000" alt="vercel" />
-    <img src="https://img.shields.io/badge/-Alan_AI-black?style=for-the-badge&logoColor=white&logo=airbrake&color=18BFFF" alt="tailwindcss" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-Alan_AI-black?style=for-the-badge&logoColor=white&logo=airbrake&color=18BFFF" alt="AlanAI" />
 
   </div>
 
@@ -20,16 +19,16 @@ Welcome to the Kir.AI repository! Kir.AI revolutionizes the rental marketplace b
 
 ## 📋 Table of Contents 📋
 
-- [📷 Site Preview 📷](#📷-site-preview-📷)
-- [🐙 Introduction 🐙](#🐙-introduction-🐙)
-- [🔋 Features 🔋](#🔋-features-🔋)
-- [⚙️ Technologies Used ⚙️](#⚙️-technologies-used-⚙️)
-- [💿 Installation 💿](#💿-installation-💿)
-- [🕸️ Usage 🕸️](#🕸️-usage-🕸️)
-- [👨‍🎓 Contributors 👨‍🎓](#👨‍🎓-contributors-👨‍🎓)
-- [🚀 Contributing 🚀](#🚀-contributing-🚀)
-- [📜 License 📜](#📜-license-📜)
-- [🔗 Contact 🔗](#🔗-contact-🔗)
+- [📷 Site Preview 📷](#-site-preview-)
+- [🐙 Introduction 🐙](#-introduction-)
+- [🔋 Features 🔋](#-features-)
+- [⚙️ Technologies Used ⚙️](#-technologies-used-)
+- [💿 Installation 💿](#-installation-)
+- [🕸️ Usage 🕸️](#-usage-)
+- [👨‍🎓 Contributors 👨‍🎓](#👨-contributors-👨)
+- [🚀 Contributing 🚀](#-contributing-)
+- [📜 License 📜](#-license-)
+- [🔗 Contact 🔗](#-contact-)
 
 
 ## 📷 Site Preview 📷
