@@ -68,34 +68,49 @@
     position: absolute;
     display: flex;
 
-    justify-content: space-between;
-    bottom: 13%;
-    padding: 0 3.16%;
+    justify-content: space-evenly;
+    bottom: 10%;
+    padding: 2% 0%;
     margin: 0 6%;
-    width: 60vw;
+    width: 59vw;
 
+   /*  border-radius: 12px;
+background: rgba(49, 197, 153, 0.323);
+backdrop-filter: blur(10px);
+mix-blend-mode: ; */
 }
 
 .small_image {
     height: 8vw;
     width: 12.8vw;
     border-radius: 10px;
-    opacity: 0.8;
+    opacity: 1;
     cursor: pointer;
+    filter: brightness(0.9);
+    border: 2px solid rgba(49, 197, 153, 0.732) ;
+    -webkit-box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
+    -moz-box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
+    box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
+
 }
 
 .more_image {
     height: 8vw;
     width: 12.8vw;
     border-radius: 10px;
-    opacity: 0.9;
+    opacity: 1;
+    filter: brightness(0.9);
+    border: 2px solid rgba(49, 197, 153, 0.732) ;
+    -webkit-box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
+    -moz-box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
+    box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
 }
 
 .more_div {
     position: absolute;
     height: 8vw;
     width: 12.8vw;    
-    right: 2.1vw;
+    right: 1.57vw;
     border-radius: 9px;
     display: flex;
     justify-content: center;
@@ -104,6 +119,8 @@
     color: rgba(127, 255, 212, 0.621);
     cursor: pointer;
     transition-duration: 400ms;
+backdrop-filter: blur(3px);
+
 }
 
 .more_div:hover {
@@ -215,21 +232,21 @@
 }
 
 .agent_card_img {
-    height: 32rem;
-    width: 90rem;
-    margin: 3rem;
+    height: 35vw;
+    width: 95vw;
+    margin: 3vw;
     margin-top: 2rem;
-    border-radius: 10px;
-    opacity: 0.9;
+    border-radius: 13px;
+    opacity: 1;
 }
 
 .agent_card_overlay {
     position: absolute;
-    height: 32rem;
-    width: 90rem;
-    margin: 3rem;
+    height: 35vw;
+    width: 95vw;
+    margin: 3vw;
     margin-top: 2rem;
-    border-radius: 10px;
+    border-radius: 13px;
     opacity: 0.9;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgb(0, 0, 0.4));
     backdrop-filter: blur(4px);
@@ -237,14 +254,14 @@
 
 .agent_profile {
     position: absolute;
-    right: 10%;
+    right: 6%;
 }
 
 .agent_card_profile {
     position: relative;
-    height: 300px;
-    width: 500px;
-    border-radius: 50px;
+    height: 22vw;
+    width: 38vw;
+    border-radius: 20px;
     opacity: 0.85;
     box-shadow: 10px 10px 74px 0px rgba(0, 0, 0);
     -webkit-box-shadow: 10px 10px 74px 0px rgba(0, 0, 0);
@@ -261,7 +278,7 @@
     position: absolute;
     font-family: 'Cabinet Grotesk', sans-serif;
     color: aquamarine;
-    left: 10%;
+    left: 6%;
     top: 10%;
     width: 100%;
 }
@@ -357,11 +374,15 @@
     display: flex;
 
     justify-content: space-between;
-    bottom: 5%;
-    padding: 0 8%;
+    /* align-items: center; */
+    /* width: 90% !important; */
+    bottom: 2%;
+    padding: 2% 8%;
     margin: 0;
     width: 100vw;
-
+    border-radius: 10px;
+background: rgba(118, 106, 106, 0.375);
+backdrop-filter: blur(10px);
 }
 
 .small_image {
@@ -392,7 +413,7 @@
 
 .price_and_others {
     width: 100vw;
-    padding-top: 0;
+    padding-top: 5%;
     overflow: hidden;
 }
 
