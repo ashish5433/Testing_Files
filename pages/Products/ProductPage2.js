@@ -168,6 +168,7 @@ export default function ProductPage2({data}) {
           </div>
         </div>
       </div>
+      <h1 className={classes.seller}>About Seller</h1>
       <div className={classes.agent_card}>
         <div>
           <Image
@@ -216,7 +217,7 @@ export default function ProductPage2({data}) {
                   />
                   <p>chat</p>
                 </div>
-                <div>
+                {/* <div>
                   <Image
                     className={classes.icons2}
                     src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
@@ -226,11 +227,11 @@ export default function ProductPage2({data}) {
 
                   />
                   <p>meet</p>
-                </div>
+                </div> */}
               </div>
             </div>
             <p>Direct owner / broker at sunseeker</p>
-            <div>
+            <div className="heeell">
               <div>
                 <span>• </span>
                 <span>Location : </span>

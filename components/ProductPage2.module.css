@@ -9,7 +9,16 @@
     overflow: hidden;
     /* margin-top: 3rem; */
 }
-
+.seller{
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+        font-family: 'Cabinet Grotesk', sans-serif;
+        font-size: 10vw;
+        color: aquamarine;
+        margin: 0;
+        margin: auto;
+}
 .first>div {
     display: flex;
 }
@@ -74,7 +83,7 @@
     margin: 0 6%;
     width: 59vw;
 
-   /*  border-radius: 12px;
+    /*  border-radius: 12px;
 background: rgba(49, 197, 153, 0.323);
 backdrop-filter: blur(10px);
 mix-blend-mode: ; */
@@ -87,10 +96,10 @@ mix-blend-mode: ; */
     opacity: 1;
     cursor: pointer;
     filter: brightness(0.9);
-    border: 2px solid rgba(49, 197, 153, 0.732) ;
-    -webkit-box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
-    -moz-box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
-    box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
+    border: 2px solid rgba(49, 197, 153, 0.732);
+    -webkit-box-shadow: -6px 10px 94px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -6px 10px 94px 0px rgba(0, 0, 0, 1);
+    box-shadow: -6px 10px 94px 0px rgba(0, 0, 0, 1);
 
 }
 
@@ -100,16 +109,16 @@ mix-blend-mode: ; */
     border-radius: 10px;
     opacity: 1;
     filter: brightness(0.9);
-    border: 2px solid rgba(49, 197, 153, 0.732) ;
-    -webkit-box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
-    -moz-box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
-    box-shadow: -6px 10px 94px 0px rgba(0,0,0,1);
+    border: 2px solid rgba(49, 197, 153, 0.732);
+    -webkit-box-shadow: -6px 10px 94px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -6px 10px 94px 0px rgba(0, 0, 0, 1);
+    box-shadow: -6px 10px 94px 0px rgba(0, 0, 0, 1);
 }
 
 .more_div {
     position: absolute;
     height: 8vw;
-    width: 12.8vw;    
+    width: 12.8vw;
     right: 1.57vw;
     border-radius: 9px;
     display: flex;
@@ -119,7 +128,7 @@ mix-blend-mode: ; */
     color: rgba(127, 255, 212, 0.621);
     cursor: pointer;
     transition-duration: 400ms;
-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
 
 }
 
@@ -216,9 +225,16 @@ backdrop-filter: blur(3px);
     cursor: pointer;
 
 }
+.icons2_div>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .agent_card {
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .agent_card>div {
@@ -286,17 +302,17 @@ backdrop-filter: blur(3px);
 .agent_detail h1 {
     font-family: 'Cabinet Grotesk', sans-serif;
     color: aquamarine;
-    font-size: 5rem;
+    font-size: 5.5vw;
     font-weight: lighter;
 }
 
 .agent_detail p {
-    font-size: 1.5rem;
+    font-size: 1.7vw;
     transform: translate(0rem, -15px);
 }
 
 .agent_detail span {
-    font-size: 1.25rem;
+    font-size: 1.3vw;
 }
 
 .agent_name_and_functions {
@@ -306,8 +322,8 @@ backdrop-filter: blur(3px);
 .agent_functions {
     display: flex;
     flex-wrap: wrap;
-    transform: translate(3rem, 1rem);
-    gap: 2rem;
+    transform: translate(2rem, 1rem);
+    gap: 2vw;
     text-align: center;
 }
 
@@ -323,7 +339,7 @@ backdrop-filter: blur(3px);
 }
 
 .agent_functions p {
-    font-size: 1rem;
+    font-size: 1vw;
     transform: translateY(0.5rem);
 }
 
@@ -332,6 +348,17 @@ backdrop-filter: blur(3px);
     flex-wrap: wrap;
     padding-top: 2rem;
     width: 100vw;
+}
+
+.company_details>div>h2 {
+    font-size: 2vw;
+
+}
+
+.company_details>div>p {
+    font-size: 1.2vw;
+    padding-top: 2px;
+
 }
 
 .company_logo {
@@ -343,140 +370,359 @@ backdrop-filter: blur(3px);
 }
 
 @media screen and (max-width: 1080px) {
-    .first{
-    padding-top: 9vh;
+    .first {
+        padding-top: 9vh;
     }
+
     .first h1 {
         font-size: 13vw;
     }
+
     .first>div {
         display: flex;
         flex-direction: column;
     }
-    
-.big_image_div {
-    width: 100vw;
+
+    .big_image_div {
+        width: 100vw;
+    }
+
+    .big_image {
+        height: 50vw;
+        width: 100vw;
+        margin: 7vw;
+        margin-top: 2vw;
+        border-radius: 10px;
+        opacity: 0.9;
+        /* background: linear-gradient(to bottom,rgb(33 44 55 / 0),rgb(33 44 55 / 0),rgb(33 44 55 / 0.75)); */
+        filter: brightness(0.9);
+    }
+
+    .small_image_div {
+        position: absolute;
+        display: flex;
+
+        justify-content: space-between;
+        /* align-items: center; */
+        /* width: 90% !important; */
+        bottom: 2%;
+        padding: 2% 8%;
+        margin: 0;
+        width: 100vw;
+        border-radius: 10px;
+        background: rgba(118, 106, 106, 0.375);
+        backdrop-filter: blur(10px);
+    }
+
+    .small_image {
+        height: 11vw;
+        width: 19vw;
+        border-radius: 8px;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .more_image {
+        height: 11vw;
+        width: 19vw;
+        border-radius: 8px;
+        opacity: 1;
+    }
+
+    .more_div {
+        height: 11vw;
+        width: 19vw;
+        right: 8vw;
+        border-radius: 8px;
+        backdrop-filter: blur(0.5px) !important
+    }
+
+    .more_div h3 {
+        padding-top: 7%;
+        font-size: 1.8vw !important;
+    }
+
+    .price_and_others {
+        width: 100vw;
+        padding-top: 5%;
+        overflow: hidden;
+    }
+
+    .price_and_others h1 {
+        font-size: 9vw;
+    }
+
+    .price_and_others h1 span {
+        font-size: 10vw;
+        padding-right: 3px;
+    }
+
+    .currencies {
+        gap: 40px;
+        padding-bottom: 0px;
+    }
+
+    .currencies p {
+        font-size: 4vw;
+        cursor: pointer;
+    }
+
+    .currencies p:nth-child(1) {
+        padding-bottom: 2px;
+        text-decoration: underline;
+    }
+
+    .price_and_others button {
+        font-size: 3.5vw;
+        padding: 0.5rem 2rem;
+        display: block;
+        width: 80%;
+        border: 2px solid aquamarine;
+        margin: 1rem auto;
+        transition-duration: 300ms;
+    }
+
+    .price_and_others h3 {
+        font-size: 3.2vw;
+        padding-bottom: 5px;
+    }
+
+    .icons2_div {
+        padding: 4vw 2.5vw;
+        justify-content: space-evenly;
+    }
+
+    .icons2_div p {
+        font-size: 3vw;
+        padding-top: 10px;
+
+    }
+
+    .icons2 {
+        opacity: 0.9;
+        width: 30px;
+        height: 30px;
+    }
+
+    .icons2_div>div:hover {
+        transform: scale(1.25);
+        cursor: pointer;
+
+    }
+
+
+    .agent_card {
+        width: 100vw;
+    }
+
+    .agent_card_img {
+        height: 40vw;
+    }
+
+    .agent_card_overlay {
+        height: 40vw;
+    }
+    .agent_functions {
+        transform: translate(2vw, 1vw);
+        gap: 2vw;
+        text-align: center;
+    }
+    .agent_functions p {
+        font-size: 1vw;
+        transform: translateY(0.5vw);
+    }
+
+    .company_details {
+        width: 100vw;
+    }.company_logo {
+        width: 7vw;
+    }
+
+    .company_details div {
+        transform: translate(0.6vw, 1vw);
+    }
+
 }
 
-.big_image {
-    height: 50vw;
-    width: 100vw;
-    margin: 7vw;
-    margin-top: 2vw;
-    border-radius: 10px;
-    opacity: 0.9;
-    /* background: linear-gradient(to bottom,rgb(33 44 55 / 0),rgb(33 44 55 / 0),rgb(33 44 55 / 0.75)); */
-    filter: brightness(0.9);
+@media screen and (max-width: 730px) {
+
+
+
+    .agent_card {
+        width: 100vw;
+        overflow-y: hidden;
+    }
+
+    .agent_card_img {
+        height: 100vw;
+
+    }
+
+    .agent_card_overlay {
+        height: 100vw;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7), rgb(0, 0, 0.4)) !important;
+
+    }
+
+    .agent_profile {
+        position: absolute;
+        right: 15%;
+        top: 11%;
+    }
+
+    .agent_card_profile {
+        position: relative;
+        height: 40vw;
+        width: 70vw;
+    }
+
+    .agent_card_membership {
+        position: absolute;
+        right: 35%;
+        bottom: -14%
+    }
+
+    .agent_detail {
+        position: absolute;
+        font-family: 'Cabinet Grotesk', sans-serif;
+        color: aquamarine;
+        left: 0%;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .agent_detail h1 {
+        font-family: 'Cabinet Grotesk', sans-serif;
+        color: aquamarine;
+        font-size: 8.5vw;
+        font-weight: lighter;
+        align-items: center !important;
+        width: 100%;
+        margin: auto;
+    }
+
+    .agent_detail p {
+        font-size: 2.3vw;
+        transform: translate(0rem, -5px);
+    }
+
+    .agent_detail span {
+        font-size: 2vw;
+    }
+
+    .agent_name_and_functions {
+        display: flex;
+    }
+
+    .agent_functions {
+        position: absolute;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0,18vw);
+        gap: 25vw;
+        text-align: center;
+    }
+
+    .agent_functions>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #00000041;
+        padding: 3vw;
+        border-radius: 50%;
+        width: 8vw;
+        height: 8vw;
+        backdrop-filter: blur(10px);
+        /* margin: auto; */
+    }
+    .agent_functions>div:hover {
+        background: #0000007b;}  .agent_functions p {
+        font-size: 1.5vw;
+        transform: translateY(1vw);
+        display: none;
+    }
+
+    .company_details {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2vw;
+        width: 100vw;
+        margin: auto;
+    }
+
+    .company_details>div>h2 {
+        font-size: 4vw;
+
+    }
+
+    .company_details>div>p {
+        font-size: 2vw;
+        padding-top: 0px;
+
+    }
+
+    .company_logo {
+        width: 7vw;
+    }
+
+    .company_details div {
+        transform: translate(00vw,0vw);
+    }
 }
 
-.small_image_div {
-    position: absolute;
-    display: flex;
+@media screen and (max-width: 630px) {
+    .agent_card_img {
+        height: 120vw;
+    }
 
-    justify-content: space-between;
-    /* align-items: center; */
-    /* width: 90% !important; */
-    bottom: 2%;
-    padding: 2% 8%;
-    margin: 0;
-    width: 100vw;
-    border-radius: 10px;
-background: rgba(118, 106, 106, 0.375);
-backdrop-filter: blur(10px);
+    .agent_card_overlay {
+        height: 120vw;
+    }
 }
+@media screen and (max-width: 530px) {
+    .agent_card_img {
+        height: 120vw;
+    }
 
-.small_image {
-    height: 11vw;
-    width: 19vw;
-    border-radius: 8px;
-    opacity: 1;
-    cursor: pointer;
+    .agent_card_overlay {
+        height: 120vw;
+    }
+    .agent_detail {
+        position: absolute;
+        font-family: 'Cabinet Grotesk', sans-serif;
+        color: aquamarine;
+        left: 0%;
+        top: 60vw;
+        text-align: center;
+        width: 100%;
+    }
 }
+@media screen and (max-width: 430px) {
+    .agent_card_img {
+        height: 115vw;
+    }
 
-.more_image {
-    height: 11vw;
-    width: 19vw;
-    border-radius: 8px;
-    opacity: 1;
-}
-
-.more_div {
-    height: 11vw;
-    width: 19vw;   
-    right: 8vw;
-    border-radius: 8px;
-}
-.more_div h3{
-    padding-top: 7%;
-    font-size: 1.8vw !important;
-}
-
-.price_and_others {
-    width: 100vw;
-    padding-top: 5%;
-    overflow: hidden;
-}
-
-.price_and_others h1 {
-    font-size: 9vw;
-}
-
-.price_and_others h1 span {
-    font-size: 10vw;
-    padding-right: 3px;
-}
-
-.currencies {
-    gap: 40px;
-    padding-bottom: 0px;
-}
-
-.currencies p {
-    font-size: 4vw;
-    cursor: pointer;
-}
-
-.currencies p:nth-child(1) {
-    padding-bottom: 2px;
-    text-decoration: underline;
-}
-
-.price_and_others button {
-    font-size: 3.5vw;
-    padding: 0.5rem 2rem;
-    display: block;
-    width: 80%;
-    border: 2px solid aquamarine;
-    margin: 1rem auto;
-    transition-duration: 300ms;
-}
-.price_and_others h3 {
-    font-size: 3.2vw;
-    padding-bottom: 5px;
-}
-
-.icons2_div {
-    padding:4vw 2.5vw;
-    justify-content: space-evenly;
-}
-
-.icons2_div p {
-    font-size: 3vw;
-    padding-top: 10px;
+    .agent_card_overlay {
+        height: 115vw;
+    }
+    .agent_detail {
+        top: 58vw;
+    }    
+    /* .agent_functions {
+        transform: translate(0, 10vw);
+    } */
+    .agent_detail p {
+        font-size: 2.3vw;
+        transform: translate(0rem, -5px);
+        margin-bottom: 0rem !important;
+    }
 
 }
-
-.icons2 {
-    opacity: 0.9;
-    width: 30px;
-    height: 30px;
-}
-
-.icons2_div>div:hover {
-    transform: scale(1.25);
-    cursor: pointer;
-
-}
-
-  }
-  
