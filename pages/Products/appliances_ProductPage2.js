@@ -56,7 +56,7 @@ export default function appliances_ProductPage2({data}) {
               height={1080}
               alt="Main Product"
             />
-            <div className={classes.overlay_big}></div>
+            {/* <div className={classes.overlay_big}></div> */}
             <div className={classes.small_image_div}>
               <Image
                 className={classes.small_image}
@@ -158,7 +158,7 @@ export default function appliances_ProductPage2({data}) {
           </div>
         </div>
       </div>
-      <div className={classes.agent_card}>
+      {/* <div className={classes.agent_card}>
         <div>
           <Image
             className={classes.agent_card_img}
@@ -257,7 +257,7 @@ export default function appliances_ProductPage2({data}) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
