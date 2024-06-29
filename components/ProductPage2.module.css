@@ -1,5 +1,5 @@
 .first {
-    min-height: 100vh;
+    /* height: 100vh; */
     background-color: #000;
     font-family: 'Cabinet Grotesk', sans-serif;
     font-size: 80vw;
@@ -182,7 +182,6 @@ mix-blend-mode: ; */
     margin: 1rem 0;
     transition-duration: 300ms;
 }
-
 .price_and_others button:hover {
     background: aquamarine;
     color: #000;
@@ -633,7 +632,7 @@ mix-blend-mode: ; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #00000041;
+        background: #ffffff41;
         padding: 3vw;
         border-radius: 50%;
         width: 8vw;
@@ -642,7 +641,7 @@ mix-blend-mode: ; */
         /* margin: auto; */
     }
     .agent_functions>div:hover {
-        background: #0000007b;}  .agent_functions p {
+        background: #ffffff7b;}  .agent_functions p {
         font-size: 1.5vw;
         transform: translateY(1vw);
         display: none;
