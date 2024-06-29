@@ -9,6 +9,14 @@
   width: 20px !important;
 
 }
+:root {
+  --cont-width: 900px;
+  --img-width: 260px;
+  --form-width: calc(var(--cont-width) - var(--img-width));
+  --switch-animation-time: 1.2s;
+  --input-width: 260px;
+  --button-height: 36px;
+}
 /* 
 ::-webkit-scrollbar-track {
   background: #000000;

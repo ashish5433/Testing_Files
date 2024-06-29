@@ -139,8 +139,10 @@ const MainNav = (props) => {
                             </svg>
                         </Button>
                         <h1
-                            style={{ fontSize: "1.5rem", fontWeight: "bold", letterSpacing: "2px" }}
-                            className={player.className}
+                            style={{ fontSize: "1.5rem", fontWeight: "bold", letterSpacing: "2px",cursor:"pointer" }}
+                            className={player.className} onClick={() => {
+                                router.push("/");
+                            }}
                         >
                             KIR.AI
                         </h1>
@@ -294,7 +296,9 @@ const MainNav = (props) => {
 
                         <Offcanvas show={show} onHide={handleClose}>
                             <Offcanvas.Header >
-                                <Offcanvas.Title className={player.className}>
+                                <Offcanvas.Title className={player.className} onClick={() => {
+                                router.push("/");
+                            }}>
                                     KIR.AI
                                 </Offcanvas.Title>
                                 <Button

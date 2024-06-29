@@ -3,13 +3,14 @@ import classes from "../../styles/Login.module.css";
 import SignIn from "@/components/signIn";
 import SignUp from "@/signs/signUp3";
 import VideoBackground from "@/components/VideoBackground";
+import Login from "@/components/login";
 // import SignIn from "../../signs/signIn2";
 // import SignUp from "../../signs/signUp3";
 export default function LoggingIn() {
   return (
       <div>
         <VideoBackground>
-          
+          <Login/>
         </VideoBackground>
       {/* <div className={classes.main_div}>
         <div className={classes.login_div}>
