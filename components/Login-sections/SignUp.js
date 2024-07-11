@@ -6,6 +6,19 @@ import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, updateP
 import { useState } from "react";
 import axios from "axios";
 import Toast from "@/components/Toast";
+import { Bebas_Neue, Unica_One } from "next/font/google";
+
+const player = Bebas_Neue({
+    subsets: ["latin"],
+    display: 'swap',
+    adjustFontFallback: false, weight: '400'
+});
+
+const unica = Unica_One({
+    subsets: ["latin"],
+    display: 'swap', 
+    adjustFontFallback: false, weight: '400'
+  });
 
 const checkEmailExistence = async (email) => {
     const apiUrl = `https://api.zerobounce.net/v2/validate?api_key=0aced1a69c004370a71500f384d5d73b&email=${email}&ip_address=`;
@@ -158,7 +171,8 @@ const SignUp = () => {
         <>
             <Toast/>
 
-                <div className="flex flex-wrap w-full px-[10%] gap-[2vh] justify-center">
+                <div className={`${unica.className} flex flex-wrap w-full px-[10%] gap-[2vh] justify-center`} >
+                {/* <h1>Register</h1> */}
                     <input
                         type="text"
                         className="bg-black/40 text-white border-0 p-2  focus:bg-black/60 focus:outline-none focus:ring-1 focus:ring-[#4dffb5]/50 transition ease-in-out duration-150 w-full"
