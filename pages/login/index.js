@@ -1,10 +1,11 @@
-import Image from "next/image";
-import classes from "../../styles/Login.module.css";
-import SignIn from "@/components/signIn";
-import SignUp from "@/signs/signUp3";
-import VideoBackground from "@/components/VideoBackground";
-import MainNav from "@/components/MainNav";
+// import Image from "next/image";
+// import classes from "../../styles/Login.module.css";
+// import SignIn from "@/components/signIn";
+// import SignUp from "@/signs/signUp3";
+// import VideoBackground from "@/components/VideoBackground";
+// import MainNav from "@/components/MainNav";
 import Login from "@/components/Login-sections/Login";
+import SignUp from "@/components/Login-sections/SignUp";
 // import SignIn from "../../signs/signIn2";
 // import SignUp from "../../signs/signUp3";
 export default function LoggingIn() {
@@ -55,16 +56,14 @@ export default function LoggingIn() {
         <div className="w-screen h-screen relative ">
           <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-white/10 backdrop-blur-lg rounded-md lg:mt-[3rem]">
             <div className="flex h-full  flex-wrap md:flex-nowrap">
-              <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-wrap items-center justify-center max-md:border-b md:border-r">
-                <div className="flex flex-wrap w-full px-[10%] gap-[2vh]">
+              <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-wrap items-end justify-center max-md:border-b md:border-r pb-[10vh]">
+              {/* <h1>Login</h1> */}
                   <Login />
-                </div>
-
               </div>
-              <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
-              <div className="flex flex-wrap w-full px-[10%] gap-[2vh]">
-                  <Login />
-                </div>
+              <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-wrap items-end justify-center max-md:border-b md:border-r pb-[10vh]">
+              {/* <h1>Login</h1> */}
+
+                  <SignUp/>
               </div>
             </div>
           </section>
