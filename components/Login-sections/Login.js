@@ -58,9 +58,9 @@ const Login = () => {
                 className="max-md:text-[1vh] text-[3vh]  bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                 placeholder="Password" onChange={(e) => { setloginPassword(e.target.value) }} />
             <button type="submit"
-                className={`${player.className} w-full max-md:text-[2vh] text-[3vh] text-black border-2 border-[#4dffb5]/40  bg-[#4dffb5]/80 py-1 px-3 hover:!text-[#4dffb5]/80 hover:bg-transparent transition ease-in-out duration-150`} onClick={login}>Login</button>
+                className={`${player.className} w-full max-md:text-[1.5vh] text-[3vh] text-black border-2 border-[#4dffb5]/40  bg-[#4dffb5]/80 py-1 px-3 hover:!text-[#4dffb5]/80 hover:bg-transparent transition ease-in-out duration-150`} onClick={login}>Login</button>
             <button type="submit"
-                className={`${player.className} w-full max-md:text-[2vh] text-[3vh] text-black border-2 border-[#4dffb5]/40  bg-[#4dffb5]/80 py-1 px-3 hover:!text-[#4dffb5]/80 hover:bg-transparent transition ease-in-out duration-150`} onClick={signInwithgoogle}>Google Login</button>
+                className={`${player.className} w-full max-md:text-[1.5vh] text-[3vh] text-black border-2 border-[#4dffb5]/40  bg-[#4dffb5]/80 py-1 px-3 hover:!text-[#4dffb5]/80 hover:bg-transparent transition ease-in-out duration-150`} onClick={signInwithgoogle}>Google Login</button>
         </div>
         </>
 

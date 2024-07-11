@@ -204,7 +204,7 @@ const SignUp = () => {
                         placeholder="Enter Mobile" />
 
                     <button type="submit"
-                        className={`${player.className} w-full max-md:text-[2vh] text-[3vh] text-black border-2 border-[#4dffb5]/40  bg-[#4dffb5]/80 py-1 px-3 hover:!text-[#4dffb5]/80 hover:bg-transparent transition ease-in-out duration-150`} onClick={Register}>Register</button>
+                        className={`${player.className} w-full max-md:text-[1.5vh] text-[3vh] text-black border-2 border-[#4dffb5]/40  bg-[#4dffb5]/80 py-1 px-3 hover:!text-[#4dffb5]/80 hover:bg-transparent transition ease-in-out duration-150`} onClick={Register}>Register</button>
                     {/* <button type="submit"
                 className="w-full mx-[20vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={signInwithgoogle}>SignInWithGoogle</button> */}
                 </div>
