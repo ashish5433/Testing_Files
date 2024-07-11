@@ -66,11 +66,11 @@ export default function LoggingIn() {
         <div className="battu posi--2"><span className="spanu"></span></div>
         <div className="battu posi--3"><span className="spanu"></span></div>
         <div className="w-screen h-screen relative ">
-          <h1 className={`${player.className} absolute z-[-1] text-[15vw] text-white opacity-20 left-[-9%] bottom-[30vh] rotate-90 leading-0 max-md:bottom-[66vh] max-md:text-[19vw] max-md:left-[-11.5%]`}>Login</h1>
-          <h1 className={`${player.className} absolute z-[-1] text-[15vw] text-white opacity-20 right-[-17%] bottom-[30vh] -rotate-90 leading-0 max-md:bottom-[25vh] max-md:text-[19vw] max-md:right-[-21.5%]`}>Register</h1>
+          <h1 className={`${player.className} absolute z-[-1] text-[15vw] text-[#4dffb5]/80 opacity-20 left-[-9%] bottom-[30vh] rotate-90 leading-0 max-md:bottom-[66vh] max-md:text-[19vw] max-md:left-[-11.5%]`}>Login</h1>
+          <h1 className={`${player.className} absolute z-[-1] text-[15vw] text-[#4dffb5]/80 opacity-20 right-[-17%] bottom-[30vh] -rotate-90 leading-0 max-md:bottom-[25vh] max-md:text-[19vw] max-md:right-[-21.5%]`}>Register</h1>
           <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-transparent lg:mt-[3rem]">
             <div className="flex h-full  flex-wrap md:flex-nowrap">
-              <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-wrap justify-center max-md:border-b md:border-r items-center">
+              <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-wrap justify-center max-md:border-b md:border-r items-center border-[#4dffb5]/80">
 
                 <Login />
               </div>
