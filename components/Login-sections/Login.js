@@ -51,11 +51,11 @@ const Login = () => {
         <div className={`${unica.className}  flex flex-wrap w-full px-[10%] gap-[2vh] justify-center`} >
             <input
                 type="email"
-                className="bg-black/40 text-gray-200 border-0 p-2  focus:bg-black/60 focus:outline-none focus:ring-1 focus:ring-[#4dffb5]/50 transition ease-in-out duration-150 w-full"
+                className="bg-black/40 text-white border !border-[#4dffb5]/10 focus:!border-[#4dffb5]/60 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                 placeholder="Email" onChange={(e) => { setloginEmail(e.target.value) }} />
             <input
                 type="password"
-                className="bg-black/40 text-gray-200 border-0 p-2  focus:bg-black/60 focus:outline-none focus:ring-1 focus:ring-[#4dffb5]/50 transition ease-in-out duration-150 w-full"
+                className="bg-black/40 text-white border !border-[#4dffb5]/10 focus:!border-[#4dffb5]/60 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                 placeholder="Password" onChange={(e) => { setloginPassword(e.target.value) }} />
             <button type="submit"
                 class="w-full mx-[20vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={login}>SignIn</button>

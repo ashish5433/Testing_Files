@@ -175,7 +175,7 @@ const SignUp = () => {
                 {/* <h1>Register</h1> */}
                     <input
                         type="text"
-                        className="bg-black/40 text-white border !border-[#4dffb5]/10 focus:!border-[#4dffb5]/60 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
+                        className="bg-black/40 text-[#4dffb5]/60 border !border-orange-500 focus:!border-[#4dffb5]/60 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                         placeholder="Full Name" onChange={(e) => {
                             setregisterName(e.target.value);
                         }} />
