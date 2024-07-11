@@ -52,14 +52,16 @@ export default function LoggingIn() {
         <div className="battu posi--1"><span className="spanu"></span></div>
         <div className="battu posi--2"><span className="spanu"></span></div>
         <div className="battu posi--3"><span className="spanu"></span></div>
-      <div className="w-screen h-screen relative lg:pt-10">
-        <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 h-3/4 bg-white">
-          <div>
-
-          </div>
-          <div>
-
-          </div>
+      <div className="w-screen h-screen relative ">
+        <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-white/10 backdrop-blur-lg rounded-md lg:mt-[3rem]">
+        <div class="flex h-full  flex-wrap md:flex-nowrap">
+                <div class="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center max-md:border-b md:border-r">
+                   <h1 className="text-white">Login</h1>
+                </div>
+                <div class="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
+                <h1 className="text-white">Sign up</h1>
+                </div>
+            </div>
         </section>
       </div> 
       </div>
