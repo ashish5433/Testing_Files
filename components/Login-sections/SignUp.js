@@ -175,38 +175,38 @@ const SignUp = () => {
                 {/* <h1>Register</h1> */}
                     <input
                         type="text"
-                        className="bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
+                        className="max-md:text-[1vh] text-[3vh]  bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                         placeholder="Full Name" onChange={(e) => {
                             setregisterName(e.target.value);
                         }} />
                     <input
                         type="email"
-                        className="bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
+                        className="max-md:text-[1vh] text-[3vh]  bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                         placeholder="Email" onChange={(e) => {
                             setregisterEmail(e.target.value);
                         }} />
                     <input
                         type="password"
-                        className="bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
+                        className="max-md:text-[1vh] text-[3vh]  bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                         placeholder="Password" onChange={(e) => {
                             setregisterPassword(e.target.value);
                         }} />
                     <input
                         type="password"
-                        className="bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
+                        className="max-md:text-[1vh] text-[3vh]  bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                         placeholder="Confirm Password" onChange={(e) => {
                             handlecnfrmPassword(e);
                         }} />
 
                     <input
                         type="number"
-                        className="bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
+                        className="max-md:text-[1vh] text-[3vh]  bg-black/40 placeholder-[#4dffb5]/40 text-[#4dffb5]/80 border-2 border-[#4dffb5]/40 focus:!border-[#4dffb5]/80 p-2  focus:bg-black/60 focus:outline-none transition ease-in-out duration-150 w-full"
                         placeholder="Enter Mobile" />
 
                     <button type="submit"
-                        class="w-full mx-[15vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={Register}>Register</button>
+                        className={`${player.className} w-full max-md:text-[2vh] text-[3vh] text-black border-2 border-[#4dffb5]/40  bg-[#4dffb5]/80 py-1 px-3 hover:!text-[#4dffb5]/80 hover:bg-transparent transition ease-in-out duration-150`} onClick={Register}>Register</button>
                     {/* <button type="submit"
-                class="w-full mx-[20vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={signInwithgoogle}>SignInWithGoogle</button> */}
+                className="w-full mx-[20vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={signInwithgoogle}>SignInWithGoogle</button> */}
                 </div>
         </>
     )
