@@ -161,38 +161,38 @@ const SignUp = () => {
                 <div className="flex flex-wrap w-full px-[10%] gap-[2vh] justify-center">
                     <input
                         type="text"
-                        className="bg-black/20 text-gray-200 border-0 p-2  focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+                        className="bg-black/40 text-white border-0 p-2  focus:bg-black/60 focus:outline-none focus:ring-1 focus:ring-[#4dffb5]/50 transition ease-in-out duration-150 w-full"
                         placeholder="Full Name" onChange={(e) => {
                             setregisterName(e.target.value);
                         }} />
                     <input
                         type="email"
-                        className="bg-gray-700 text-gray-200 border-0 rounded-md p-2  focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+                        className="bg-black/40 text-gray-200 border-0 p-2  focus:bg-black/60 focus:outline-none focus:ring-1 focus:ring-[#4dffb5]/50 transition ease-in-out duration-150 w-full"
                         placeholder="Email" onChange={(e) => {
                             setregisterEmail(e.target.value);
                         }} />
                     <input
                         type="password"
-                        className="bg-gray-700 text-gray-200 border-0 rounded-md p-2  focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+                        className="bg-black/40 text-gray-200 border-0 p-2  focus:bg-black/60 focus:outline-none focus:ring-1 focus:ring-[#4dffb5]/50 transition ease-in-out duration-150 w-full"
                         placeholder="Password" onChange={(e) => {
                             setregisterPassword(e.target.value);
                         }} />
                     <input
                         type="password"
-                        className="bg-gray-700 text-gray-200 border-0 rounded-md p-2  focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+                        className="bg-black/40 text-gray-200 border-0 p-2  focus:bg-black/60 focus:outline-none focus:ring-1 focus:ring-[#4dffb5]/50 transition ease-in-out duration-150 w-full"
                         placeholder="Confirm Password" onChange={(e) => {
                             handlecnfrmPassword(e);
                         }} />
 
                     <input
                         type="number"
-                        className="bg-gray-700 text-gray-200 border-0 rounded-md p-2  focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+                        className="bg-black/40 text-gray-200 border-0 p-2  focus:bg-black/60 focus:outline-none focus:ring-1 focus:ring-[#4dffb5]/50 transition ease-in-out duration-150 w-full"
                         placeholder="Enter Mobile" />
 
                     <button type="submit"
-                        class="w-full mx-[15vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={Register}>Register</button>
+                        class="w-full mx-[15vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={Register}>Register</button>
                     {/* <button type="submit"
-                class="w-full mx-[20vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={signInwithgoogle}>SignInWithGoogle</button> */}
+                class="w-full mx-[20vw] bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" onClick={signInwithgoogle}>SignInWithGoogle</button> */}
                 </div>
         </>
     )
