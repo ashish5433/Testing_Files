@@ -34,6 +34,7 @@ import RelatedMotorcycle from "@/Check/Relatedtags/relatedMotorcycle";
 import RelatedtagsCars from "@/Check/Relatedtags/relatedCars";
 import iotCarousel from "@/CarouselImageData/iotCarousel";
 import MainNav from "@/components/MainNav";
+import Head from "next/head";
 const fontBebas = Bebas_Neue({
   subsets: ["latin"],
   display: 'swap',
@@ -57,6 +58,7 @@ export default function ProductsList() {
   const categoryDetail = router.query.categoryId;
   // console.log(categoryDetail);
   const [subcategory, setSubcategory] = useState([]);
+  const [faviURL, setfaviURL] = useState("/favicons/favicon.png");
   const [carouselImages, setCarouselImages] = useState("");
   useEffect(() => {
     if (categoryDetail === "amphibious") {
@@ -143,11 +145,36 @@ export default function ProductsList() {
       setSubcategory(sailBoats);
     }
   });
+  // useEffect(() => {
+  //   if () {
+  //     setfaviURL("/favicons/car.png")
+  //   }
+  //   else if (carouselImages === "bikeCarousel") {
+  //     setfaviURL("/favicons/bike.png")
+  //   }
+  //   else if (carouselImages === "iotCarousel") {
+  //     setfaviURL("/favicons/iot.png")
+  //   }
+  //   else {
+  //     setfaviURL("/favicons/villa.png")
+  //   }
+
+  // }, []);
+
+
+
 
   let mainCarousel = [...carouselImages];
   const [yacht, changeYacht] = useState(false);
   return (
     <div>
+      <Head>
+        <title>{` Kir.ai - ${categoryDetail}`}</title>
+        {
+          carouselImages === "carCarousel" ? <link rel="icon" href="/favicons/car.png" /> : carouselImages === "bikeCarousel" ? <link rel="icon" href="/favicons/bike2.png" /> : carouselImages === "iotCarousel" ? <link rel="icon" href="/favicons/iot.png" /> : <link rel="icon" href="/favicons/estate.png" />
+        }
+
+      </Head>
 
       {/* <div className="nav2productlist">
       <Navbar2/>
@@ -223,10 +250,10 @@ export default function ProductsList() {
           {/* <Topfilter show={showFilter} showFunc={setShowFilter} gridOrList={gridOrList} setGridOrList={setGridOrList} /> */}
           {
             carouselImages === "bikeCarousel" ? (<div className="bg-[#101010] py-11">
-            <ProductCard products={bikeCarousel} view={true} /> </div>): carouselImages === "carCarousel" ? (<div className="bg-[#101010] py-11">
-            <ProductCard products={carCarousel} view={true} /> </div>):carouselImages === "iotCarousel" ?  (<div className="bg-[#101010] py-11">
-            <ProductCard products={iotCarousel} view={true} /> </div>):  (<div className="bg-[#101010] py-11">
-            <ProductCard products={estateCarousel} view={true} /> </div>)
+              <ProductCard products={bikeCarousel} view={true} /> </div>) : carouselImages === "carCarousel" ? (<div className="bg-[#101010] py-11">
+                <ProductCard products={carCarousel} view={true} /> </div>) : carouselImages === "iotCarousel" ? (<div className="bg-[#101010] py-11">
+                  <ProductCard products={iotCarousel} view={true} /> </div>) : (<div className="bg-[#101010] py-11">
+                    <ProductCard products={estateCarousel} view={true} /> </div>)
           }
 
 

@@ -7,6 +7,7 @@ import FontFaceObserver from 'fontfaceobserver';
 import Router, { useRouter } from 'next/router';
 import MainNav from '@/components/MainNav';
 import CustomCursor from '@/components/CustomCursor';
+import Head from 'next/head';
 export default function App({ Component, pageProps }) {
   
   const [loading, setLoading] = useState(true);
@@ -62,6 +63,10 @@ export default function App({ Component, pageProps }) {
   }, [router.pathname]);
   return (
     <>
+    <Head>
+        <title>Kir.AI - Rental Platform</title>
+        <link rel="icon" href="/favicons/home.png"/>
+      </Head>
       {loading && <Loading />}
       <CustomCursor/>
       <MainNav/>
