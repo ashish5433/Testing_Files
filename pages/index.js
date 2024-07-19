@@ -1,3 +1,4 @@
+"use client"
 import Navbar1 from "../components/navbar";
 import MidSection from "../components/midSection";
 import Corousel from "../components/Carousel";
@@ -106,7 +107,7 @@ export default function Home() {
           <Navbar1 isShow={toShow} setToshow={SettoShow} />
           {toShow && <UserProfile Name={userName} Email={userEmail} />}
         </div> */}
-        <MainNav/>
+        {/* <MainNav/> */}
         {/* <AlanContainer /> */}
 
         <div className="cor1">

@@ -15,9 +15,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { useRouter } from "next/router";
 
-import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
-import { app } from "../firebase/firebase";
+// import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+// import { app } from "../firebase/firebase";
 import { Bebas_Neue, Unica_One } from "next/font/google";
+import { useAuth } from '@/contexts/AuthContext';
 
 
 const player = Bebas_Neue({
@@ -27,16 +28,19 @@ const player = Bebas_Neue({
 });
 const unica = Unica_One({
     subsets: ["latin"],
-    display: 'swap', 
+    display: 'swap',
     adjustFontFallback: false, weight: '400'
-  });
+});
 const MainNav = (props) => {
-    const [userName, setUserName] = useState("");
+
+    const { user, sign_Out, userName, isUser } = useAuth();
+
+    // const [userName, setUserName] = useState("");
     const [show, setShow] = useState(false);
-    const [isUser, setisUser] = useState(true);
+    // const [isUser, setisUser] = useState(true);
     const [color, setColor] = useState(false);
 
-    const auth = getAuth(app);
+    // const auth = getAuth(app);
 
     const [nav2, setNav2] = useState(false);
     const [searchbar, setSearchbar] = useState(false);
@@ -69,47 +73,50 @@ const MainNav = (props) => {
         router.push("/login");
     };
 
-    useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUserName(auth.currentUser.displayName);
-                setisUser(false);
-                setbtnDisable(true);
-                console.log(auth.currentUser.displayName);
-            } else {
-                console.log("User Not Found");
-            }
-        });
-    }, []);
+    // useEffect(() => {
+    //     onAuthStateChanged(auth, (user) => {
+    //         if (user) {
+    //             setUserName(auth.currentUser.displayName);
+    //             setisUser(false);
+    //             // setbtnDisable(true);
+    //             console.log(auth.currentUser.displayName);
+    //             // router.push("/");
+    //         } else {
+    //             console.log("User Not Found");
+    //         }
+    //     });
+    // }, [isUser]);
 
-    const sign_Out = () => {
-        signOut(auth)
-            .then(() => {
-                toast.success("Signed Out Successfully ", {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                });
-                // setisUser(true);
-            })
-            .catch((error) => {
-                toast.error("Some Error Occured ", {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                });
-            });
-    };
+    // const sign_Out = () => {
+    //     signOut(auth)
+    //         .then(() => {
+    //             toast.success("Signed Out Successfully ", {
+    //                 position: "top-center",
+    //                 autoClose: 5000,
+    //                 hideProgressBar: false,
+    //                 closeOnClick: true,
+    //                 pauseOnHover: true,
+    //                 draggable: true,
+    //                 progress: undefined,
+    //                 theme: "colored",
+    //             });
+    //             // setisUser(true);
+    //         })
+    //         .catch((error) => {
+    //             toast.error("Some Error Occured ", {
+    //                 position: "top-center",
+    //                 autoClose: 5000,
+    //                 hideProgressBar: false,
+    //                 closeOnClick: true,
+    //                 pauseOnHover: true,
+    //                 draggable: true,
+    //                 progress: undefined,
+    //                 theme: "colored",
+    //             });
+    //         });
+    //         router.push("/login");
+
+    // };
 
     return (
         <div className='w-screen z-[200] fixed'>
@@ -139,7 +146,7 @@ const MainNav = (props) => {
                             </svg>
                         </Button>
                         <h1
-                            style={{ fontSize: "1.5rem", fontWeight: "bold", letterSpacing: "2px",cursor:"pointer" }}
+                            style={{ fontSize: "1.5rem", fontWeight: "bold", letterSpacing: "2px", cursor: "pointer" }}
                             className={player.className} onClick={() => {
                                 router.push("/");
                             }}
@@ -187,11 +194,11 @@ const MainNav = (props) => {
                                 }
                             } >List With Us</span>
                         </Button>
-                        <Button
-                            className="me-2 nav-btn login-name-button translate-y-[1.5px]"
-                        // disabled={btnDisable}
-                        >
-                            {isUser ? (
+                        {isUser ? (
+                            <Button
+                                className="me-2 nav-btn login-name-button translate-y-[1.5px]"
+                            >
+
                                 <span
                                     id="signin"
                                     onClick={() => {
@@ -201,50 +208,24 @@ const MainNav = (props) => {
                                 >
                                     Login
                                 </span>
-                            ) : (
-                                <span>
-                                    <Dropdown className="mt-3.5">
-                                        <Dropdown.Toggle
-                                            variant="transparent"
-                                            id="dropdown-basic"
-                                        >
-                                            <p className="inline-flex  text-neutral-50">
-                                                <span className="material-symbols-outlined py-3">
-                                                    person
-                                                </span>
-                                                <span className="py-3">{userName}</span>
-                                            </p>
-                                        </Dropdown.Toggle>
-
-                                        <Dropdown.Menu className="hover:bg-slate-100">
-                                            <Dropdown.Item
-                                                className="focus:bg-slate-100"
-                                                href="#/action-1"
-                                                onMouseEnter={ShowDetails}
-                                                onMouseLeave={HideDetails}
-                                            >
-                                                Account Details
-                                            </Dropdown.Item>
-                                            <Dropdown.Item
-                                                className={`${unica.className} focus:bg-slate-100`}
-                                                //href="#/action-2"
-                                                onClick={sign_Out}
-
-
-                                            >
-                                                Sign Out
-                                            </Dropdown.Item>
-                                        </Dropdown.Menu>
-                                    </Dropdown>
+                            </Button>
+                        ) : (
+                            <Button
+                                className="me-2 nav-btn login-name-button translate-y-[1.5px]"
+                            >
+                                <span onClick={sign_Out} className={`${unica.className} nav-btns`}>
+                                    {userName}
                                 </span>
-                            )}
-                        </Button>
+                            </Button>
+
+                        )}
+
                     </div>
-                        <Button
-                            className="me-2 nav-btn login-name-button-2"
-                        // disabled={btnDisable}
-                        >
-                            {isUser ? (
+                    {isUser ? (
+                            <Button
+                                className="nav-btn login-name-button-2 translate-y-[1.5px]"
+                            >
+
                                 <span
                                     id="signin"
                                     onClick={() => {
@@ -254,51 +235,24 @@ const MainNav = (props) => {
                                 >
                                     Login
                                 </span>
-                            ) : (
-                                <span>
-                                    <Dropdown className="mt-3.5">
-                                        <Dropdown.Toggle
-                                            variant="transparent"
-                                            id="dropdown-basic"
-                                        >
-                                            <p className="inline-flex  text-neutral-50">
-                                                <span className="material-symbols-outlined py-3">
-                                                    person
-                                                </span>
-                                                <span className="py-3">{userName}</span>
-                                            </p>
-                                        </Dropdown.Toggle>
-
-                                        <Dropdown.Menu className="hover:bg-slate-100">
-                                            <Dropdown.Item
-                                                className={`${unica.className} focus:bg-slate-100`}
-                                                href="#/action-1"
-                                                onMouseEnter={ShowDetails}
-                                                onMouseLeave={HideDetails}
-                                            >
-                                                Account Details
-                                            </Dropdown.Item>
-                                            <Dropdown.Item
-                                                className="focus:bg-slate-100"
-                                                //href="#/action-2"
-                                                onClick={sign_Out}
-
-
-                                            >
-                                                Sign Out
-                                            </Dropdown.Item>
-                                        </Dropdown.Menu>
-                                    </Dropdown>
+                            </Button>
+                        ) : (
+                            <Button
+                                className="nav-btn login-name-button-2 translate-y-[1.5px]"
+                            >
+                                <span onClick={sign_Out} className={`${unica.className} nav-btns`}>
+                                    {userName}
                                 </span>
-                            )}
-                        </Button>
+                            </Button>
+
+                        )}
                     <div className=" z-[1000000000000000000] absolute">
 
                         <Offcanvas show={show} onHide={handleClose}>
                             <Offcanvas.Header >
                                 <Offcanvas.Title className={player.className} onClick={() => {
-                                router.push("/");
-                            }}>
+                                    router.push("/");
+                                }}>
                                     KIR.AI
                                 </Offcanvas.Title>
                                 <Button
@@ -324,7 +278,7 @@ const MainNav = (props) => {
                                                 Sign in / Register
                                             </Button>
                                         ) : (
-                                            <p style={{ marginLeft: "3rem", marginTop: "-37px" }}>
+                                            <p className={`${unica.className}`}>
                                                 {userName}
                                             </p>
                                         )}

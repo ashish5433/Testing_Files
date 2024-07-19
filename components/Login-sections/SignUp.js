@@ -98,20 +98,22 @@ const SignUp = () => {
                     theme: "colored",
                 });
             }
-        } else if (isChecked2 === false) {
-            {
-                toast.error('Please accept terms and conditons!! ', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                });
-            }
-        } else {
+        } 
+        // else if (isChecked2 === false) {
+        //     {
+        //         toast.error('Please accept terms and conditons!! ', {
+        //             position: "top-center",
+        //             autoClose: 5000,
+        //             hideProgressBar: false,
+        //             closeOnClick: true,
+        //             pauseOnHover: true,
+        //             draggable: true,
+        //             progress: undefined,
+        //             theme: "colored",
+        //         });
+        //     }
+        // } 
+        else {
             try {
                 const user = await createUserWithEmailAndPassword(
                     auth,

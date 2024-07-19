@@ -1,32 +1,35 @@
-import '@/styles/globals.css'
+import '@/styles/globals.css';
 import { useState, useEffect } from 'react';
-// import { useRouter } from 'next/router';
 import Loading from '@/components/loading';
 import FontFaceObserver from 'fontfaceobserver';
-
 import Router, { useRouter } from 'next/router';
 import MainNav from '@/components/MainNav';
 import CustomCursor from '@/components/CustomCursor';
 import Head from 'next/head';
+import { AuthProvider } from '@/contexts/AuthContext';
+
 export default function App({ Component, pageProps }) {
-  
   const [loading, setLoading] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isSigningOut, setIsSigningOut] = useState(false);
   const router = useRouter();
-
+  
   useEffect(() => {
-    const handleRouteChangeStart = () => setLoading(true);
-    const handleRouteChangeComplete = () => {
-      setInterval(()=>{
+    const handleRouteChangeStart = () => {
+      if (!isSigningOut) {
+        setLoading(true);
+      }
+    };
 
+    const handleRouteChangeComplete = () => {
+      if (!isSigningOut) {
         setLoading(false);
-      },11000)
-    }
+      }
+    };
 
     Router.events.on('routeChangeComplete', handleRouteChangeComplete);
     Router.events.on('routeChangeError', handleRouteChangeComplete);
 
-    // Ensure the loading screen stays until Material Icons are loaded
     const loadMaterialIcons = () => {
       return new Promise((resolve) => {
         const materialIconsObserver = new FontFaceObserver('Material Symbols Outlined', { weight: 100 });
@@ -35,7 +38,7 @@ export default function App({ Component, pageProps }) {
           resolve();
           setIsLoaded(true);
         }).catch(() => {
-          resolve(); // Resolve even if it fails to prevent getting stuck
+          resolve();
           setIsLoaded(true);
         });
       });
@@ -43,7 +46,7 @@ export default function App({ Component, pageProps }) {
 
     const onLoad = async () => {
       await new Promise((resolve) => {
-        setTimeout(resolve, 3000); // Ensure at least 3 seconds of loading
+        setTimeout(resolve, 3000);
       });
 
       await loadMaterialIcons();
@@ -51,7 +54,7 @@ export default function App({ Component, pageProps }) {
     };
 
     if (router.pathname === '/') {
-      onLoad(); // Trigger the initial load check only for the main landing page
+      onLoad();
     } else {
       setLoading(false);
     }
@@ -60,18 +63,21 @@ export default function App({ Component, pageProps }) {
       Router.events.off('routeChangeComplete', handleRouteChangeComplete);
       Router.events.off('routeChangeError', handleRouteChangeComplete);
     };
-  }, [router.pathname]);
+  }, [router.pathname, isSigningOut]);
+
   return (
     <>
-    <Head>
-        <title>Kir.AI - Rental Platform</title>
+      <Head>
+        <title>Kir.ai - Rental Platform</title>
         <link rel="icon" href="/favicons/home.png"/>
       </Head>
       {loading && <Loading />}
       <CustomCursor/>
-      <MainNav/>
 
-      <Component {...pageProps} />
+      <AuthProvider>
+        <MainNav />
+        <Component {...pageProps} />
+      </AuthProvider>
     </>
   );
 }

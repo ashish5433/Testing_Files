@@ -1,4 +1,3 @@
-// components/CustomCursor.js
 import React, { useEffect, useState } from 'react';
 
 const CustomCursor = () => {
@@ -10,17 +9,21 @@ const CustomCursor = () => {
     setPosition({ x: event.clientX, y: event.clientY });
 
     const element = document.elementFromPoint(event.clientX, event.clientY);
-    const cursorStyle = window.getComputedStyle(element).getPropertyValue('cursor');
 
-    if (element.tagName === 'IFRAME') {
+    if (element && element.tagName === 'IFRAME') {
       setIsIframe(true);
       return;
     }
 
     setIsIframe(false);
 
-    if (cursorStyle === 'pointer') {
-      setCursorType('pointer');
+    if (element) {
+      const cursorStyle = window.getComputedStyle(element).getPropertyValue('cursor');
+      if (cursorStyle === 'pointer') {
+        setCursorType('pointer');
+      } else {
+        setCursorType('');
+      }
     } else {
       setCursorType('');
     }
