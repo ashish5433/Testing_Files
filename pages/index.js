@@ -1,4 +1,3 @@
-"use client"
 import Navbar1 from "../components/navbar";
 import MidSection from "../components/midSection";
 import Corousel from "../components/Carousel";
