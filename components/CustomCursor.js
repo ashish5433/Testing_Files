@@ -1,0 +1,50 @@
+// components/CustomCursor.js
+import React, { useEffect, useState } from 'react';
+
+const CustomCursor = () => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [cursorType, setCursorType] = useState('');
+  const [isIframe, setIsIframe] = useState(false);
+
+  const handleMouseMove = (event) => {
+    setPosition({ x: event.clientX, y: event.clientY });
+
+    const element = document.elementFromPoint(event.clientX, event.clientY);
+    const cursorStyle = window.getComputedStyle(element).getPropertyValue('cursor');
+
+    if (element.tagName === 'IFRAME') {
+      setIsIframe(true);
+      return;
+    }
+
+    setIsIframe(false);
+
+    if (cursorStyle === 'pointer') {
+      setCursorType('pointer');
+    } else {
+      setCursorType('');
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  return (
+    !isIframe && (
+      <div
+        className={`custom-cursor ${cursorType}`}
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+        }}
+      />
+    )
+  );
+};
+
+export default CustomCursor;

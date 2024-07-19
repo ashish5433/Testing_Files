@@ -6,6 +6,7 @@ import FontFaceObserver from 'fontfaceobserver';
 
 import Router, { useRouter } from 'next/router';
 import MainNav from '@/components/MainNav';
+import CustomCursor from '@/components/CustomCursor';
 export default function App({ Component, pageProps }) {
   
   const [loading, setLoading] = useState(true);
@@ -62,7 +63,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {loading && <Loading />}
+      <CustomCursor/>
       <MainNav/>
+
       <Component {...pageProps} />
     </>
   );

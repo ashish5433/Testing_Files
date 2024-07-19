@@ -43,11 +43,38 @@ body {
   /* background-color: rgb(180, 13, 13);
   color: white; */
   overflow-x: hidden;
+  cursor: none !important;
   -ms-overflow-style: none; /* disables default scrollbar */
   /* width: 100vw; */
 }
 body::-webkit-scrollbar {
   display: none; 
+  }
+  .custom-cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    /* transition: background-color 0.3s, transform 0.1s, scale 1.9s; */
+    transition: background-color 1s, transform 0.5s, opacity 1s;
+    /* background-color: #4dffb5; */
+    background: #ffffff;
+    opacity: 0.75;
+    transform: translate(-50%, -50%);
+  }
+  
+  .custom-cursor.pointer {
+    /* background-color: white; */
+    opacity: 0.8;
+    transform: scale(3)  translate(-20%, -15%);
+    /* filter: blur(10px); */
+    /* backdrop-filter: blur(10px); */
+    
+    mix-blend-mode: difference;
+    
+
   }
 .navbar {
   padding-left: 3rem !important;
