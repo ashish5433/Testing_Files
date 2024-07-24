@@ -22,9 +22,10 @@ export default function App({ Component, pageProps }) {
     };
 
     const handleRouteChangeComplete = () => {
-      if (!isSigningOut) {
+      setInterval(()=>{
+
         setLoading(false);
-      }
+      },11000)
     };
 
     Router.events.on('routeChangeComplete', handleRouteChangeComplete);
