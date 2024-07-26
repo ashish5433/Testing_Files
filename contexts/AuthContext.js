@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
         setUser(curruser);
         setUserName(curruser.displayName);
         setisUser(false);
-        console.log(curruser.displayName);
+        // console.log(curruser.displayName);
         router.push("/");
       }
     });
