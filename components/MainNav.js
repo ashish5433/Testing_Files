@@ -266,19 +266,19 @@ const MainNav = (props) => {
                             <Offcanvas.Body>
                                 <hr />
                                 <div className={`${unica.className} btn-div`}>
-                                    <div>
+                                    <div className='flex '>
                                         <span className="material-symbols-outlined">
                                             account_circle
                                         </span>
                                         {isUser ? (
                                             <Button
                                                 onClick={signInClick}
-
+ className='pt-3 '
                                             >
                                                 Sign in / Register
                                             </Button>
                                         ) : (
-                                            <p className={`${unica.className}`}>
+                                            <p className={` pt-3 ${unica.className} `}>
                                                 {userName}
                                             </p>
                                         )}

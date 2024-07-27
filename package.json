@@ -1,6 +1,6 @@
 {
-  "name": "shaukeen",
-  "version": "0.1.0",
+  "name": "Kir.ai",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

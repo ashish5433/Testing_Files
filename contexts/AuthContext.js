@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     });
 
     return () => unsubscribe();
-  }, [router]);
+  }, []);
 
   const sign_Out = async () => {
     try {
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
         theme: "colored",
       });
       setisUser(true);
-    //   router.push("/login");
+      router.push("/login");
     } catch (error) {
       toast.error("Some Error Occurred ", {
         position: "top-center",
