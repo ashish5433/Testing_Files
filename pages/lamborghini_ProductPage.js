@@ -19,22 +19,47 @@ export default function LamborghiniProductPage({ data }) {
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   const router = useRouter();
 
+  // const addToCart = async () => {
+  //   if (user) {
+  //     await addDoc(cartRef, {
+  //       productId: "lamborghini_aventador",
+  //       productName: "Lamborghini Aventador",
+  //       productPrice: 19999,
+  //       quantity: 1,
+  //       Time: showTime,
+  //       Date: datenow
+  //     });
+  //     alert("Added to cart successfully");
+  //   } else {
+  //     alert('You need to be logged in to add items to your cart');
+  //   }
+  // };
   const addToCart = async () => {
-    if (user) {
-      await addDoc(cartRef, {
-        productId: "lamborghini_aventador",
+    if (!user) {
+      alert("You need to be logged in to add items to your cart");
+      return;
+    }
+
+    // setLoading(true);
+    const productId = "lamborghini_aventador";
+    const productRef = doc(db, 'users', user.uid, 'cart', productId);
+    const productSnap = await getDoc(productRef);
+
+    if (productSnap.exists()) {
+      await setDoc(productRef, {
+        quantity: productSnap.data().quantity + 1
+      }, { merge: true });
+    } else {
+      await setDoc(productRef, {
         productName: "Lamborghini Aventador",
         productPrice: 19999,
         quantity: 1,
-        Time: showTime,
-        Date: datenow
       });
-      alert("Added to cart successfully");
-    } else {
-      alert('You need to be logged in to add items to your cart');
     }
-  };
 
+    // setLoading(false);
+    alert("Added to cart successfully");
+  };
   const pusher = () => {
     router.push("/components/History");
   };

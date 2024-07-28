@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect, useContext } from 'react';
 import { useAuth } from './AuthContext';
 import { db } from '@/firebase/firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
+
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
@@ -20,7 +21,10 @@ export const CartProvider = ({ children }) => {
           ...doc.data()
         }));
         setCart(cartItems);
-        setCartCount(cartItems.length);
+        
+        // Calculate the total count of items in the cart
+        const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+        setCartCount(totalCount);
       });
 
       return () => unsubscribe();
