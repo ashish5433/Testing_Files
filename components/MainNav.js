@@ -21,6 +21,7 @@ import { Bebas_Neue, Unica_One } from "next/font/google";
 import { useAuth } from '@/contexts/AuthContext';
 import Link from 'next/link';
 import { useCart } from '@/contexts/CartContext';
+import CartPage from '@/pages/Cart';
 
 
 const player = Bebas_Neue({
@@ -63,6 +64,11 @@ const MainNav = (props) => {
             setNav2(true);
             setSearchbar(true);
         }
+    };
+    const [showCartModal, setShowCartModal] = useState(false);
+
+    const handleCartClick = () => {
+        setShowCartModal(true);
     };
 
     useEffect(() => {
@@ -123,9 +129,13 @@ const MainNav = (props) => {
 
     return (
         <div className='w-screen z-[200] fixed'>
+{showCartModal && (
+                    <CartPage showModal={showCartModal} onClose={() => setShowCartModal(false)} />
+                )}
             <Navbar
                 className={color ? "navbar black-nav" : "navbar transparent-nav"}
             >
+                
                 <Container fluid className='nav-container'>
                     <div className="left-nav">
                         <Button
@@ -194,14 +204,13 @@ const MainNav = (props) => {
                         <Button className="me-2 nav-btn">
                             <span className={`${unica.className} nav-btns`} >List With Us</span>
                         </Button>
+
                         {user && <Button className="me-2 nav-btn">
-                            <span className={`${unica.className} nav-btns`}  onClick={
-                                () => {
-                                   router.push("/Cart");
-                                }}>
+                            <span className={`${unica.className} nav-btns`} onClick={handleCartClick}>
                                 Cart ({cartCount})
                             </span>
                         </Button>}
+
                         {isUser ? (
                             <Button
                                 className="me-2 nav-btn login-name-button translate-y-[1.5px]"
