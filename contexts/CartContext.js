@@ -1,11 +1,7 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
-// import { useAuth } from '../auth';
-// import { db } from '../firebase';
-// import { collection, onSnapshot } from "firebase/firestore"; 
 import { useAuth } from './AuthContext';
 import { db } from '@/firebase/firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
-
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
@@ -13,6 +9,7 @@ export const useCart = () => useContext(CartContext);
 export const CartProvider = ({ children }) => {
   const { user } = useAuth();
   const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     if (user) {
@@ -23,6 +20,7 @@ export const CartProvider = ({ children }) => {
           ...doc.data()
         }));
         setCart(cartItems);
+        setCartCount(cartItems.length);
       });
 
       return () => unsubscribe();
@@ -30,7 +28,7 @@ export const CartProvider = ({ children }) => {
   }, [user]);
 
   return (
-    <CartContext.Provider value={{ cart }}>
+    <CartContext.Provider value={{ cart, cartCount }}>
       {children}
     </CartContext.Provider>
   );

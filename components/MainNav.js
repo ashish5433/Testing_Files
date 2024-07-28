@@ -20,6 +20,7 @@ import { useRouter } from "next/router";
 import { Bebas_Neue, Unica_One } from "next/font/google";
 import { useAuth } from '@/contexts/AuthContext';
 import Link from 'next/link';
+import { useCart } from '@/contexts/CartContext';
 
 
 const player = Bebas_Neue({
@@ -69,6 +70,7 @@ const MainNav = (props) => {
     }, []);
 
     const router = useRouter();
+    const { cartCount } = useCart();
 
     const signInClick = () => {
         router.push("/login");
@@ -197,7 +199,7 @@ const MainNav = (props) => {
                                 () => {
                                    router.push("/Cart");
                                 }}>
-                                Cart
+                                Cart ({cartCount})
                             </span>
                         </Button>}
                         {isUser ? (
