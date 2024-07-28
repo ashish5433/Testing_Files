@@ -7,6 +7,7 @@ import MainNav from '@/components/MainNav';
 import CustomCursor from '@/components/CustomCursor';
 import Head from 'next/head';
 import { AuthProvider } from '@/contexts/AuthContext';
+import { CartProvider } from '@/contexts/CartContext';
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
@@ -72,12 +73,16 @@ export default function App({ Component, pageProps }) {
         <title>Kir.ai - Rental Platform</title>
         <link rel="icon" href="/favicons/home.png"/>
       </Head>
-      {loading && <Loading />}
+      {/* {loading && <Loading />} */}
       <CustomCursor/>
 
       <AuthProvider>
+        <CartProvider>
+
         <MainNav />
         <Component {...pageProps} />
+       
+        </CartProvider>
       </AuthProvider>
     </>
   );

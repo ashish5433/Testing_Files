@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 // import { app } from "../firebase/firebase";
 import { Bebas_Neue, Unica_One } from "next/font/google";
 import { useAuth } from '@/contexts/AuthContext';
+import Link from 'next/link';
 
 
 const player = Bebas_Neue({
@@ -182,18 +183,23 @@ const MainNav = (props) => {
                         </div>
                     </div> */}
                     <div className={`${classes.small} all-nav-btns`}>
+
                         <Button className="me-2 nav-btn">
                             <span className={`${unica.className} nav-btns`}>
                                 Just For You
                             </span>
                         </Button>
                         <Button className="me-2 nav-btn">
-                            <span className={`${unica.className} nav-btns`} onClick={
-                                () => {
-                                    // {data.setEmailbyvoice("Asyush")}
-                                }
-                            } >List With Us</span>
+                            <span className={`${unica.className} nav-btns`} >List With Us</span>
                         </Button>
+                        {user && <Button className="me-2 nav-btn">
+                            <span className={`${unica.className} nav-btns`}  onClick={
+                                () => {
+                                   router.push("/Cart");
+                                }}>
+                                Cart
+                            </span>
+                        </Button>}
                         {isUser ? (
                             <Button
                                 className="me-2 nav-btn login-name-button translate-y-[1.5px]"
@@ -222,30 +228,30 @@ const MainNav = (props) => {
 
                     </div>
                     {isUser ? (
-                            <Button
-                                className="nav-btn login-name-button-2 translate-y-[1.5px]"
-                            >
+                        <Button
+                            className="nav-btn login-name-button-2 translate-y-[1.5px]"
+                        >
 
-                                <span
-                                    id="signin"
-                                    onClick={() => {
-                                        router.push("/login");
-                                    }}
-                                    className={`${unica.className} nav-btns`}
-                                >
-                                    Login
-                                </span>
-                            </Button>
-                        ) : (
-                            <Button
-                                className="nav-btn login-name-button-2 translate-y-[1.5px]"
+                            <span
+                                id="signin"
+                                onClick={() => {
+                                    router.push("/login");
+                                }}
+                                className={`${unica.className} nav-btns`}
                             >
-                                <span onClick={sign_Out} className={`${unica.className} nav-btns`}>
-                                    {userName}
-                                </span>
-                            </Button>
+                                Login
+                            </span>
+                        </Button>
+                    ) : (
+                        <Button
+                            className="nav-btn login-name-button-2 translate-y-[1.5px]"
+                        >
+                            <span onClick={sign_Out} className={`${unica.className} nav-btns`}>
+                                {userName}
+                            </span>
+                        </Button>
 
-                        )}
+                    )}
                     <div className=" z-[1000000000000000000] absolute">
 
                         <Offcanvas show={show} onHide={handleClose}>
@@ -273,7 +279,7 @@ const MainNav = (props) => {
                                         {isUser ? (
                                             <Button
                                                 onClick={signInClick}
- className='pt-3 '
+                                                className='pt-3 '
                                             >
                                                 Sign in / Register
                                             </Button>
@@ -284,6 +290,7 @@ const MainNav = (props) => {
                                         )}
                                     </div>
                                     <div>
+
                                         <span className="material-symbols-outlined">recommend</span>
                                         <Button>About us</Button>
                                     </div>

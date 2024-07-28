@@ -3,59 +3,55 @@ import classes from "../components/ProductPage2.module.css";
 import Navbar1 from "../components/navbar";
 import Image from "next/image";
 import Navbar2 from "../components/navbar2";
-import { db,storage } from "@/firebase/firebase";
-import {collection,getDocs,addDoc} from 'firebase/firestore'
-// import { getDocs } from "firebase/firestore";
+import { db } from "@/firebase/firebase";
+import { collection, addDoc } from 'firebase/firestore';
 import { useState } from "react";
 import { useRouter } from "next/router";
-export default function lamborghini_ProductPage({data}) {
-  const [productName,setProductName]=useState("")
-  const orders=collection(db,"Order_Details");
-  const date =new Date()
+import { useAuth } from "@/contexts/AuthContext";
+
+export default function LamborghiniProductPage({ data }) {
+  const [productName, setProductName] = useState("");
+  const { user } = useAuth();
+  const orders = collection(db, "Order_Details");
+  const cartRef = user ? collection(db, 'users', user.uid, 'cart') : null;
+  const date = new Date();
   const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+  const router = useRouter();
 
-  const createData=async()=>{
-    await addDoc(orders,{ProductName:"lamborghini aventador", Seller:"Milind Palaria",price:19999,Time:showTime,Date:datenow})
-    alert("Rented Successfully")
-  }
-  // console.log(data);
-  const router=useRouter();
-  const pusher=()=>{
+  const addToCart = async () => {
+    if (user) {
+      await addDoc(cartRef, {
+        productId: "lamborghini_aventador",
+        productName: "Lamborghini Aventador",
+        productPrice: 19999,
+        quantity: 1,
+        Time: showTime,
+        Date: datenow
+      });
+      alert("Added to cart successfully");
+    } else {
+      alert('You need to be logged in to add items to your cart');
+    }
+  };
+
+  const pusher = () => {
     router.push("/components/History");
-  }
+  };
+
   return (
     <div>
-      {/* <div className="nav2productlist">
-
-      <Navbar2 />
-      </div> */}
       <div className={classes.first}>
         <h1>lamborghini aventador</h1>
         <h3>~ Milind Palaria</h3>
         <div>
           <div className={classes.big_image_div}>
-            {/* <div className={classes.share_and_like}>
-              <Image
-                className={classes.icons}
-                src="/share_4.png"
-                width={30}
-                height={30}
-              />
-              <Image
-                className={classes.icons}
-                src="/heart3.png"
-                width={35}
-                height={35}
-              />
-            </div> */}
             <Image
               className={classes.big_image}
               src="/carcarousel3.jpg"
               width={1920}
               height={1080}
               alt="Main Product"
-
             />
             <div className={classes.overlay_big}></div>
             <div className={classes.small_image_div}>
@@ -65,7 +61,6 @@ export default function lamborghini_ProductPage({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
               />
               <Image
                 className={classes.small_image}
@@ -73,7 +68,6 @@ export default function lamborghini_ProductPage({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
               />
               <Image
                 className={classes.small_image}
@@ -81,7 +75,6 @@ export default function lamborghini_ProductPage({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
               />
               <Image
                 className={classes.small_image}
@@ -89,7 +82,6 @@ export default function lamborghini_ProductPage({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
               />
               <div className={classes.more_div}>
                 <h3>more photos</h3>
@@ -105,7 +97,7 @@ export default function lamborghini_ProductPage({data}) {
               <p>usd</p>
               <p>eur</p>
             </div>
-            <button onClick={createData}>rent now</button>
+            <button onClick={addToCart}>rent now</button>
             <button onClick={pusher}>View History</button>
             <h3>add to wishlist</h3>
             <div className={classes.icons2_div}>
@@ -116,7 +108,6 @@ export default function lamborghini_ProductPage({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>visit</p>
               </div>
@@ -127,7 +118,6 @@ export default function lamborghini_ProductPage({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>call</p>
               </div>
@@ -138,7 +128,6 @@ export default function lamborghini_ProductPage({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>chat</p>
               </div>
@@ -149,7 +138,6 @@ export default function lamborghini_ProductPage({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>live view</p>
               </div>
@@ -160,7 +148,6 @@ export default function lamborghini_ProductPage({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>meet</p>
               </div>
@@ -176,7 +163,6 @@ export default function lamborghini_ProductPage({data}) {
             width={1920}
             height={1080}
             alt="Agent Cover"
-
           />
           <div className={classes.agent_card_overlay}></div>
           <div className={classes.agent_profile}>
@@ -186,9 +172,7 @@ export default function lamborghini_ProductPage({data}) {
               width={500}
               height={500}
               alt="Agent Image"
-
             />
-            
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
@@ -201,7 +185,6 @@ export default function lamborghini_ProductPage({data}) {
                     width={50}
                     height={50}
                     alt="Contact Image"
-
                   />
                   <p>call</p>
                 </div>
@@ -212,7 +195,6 @@ export default function lamborghini_ProductPage({data}) {
                     width={50}
                     height={50}
                     alt="Contact Image"
-
                   />
                   <p>chat</p>
                 </div>
@@ -223,7 +205,6 @@ export default function lamborghini_ProductPage({data}) {
                     width={50}
                     height={50}
                     alt="Contact Image"
-
                   />
                   <p>meet</p>
                 </div>
@@ -264,7 +245,6 @@ export default function lamborghini_ProductPage({data}) {
                 width={200}
                 height={200}
                 alt="Company Logo"
-
               />
               <div>
                 <h2>Company Name</h2>
