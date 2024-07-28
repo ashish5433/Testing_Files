@@ -11,14 +11,14 @@ import { useAuth } from "@/contexts/AuthContext";
 
 export default function LamborghiniProductPage({ data }) {
   const [productName, setProductName] = useState("");
-  const { user } = useAuth();
   const orders = collection(db, "Order_Details");
   const cartRef = user ? collection(db, 'users', user.uid, 'cart') : null;
   const date = new Date();
   const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   const router = useRouter();
-
+  
+  const { user } = useAuth();
   // const addToCart = async () => {
   //   if (user) {
   //     await addDoc(cartRef, {
@@ -52,6 +52,7 @@ export default function LamborghiniProductPage({ data }) {
     } else {
       await setDoc(productRef, {
         productName: "Lamborghini Aventador",
+        productOwner: "Milind Palaria",
         productPrice: 19999,
         quantity: 1,
       });

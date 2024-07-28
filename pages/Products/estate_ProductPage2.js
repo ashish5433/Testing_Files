@@ -4,10 +4,11 @@ import Navbar1 from "../../components/navbar";
 import Image from "next/image";
 import Navbar2 from "../../components/navbar2";
 import { db,storage } from "@/firebase/firebase";
-import {collection,getDocs,addDoc} from 'firebase/firestore'
+import {collection,getDocs,addDoc, doc, getDoc, setDoc} from 'firebase/firestore'
 // import { getDocs } from "firebase/firestore";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { useAuth } from "@/contexts/AuthContext";
 export default function estate_ProductPage2({data}) {
   const [productName,setProductName]=useState("")
   const orders=collection(db,"Order_Details");
@@ -19,6 +20,36 @@ export default function estate_ProductPage2({data}) {
     await addDoc(orders,{ProductName:"Eiffel 2BHK Apartments", Seller:"Rishav Kumar",price:43000,Time:showTime,Date:datenow})
     alert("Rented Successfully")
   }
+  
+  const { user } = useAuth();
+
+  const addToCart = async () => {
+    if (!user) {
+      alert("You need to be logged in to add items to your cart");
+      return;
+    }
+
+    // setLoading(true);
+    const productId = "Eiffel_2BHK_Apartments";
+    const productRef = doc(db, 'users', user.uid, 'cart', productId);
+    const productSnap = await getDoc(productRef);
+
+    if (productSnap.exists()) {
+      await setDoc(productRef, {
+        quantity: productSnap.data().quantity + 1
+      }, { merge: true });
+    } else {
+      await setDoc(productRef, {
+        productName: "Eiffel 2BHK Apartments",
+        productOwner: "Rishav Kumar",
+        productPrice: 43000,
+        quantity: 1,
+      });
+    }
+
+    // setLoading(false);
+    alert("Added to cart successfully");
+  };
   // console.log(data);
   const router=useRouter();
   const pusher=()=>{
@@ -105,7 +136,7 @@ export default function estate_ProductPage2({data}) {
               <p>usd</p>
               <p>eur</p>
             </div>
-            <button onClick={createData}>rent now</button>
+            <button onClick={addToCart}>rent now</button>
             <button onClick={pusher}>View History</button>
             <h3>add to wishlist</h3>
             <div className={classes.icons2_div}>

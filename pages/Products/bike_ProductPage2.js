@@ -4,10 +4,11 @@ import Navbar1 from "../../components/navbar";
 import Image from "next/image";
 import Navbar2 from "../../components/navbar2";
 import { db, storage } from "@/firebase/firebase";
-import { collection, getDocs, addDoc } from 'firebase/firestore'
+import { collection, getDocs, addDoc, doc, getDoc, setDoc } from 'firebase/firestore'
 // import { getDocs } from "firebase/firestore";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { useAuth } from "@/contexts/AuthContext";
 export default function bike_ProductPage2({ data }) {
   const [productName, setProductName] = useState("")
   const orders = collection(db, "Order_Details");
@@ -15,11 +16,41 @@ export default function bike_ProductPage2({ data }) {
   const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
-  const createData = async () => {
-    await addDoc(orders, { ProductName: "Suzuki Hayabusa", Seller: "Milind Palaria", price: 4500, Time: showTime, Date: datenow })
-    alert("Rented Successfully")
-  }
+  // const createData = async () => {
+  //   await addDoc(orders, { ProductName: "Suzuki Hayabusa", Seller: "Milind Palaria", price: 4500, Time: showTime, Date: datenow })
+  //   alert("Rented Successfully")
+  // }
   // console.log(data);
+
+  const { user } = useAuth();
+
+  const addToCart = async () => {
+    if (!user) {
+      alert("You need to be logged in to add items to your cart");
+      return;
+    }
+
+    // setLoading(true);
+    const productId = "Suzuki_Hayabusa";
+    const productRef = doc(db, 'users', user.uid, 'cart', productId);
+    const productSnap = await getDoc(productRef);
+
+    if (productSnap.exists()) {
+      await setDoc(productRef, {
+        quantity: productSnap.data().quantity + 1
+      }, { merge: true });
+    } else {
+      await setDoc(productRef, {
+        productName: "Suzuki Hayabusa",
+        productOwner: "Milind Palaria",
+        productPrice: 4500,
+        quantity: 1,
+      });
+    }
+
+    // setLoading(false);
+    alert("Added to cart successfully");
+  };
   const router = useRouter();
   const pusher = () => {
     router.push("/components/History");
@@ -105,7 +136,7 @@ export default function bike_ProductPage2({ data }) {
               <p>usd</p>
               <p>eur</p>
             </div>
-            <button onClick={createData}>rent now</button>
+            <button onClick={addToCart}>rent now</button>
             <button onClick={pusher}>View History</button>
             <h3>add to wishlist</h3>
             <div className={classes.icons2_div}>

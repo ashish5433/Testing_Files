@@ -4,10 +4,11 @@ import Navbar1 from "../../components/navbar";
 import Image from "next/image";
 import Navbar2 from "../../components/navbar2";
 import { db,storage } from "@/firebase/firebase";
-import {collection,getDocs,addDoc} from 'firebase/firestore'
+import {collection,getDocs,addDoc, doc, getDoc, setDoc} from 'firebase/firestore'
 // import { getDocs } from "firebase/firestore";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { useAuth } from "@/contexts/AuthContext";
 export default function ProductPage2({data}) {
   const [productName,setProductName]=useState("")
   const orders=collection(db,"Order_Details");
@@ -19,6 +20,36 @@ export default function ProductPage2({data}) {
     await addDoc(orders,{ProductName:"Porsche 918 Spyder", Seller:"Ashish Bhardwaj",price:18000,Time:showTime,Date:datenow})
     alert("Rented Successfully")
   }
+  
+  const { user } = useAuth();
+
+  const addToCart = async () => {
+    if (!user) {
+      alert("You need to be logged in to add items to your cart");
+      return;
+    }
+
+    // setLoading(true);
+    const productId = "Porsche_918_Spyder";
+    const productRef = doc(db, 'users', user.uid, 'cart', productId);
+    const productSnap = await getDoc(productRef);
+
+    if (productSnap.exists()) {
+      await setDoc(productRef, {
+        quantity: productSnap.data().quantity + 1
+      }, { merge: true });
+    } else {
+      await setDoc(productRef, {
+        productName: "Porsche 918 Spyder",
+        productOwner: "Ashish Bhardwaj",
+        productPrice: 18000,
+        quantity: 1,
+      });
+    }
+
+    // setLoading(false);
+    alert("Added to cart successfully");
+  };
   // console.log(data);
   const router=useRouter();
   const pusher=()=>{
