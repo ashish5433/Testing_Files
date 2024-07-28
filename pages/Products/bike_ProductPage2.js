@@ -10,11 +10,11 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "@/contexts/AuthContext";
 export default function bike_ProductPage2({ data }) {
-  const [productName, setProductName] = useState("")
-  const orders = collection(db, "Order_Details");
-  const date = new Date()
-  const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-  const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+  // const [productName, setProductName] = useState("")
+  // const orders = collection(db, "Order_Details");
+  // const date = new Date()
+  // const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  // const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
   // const createData = async () => {
   //   await addDoc(orders, { ProductName: "Suzuki Hayabusa", Seller: "Milind Palaria", price: 4500, Time: showTime, Date: datenow })

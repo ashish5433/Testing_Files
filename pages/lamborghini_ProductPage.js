@@ -10,12 +10,12 @@ import { useRouter } from "next/router";
 import { useAuth } from "@/contexts/AuthContext";
 
 export default function LamborghiniProductPage({ data }) {
-  const [productName, setProductName] = useState("");
-  const orders = collection(db, "Order_Details");
-  const cartRef = user ? collection(db, 'users', user.uid, 'cart') : null;
-  const date = new Date();
-  const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-  const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+  // const [productName, setProductName] = useState("");
+  // const orders = collection(db, "Order_Details");
+  // const cartRef = user ? collection(db, 'users', user.uid, 'cart') : null;
+  // const date = new Date();
+  // const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  // const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   const router = useRouter();
   
   const { user } = useAuth();

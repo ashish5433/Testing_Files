@@ -10,16 +10,16 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "@/contexts/AuthContext";
 export default function ProductPage2({data}) {
-  const [productName,setProductName]=useState("")
-  const orders=collection(db,"Order_Details");
-  const date =new Date()
-  const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-  const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+  // const [productName,setProductName]=useState("")
+  // const orders=collection(db,"Order_Details");
+  // const date =new Date()
+  // const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  // const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
-  const createData=async()=>{
-    await addDoc(orders,{ProductName:"Porsche 918 Spyder", Seller:"Ashish Bhardwaj",price:18000,Time:showTime,Date:datenow})
-    alert("Rented Successfully")
-  }
+  // const createData=async()=>{
+  //   await addDoc(orders,{ProductName:"Porsche 918 Spyder", Seller:"Ashish Bhardwaj",price:18000,Time:showTime,Date:datenow})
+  //   alert("Rented Successfully")
+  // }
   
   const { user } = useAuth();
 
@@ -136,7 +136,7 @@ export default function ProductPage2({data}) {
               <p>usd</p>
               <p>eur</p>
             </div>
-            <button onClick={createData}>rent now</button>
+            <button onClick={addToCart}>rent now</button>
             <button onClick={pusher}>View History</button>
             <h3>add to wishlist</h3>
             <div className={classes.icons2_div}>
