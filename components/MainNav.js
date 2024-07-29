@@ -242,7 +242,7 @@ const MainNav = (props) => {
                     {/* For MObile */}
                     {isUser ? (
                         <Button
-                            className="nav-btn login-name-button-2 translate-y-[1.5px]"
+                            className="nav-btn login-name-button-2 translate-y-[1.5px] translate-x-12"
                         >
 
                             <span
@@ -257,7 +257,7 @@ const MainNav = (props) => {
                         </Button>
                     ) : (
                         <>
-                         <Button className="nav-btn  login-name-button-2 translate-y-[1.5px] translate-x-8">
+                         <Button className="nav-btn  login-name-button-2 translate-y-[1.5px] translate-x-8 !w-[325px]">
                          <span className={`${unica.className} nav-btns`} onClick={handleCartClick}>
                              Cart ({cartCount})
                          </span>
