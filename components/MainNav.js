@@ -36,7 +36,7 @@ const unica = Unica_One({
 });
 const MainNav = (props) => {
 
-    const { user, sign_Out, userName, isUser } = useAuth();
+    const { user, sign_Out, userName, isUser,mobileUserName } = useAuth();
 
     // const [userName, setUserName] = useState("");
     const [show, setShow] = useState(false);
@@ -263,10 +263,10 @@ const MainNav = (props) => {
                          </span>
                      </Button>
                         <Button
-                            className="nav-btn login-name-button-2 translate-y-[1.5px]"
+                            className="nav-btn login-name-button-2 translate-y-[1.5px] !w-1/3"
                         >
                             <span onClick={sign_Out} className={`${unica.className} nav-btns`}>
-                                {userName}
+                                {mobileUserName}
                             </span>
                         </Button>
                             </>

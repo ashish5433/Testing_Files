@@ -9,16 +9,25 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState("");
+  const [mobileUserName, setMobileUserName] = useState("");
+
   const [isUser, setisUser] = useState(true);
   const router = useRouter();
 
+  function getFirstName(displayName) {
+    if (!displayName) return '';
+    return displayName.split(' ')[0];
+  }
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((curruser) => {
       if (curruser) {
         setUser(curruser);
-        setUserName(curruser.displayName);
         setisUser(false);
-        // console.log(curruser.displayName);
+        const namer=getFirstName(curruser.displayName);
+        // console.log(namer);
+        setUserName(curruser.displayName);
+        setMobileUserName(namer);
+
         router.push("/");
       }
     });
@@ -57,7 +66,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, sign_Out, userName, isUser }}>
+    <AuthContext.Provider value={{ user, sign_Out, userName, isUser ,mobileUserName}}>
       {children}
     </AuthContext.Provider>
   );
