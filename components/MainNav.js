@@ -21,7 +21,7 @@ import { Bebas_Neue, Unica_One } from "next/font/google";
 import { useAuth } from '@/contexts/AuthContext';
 import Link from 'next/link';
 import { useCart } from '@/contexts/CartContext';
-import CartPage from '@/pages/Cart';
+import CartPage from '@/components/Cart';
 
 
 const player = Bebas_Neue({
@@ -129,13 +129,13 @@ const MainNav = (props) => {
 
     return (
         <div className='w-screen z-[200] fixed'>
-{showCartModal && (
-                    <CartPage showModal={showCartModal} onClose={() => setShowCartModal(false)} />
-                )}
+            {showCartModal && (
+                <CartPage showModal={showCartModal} onClose={() => setShowCartModal(false)} />
+            )}
             <Navbar
                 className={color ? "navbar black-nav" : "navbar transparent-nav"}
             >
-                
+
                 <Container fluid className='nav-container'>
                     <div className="left-nav">
                         <Button
@@ -238,6 +238,8 @@ const MainNav = (props) => {
                         )}
 
                     </div>
+
+                    {/* For MObile */}
                     {isUser ? (
                         <Button
                             className="nav-btn login-name-button-2 translate-y-[1.5px]"
@@ -254,6 +256,12 @@ const MainNav = (props) => {
                             </span>
                         </Button>
                     ) : (
+                        <>
+                         <Button className="nav-btn  login-name-button-2 translate-y-[1.5px] translate-x-8">
+                         <span className={`${unica.className} nav-btns`} onClick={handleCartClick}>
+                             Cart ({cartCount})
+                         </span>
+                     </Button>
                         <Button
                             className="nav-btn login-name-button-2 translate-y-[1.5px]"
                         >
@@ -261,6 +269,7 @@ const MainNav = (props) => {
                                 {userName}
                             </span>
                         </Button>
+                            </>
 
                     )}
                     <div className=" z-[1000000000000000000] absolute">

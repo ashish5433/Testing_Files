@@ -101,7 +101,12 @@ body::-webkit-scrollbar {
   padding-left: 3rem !important;
   padding-right: 3rem !important;
 }
-
+@media screen and (max-width: 780px) {
+  .navbar {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
+}
 #offcanvasNavbar-expand {
   background-color: rgb(255, 0, 0);
 }
@@ -2866,7 +2871,7 @@ ame_n_loc>div>label {
     color: whitesmoke;
     font-size: 0.7rem !important;
     margin-right: 2px;
-    margin-right: -30px !important;
+    margin-right: 8px !important;
     display: block !important;
     width: 500px;
   }
