@@ -21,7 +21,7 @@ export default function estate_ProductPage2({data}) {
   //   alert("Rented Successfully")
   // }
   
-  // const { user } = useAuth();
+  const { user } = useAuth();
 
   const addToCart = async () => {
     if (!user) {

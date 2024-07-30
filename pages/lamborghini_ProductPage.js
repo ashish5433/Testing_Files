@@ -4,7 +4,7 @@ import Navbar1 from "../components/navbar";
 import Image from "next/image";
 import Navbar2 from "../components/navbar2";
 import { db } from "@/firebase/firebase";
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, getDoc, setDoc } from 'firebase/firestore';
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "@/contexts/AuthContext";
