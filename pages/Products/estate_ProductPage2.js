@@ -19,10 +19,8 @@ export default function estate_ProductPage2({data}) {
   // const createData=async()=>{
   //   await addDoc(orders,{ProductName:"Eiffel 2BHK Apartments", Seller:"Rishav Kumar",price:43000,Time:showTime,Date:datenow})
   //   alert("Rented Successfully")
-  // }
-  
+  // }  
   const { user } = useAuth();
-
   const addToCart = async () => {
     if (!user) {
       alert("You need to be logged in to add items to your cart");

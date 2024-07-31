@@ -23,17 +23,6 @@ const unica = Unica_One({
 export default function LoggingIn() {
   return (
     <div>
-      {/* <MainNav/> */}
-      {/* <VideoBackground>
-        <div className={classes.main_div}>
-          <div className={classes.login_div}>
-            <SignIn />
-          </div>
-          <div className={classes.signup_div}>
-            <SignUp />
-          </div>
-        </div>
-      </VideoBackground> */}
       <div className="loading-screen">
         <div className="grid">
           <svg className="grid-svg" xmlns="http://www.w3.org/2000/svg" width="982" height="786" viewBox="0 0 982 786" fill="none">
@@ -156,14 +145,3 @@ export default function LoggingIn() {
     </div>
   );
 }
-
-{/* <Login/> */ }
-{/* <div className={classes.assistance_btn}>
-          <Image
-            className={`${classes.assist_icon}`}
-            src="/profile.png"
-            width={50}
-            height={50}
-          />
-          <p>Seek Assistance For Account Creation</p>
-        </div> */}
