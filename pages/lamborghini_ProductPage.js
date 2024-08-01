@@ -59,7 +59,7 @@ export default function LamborghiniProductPage({ data }) {
     }
 
     // setLoading(false);
-    alert("Added to cart successfully");
+    // alert("Added to cart successfully");
   };
   const pusher = () => {
     router.push("/components/History");
