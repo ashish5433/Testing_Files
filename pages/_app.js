@@ -73,7 +73,7 @@ export default function App({ Component, pageProps }) {
         <title>Kir.ai - Rental Platform</title>
         <link rel="icon" href="/favicons/home.png"/>
       </Head>
-      {loading && <Loading />}
+      {/* {loading && <Loading />} */}
       <CustomCursor/>
 
       <AuthProvider>
