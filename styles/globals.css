@@ -2979,3 +2979,6 @@ text-decoration: underline;
 
 } */
 }
+.no-scroll {
+  overflow: hidden !important;
+}

@@ -1,7 +1,20 @@
-import React from 'react';
-import styles from "@/styles/Modal.module.css"
+import React, { useEffect } from 'react';
+import styles from "@/styles/Modal.module.css";
 
 const Modal = ({ show, onClose, children }) => {
+  useEffect(() => {
+    if (show) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    // Cleanup function to remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [show]);
+
   if (!show) return null;
 
   return (
