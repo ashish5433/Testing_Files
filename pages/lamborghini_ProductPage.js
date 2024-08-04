@@ -224,7 +224,7 @@ export default function LamborghiniProductPage({ data }) {
                   />
                   <p>chat</p>
                 </div>
-                <div>
+                {/* <div>
                   <Image
                     className={classes.icons2}
                     src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
@@ -233,7 +233,7 @@ export default function LamborghiniProductPage({ data }) {
                     alt="Contact Image"
                   />
                   <p>meet</p>
-                </div>
+                </div> */}
               </div>
             </div>
             <p>Direct owner / broker at sunseeker</p>

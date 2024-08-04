@@ -9,16 +9,18 @@
     overflow: hidden;
     /* margin-top: 3rem; */
 }
-.seller{
-        background-color: #000;
-        width: 100%;
-        text-align: center;
-        font-family: 'Cabinet Grotesk', sans-serif;
-        font-size: 10vw;
-        color: aquamarine;
-        margin: 0;
-        margin: auto;
+
+.seller {
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 10vw;
+    color: aquamarine;
+    margin: 0;
+    margin: auto;
 }
+
 .first>div {
     display: flex;
 }
@@ -182,6 +184,7 @@ mix-blend-mode: ; */
     margin: 1rem 0;
     transition-duration: 300ms;
 }
+
 .price_and_others button:hover {
     background: aquamarine;
     color: #000;
@@ -224,7 +227,8 @@ mix-blend-mode: ; */
     cursor: pointer;
 
 }
-.icons2_div>div{
+
+.icons2_div>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -521,11 +525,13 @@ mix-blend-mode: ; */
     .agent_card_overlay {
         height: 40vw;
     }
+
     .agent_functions {
         transform: translate(2vw, 1vw);
         gap: 2vw;
         text-align: center;
     }
+
     .agent_functions p {
         font-size: 1vw;
         transform: translateY(0.5vw);
@@ -533,7 +539,9 @@ mix-blend-mode: ; */
 
     .company_details {
         width: 100vw;
-    }.company_logo {
+    }
+
+    .company_logo {
         width: 7vw;
     }
 
@@ -622,7 +630,7 @@ mix-blend-mode: ; */
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        transform: translate(0,18vw);
+        transform: translate(0, 18vw);
         gap: 25vw;
         text-align: center;
     }
@@ -640,8 +648,12 @@ mix-blend-mode: ; */
         backdrop-filter: blur(10px);
         /* margin: auto; */
     }
+
     .agent_functions>div:hover {
-        background: #ffffff7b;}  .agent_functions p {
+        background: #ffffff7b;
+    }
+
+    .agent_functions p {
         font-size: 1.5vw;
         transform: translateY(1vw);
         display: none;
@@ -673,7 +685,7 @@ mix-blend-mode: ; */
     }
 
     .company_details div {
-        transform: translate(00vw,0vw);
+        transform: translate(00vw, 0vw);
     }
 }
 
@@ -686,6 +698,7 @@ mix-blend-mode: ; */
         height: 120vw;
     }
 }
+
 @media screen and (max-width: 530px) {
     .agent_card_img {
         height: 120vw;
@@ -694,6 +707,7 @@ mix-blend-mode: ; */
     .agent_card_overlay {
         height: 120vw;
     }
+
     .agent_detail {
         position: absolute;
         font-family: 'Cabinet Grotesk', sans-serif;
@@ -704,6 +718,7 @@ mix-blend-mode: ; */
         width: 100%;
     }
 }
+
 @media screen and (max-width: 430px) {
     .agent_card_img {
         height: 115vw;
@@ -712,9 +727,11 @@ mix-blend-mode: ; */
     .agent_card_overlay {
         height: 115vw;
     }
+
     .agent_detail {
         top: 58vw;
-    }    
+    }
+
     /* .agent_functions {
         transform: translate(0, 10vw);
     } */
