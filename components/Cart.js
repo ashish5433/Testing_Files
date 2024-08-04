@@ -42,7 +42,7 @@ const CartPage = ({ showModal, onClose }) => {
         {cart.length === 0 ? (
           <p>Your cart is empty</p>
         ) : (
-          <ul className="h-full w-full flex flex-col justify-center items-center p-0 mt-[6.5vh]">
+          <ul className="h-[175%] w-full flex flex-col justify-center items-center p-0 mt-[6.5vh]">
             {cart.map(item => (
               <li key={item.id} className={`${unica.className} flex items-center justify-center flex-col mt-1 w-full border-b-2 border-t-2 mb-1 text-center`}>
                 <h2 className="text-[340%] leading-0 mb-0 max-md:text-[4vh]">{item.productName}</h2>
