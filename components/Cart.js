@@ -32,14 +32,11 @@ const CartPage = ({ showModal, onClose }) => {
         return <p>You need to be logged in to view your cart</p>;
     }
 
-    if (cart.length === 0) {
-        return <p>Your cart is empty</p>;
-    }
 
     return (
         <Modal show={showModal} onClose={onClose}>
         <h1 className={`${bebas.className} border-b-2  fixed`}>Your Cart</h1>
-        {cart.length === 0 ? (
+        {cart.length === -1 ? (
           <p>Your cart is empty</p>
         ) : (
           <ul className="h-[175%] w-full flex flex-col justify-center items-center p-0 mt-[6.5vh] md:mt-[8vh]">
