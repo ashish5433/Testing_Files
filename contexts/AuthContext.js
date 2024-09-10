@@ -39,16 +39,7 @@ export const AuthProvider = ({ children }) => {
     try {
       await auth.signOut();
       setUser(null);
-      toast.success("Signed Out Successfully ", {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+     
       setisUser(true);
       router.push("/login");
     } catch (error) {
