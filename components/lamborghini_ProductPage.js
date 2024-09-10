@@ -17,7 +17,7 @@ export default function lamborghini_ProductPage({data}) {
 
   const createData=async()=>{
     await addDoc(orders,{ProductName:"lamborghini aventador", Seller:"Milind Palaria",price:19999,Time:showTime,Date:datenow})
-    alert("Rented Successfully")
+    // alert("Rented Successfully")
   }
   // console.log(data);
   const router=useRouter();

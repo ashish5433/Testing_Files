@@ -33,19 +33,19 @@ export default function UplaodImage() {
         // console.log(img_url);
         await addDoc(imagedetailref, { Seller: name, Type: type, URL: img_url })
 
-        alert("Data Uploaded")
+        // alert("Data Uploaded")
         clearInputs()
     }
     const uploadImage = async () => {
         if (file == null || name=="" || type=="") {
-            alert("All Inputs are not filled")
+            // alert("All Inputs are not filled")
             return;
         }
         const Imageref = ref(storage, `images/${file.name + v4()}`)
 
         await uploadBytes(Imageref, file).then((snapshot) => {
 
-            alert("Images Uploaded")
+            // alert("Images Uploaded")
             return getDownloadURL(snapshot.ref)
         }).then(dnloadUrl => {
             setimgurl(dnloadUrl)

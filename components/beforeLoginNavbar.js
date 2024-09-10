@@ -205,7 +205,7 @@ function NavbarL() {
   const sign_Out = () => {
     signOut(auth)
       .then(() => {
-        alert("Signed Out Successfully....");
+        // alert("Signed Out Successfully....");
         setisUser(true);
       })
       .catch((error) => {

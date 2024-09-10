@@ -17,7 +17,7 @@ export default function ProductPage2({data}) {
 
   const createData=async()=>{
     await addDoc(orders,{ProductName:"Porsche 918 Spyder", Seller:"Ashish Bhardwaj",price:18000,Time:showTime,Date:datenow})
-    alert("Rented Successfully")
+    // alert("Rented Successfully")
   }
   // console.log(data);
   const router=useRouter();

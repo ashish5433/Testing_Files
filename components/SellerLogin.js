@@ -53,7 +53,10 @@ const Seller = () => {
 
     const verifyNum = async () => {
         // console.log(phoneNumber)
-        if (phoneNumber == 0) alert("Please enter number");
+        if (phoneNumber == 0){
+            // alert("Please enter number");
+
+        } 
         else {
             var detail = [];
             try {
@@ -61,7 +64,7 @@ const Seller = () => {
                     `https://phonevalidation.abstractapi.com/v1/?api_key=6c45f511cc0a4813af9190c58f88426a&phone=${phoneNumber}`
                 );
             } catch (e) {
-                alert("Error Occured");
+                // alert("Error Occured");
             }
             // console.log(detail.data);
             if (detail.data.valid === true) {
@@ -70,7 +73,7 @@ const Seller = () => {
                 setver_dis("block");
                 setisNumber(true);
             } else {
-                alert("Invalid Number");
+                // alert("Invalid Number");
             }
         }
     };

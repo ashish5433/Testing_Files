@@ -49,7 +49,7 @@ export default function bike_ProductPage2({ data }) {
     }
 
     // setLoading(false);
-    alert("Added to cart successfully");
+    // alert("Added to cart successfully");
   };
   const router = useRouter();
   const pusher = () => {

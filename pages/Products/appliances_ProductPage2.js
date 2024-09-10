@@ -47,7 +47,7 @@ export default function appliances_ProductPage2({data}) {
     }
 
     // setLoading(false);
-    alert("Added to cart successfully");
+    // alert("Added to cart successfully");
   };
   // console.log(data);
   const router=useRouter();

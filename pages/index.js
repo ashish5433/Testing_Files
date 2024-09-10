@@ -17,6 +17,7 @@ import { createContext } from "vm";
 // import addClass from "./context/context";
 import { addClass } from "@/contexts/context";
 import MainNav from "@/components/MainNav";
+import { MainFooter } from "@/components/MainFooter";
 
 export default function Home() {
   const [yachts, setYachts] = useState(false);
@@ -148,7 +149,8 @@ export default function Home() {
           RVProps={rv}
           IotProps={iot}
         />
-        <Footer />
+        {/* <Footer /> */}
+        <MainFooter/>
         <ProgressBar color="#4dffb5" height={10} position="bottom" />
         {/* </emailContext.Provider>  */}
       </addClass.Provider>

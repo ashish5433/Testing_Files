@@ -17,7 +17,7 @@ export default function estate_ProductPage2({data}) {
 
   const createData=async()=>{
     await addDoc(orders,{ProductName:"Eiffel 2BHK Apartments", Seller:"Rishav Kumar",price:43000,Time:showTime,Date:datenow})
-    alert("Rented Successfully")
+    // alert("Rented Successfully")
   }
   // console.log(data);
   const router=useRouter();

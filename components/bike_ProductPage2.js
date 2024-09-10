@@ -17,7 +17,7 @@ export default function bike_ProductPage2({ data }) {
 
   const createData = async () => {
     await addDoc(orders, { ProductName: "Suzuki Hayabusa", Seller: "Milind Palaria", price: 4500, Time: showTime, Date: datenow })
-    alert("Rented Successfully")
+    // alert("Rented Successfully")
   }
   // console.log(data);
   const router = useRouter();

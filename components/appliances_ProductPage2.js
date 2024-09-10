@@ -17,7 +17,7 @@ export default function appliances_ProductPage2({data}) {
 
   const createData=async()=>{
     await addDoc(orders,{ProductName:"Play Station 5", Seller:"Harsh Kanojia",price:1000,Time:showTime,Date:datenow})
-    alert("Rented Successfully")
+    // alert("Rented Successfully")
   }
   // console.log(data);
   const router=useRouter();
