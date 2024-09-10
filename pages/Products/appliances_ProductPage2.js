@@ -3,24 +3,17 @@ import classes from "../../components/ProductPage2.module.css";
 import Navbar1 from "../../components/navbar";
 import Image from "next/image";
 import Navbar2 from "../../components/navbar2";
-import { db,storage } from "@/firebase/firebase";
-import {collection,getDocs,addDoc, doc, getDoc, setDoc} from 'firebase/firestore'
-// import { getDocs } from "firebase/firestore";
+import { db, storage } from "@/firebase/firebase";
+import { collection, getDocs, addDoc, doc, getDoc, setDoc } from 'firebase/firestore';
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "@/contexts/AuthContext";
-export default function appliances_ProductPage2({data}) {
-  // const [productName,setProductName]=useState("")
-  // const orders=collection(db,"Order_Details");
-  // const date =new Date()
-  // const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-  // const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
-  // const createData=async()=>{
-  //   await addDoc(orders,{ProductName:"Play Station 5", Seller:"Harsh Kanojia",price:1000,Time:showTime,Date:datenow})
-  //   alert("Rented Successfully")
-  // }
+export default function appliances_ProductPage2({ data }) {
   const { user } = useAuth();
+
+  // State for the main big image
+  const [bigImage, setBigImage] = useState("/iotcarousel3.jpg");
 
   const addToCart = async () => {
     if (!user) {
@@ -28,7 +21,6 @@ export default function appliances_ProductPage2({data}) {
       return;
     }
 
-    // setLoading(true);
     const productId = "Play_Station_5";
     const productRef = doc(db, 'users', user.uid, 'cart', productId);
     const productSnap = await getDoc(productRef);
@@ -45,48 +37,32 @@ export default function appliances_ProductPage2({data}) {
         quantity: 1,
       });
     }
-
-    // setLoading(false);
-    // alert("Added to cart successfully");
   };
-  // console.log(data);
-  const router=useRouter();
-  const pusher=()=>{
+
+  const router = useRouter();
+  const pusher = () => {
     router.push("/components/History");
-  }
+  };
+
+  // Handler to update the big image when a small image is clicked
+  const handleImageClick = (src) => {
+    setBigImage(src);
+  };
+
   return (
     <div>
-      {/* <div className="nav2productlist">
-
-      <Navbar2 />
-      </div> */}
       <div className={classes.first}>
         <h1>Play Station 5</h1>
         <h3>~ Harsh Kanojia</h3>
         <div>
           <div className={classes.big_image_div}>
-            {/* <div className={classes.share_and_like}>
-              <Image
-                className={classes.icons}
-                src="/share_4.png"
-                width={30}
-                height={30}
-              />
-              <Image
-                className={classes.icons}
-                src="/heart3.png"
-                width={35}
-                height={35}
-              />
-            </div> */}
             <Image
               className={classes.big_image}
-              src="/iotcarousel3.jpg"
+              src={bigImage} // Use the state for the big image source
               width={1920}
               height={1080}
               alt="Main Product"
             />
-            {/* <div className={classes.overlay_big}></div> */}
             <div className={classes.small_image_div}>
               <Image
                 className={classes.small_image}
@@ -94,6 +70,7 @@ export default function appliances_ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
+                onClick={() => handleImageClick("/iotcarousel4.jpg")} // Update big image on click
               />
               <Image
                 className={classes.small_image}
@@ -101,6 +78,7 @@ export default function appliances_ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
+                onClick={() => handleImageClick("/iotcarousel5.jpg")} // Update big image on click
               />
               <Image
                 className={classes.small_image}
@@ -108,6 +86,7 @@ export default function appliances_ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
+                onClick={() => handleImageClick("/iotcarousel2.jpg")} // Update big image on click
               />
               <Image
                 className={classes.small_image}
@@ -115,6 +94,7 @@ export default function appliances_ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
+                onClick={() => handleImageClick("/iotcarousel6.jpg")} // Update big image on click
               />
               <div className={classes.more_div}>
                 <h3>more photos</h3>
@@ -189,7 +169,6 @@ export default function appliances_ProductPage2({data}) {
         </div>
       </div>
       <h1 className={classes.seller}>About Seller</h1>
-
       <div className={classes.agent_card}>
         <div>
           <Image
@@ -208,7 +187,6 @@ export default function appliances_ProductPage2({data}) {
               height={500}
               alt="Agent Image"
             />
-            
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
@@ -234,16 +212,6 @@ export default function appliances_ProductPage2({data}) {
                   />
                   <p>chat</p>
                 </div>
-                {/* <div>
-                  <Image
-                    className={classes.icons2}
-                    src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
-                    width={50}
-                    height={50}
-                    alt="Contact Image"
-                  />
-                  <p>meet</p>
-                </div> */}
               </div>
             </div>
             <p>Direct owner / broker at sunseeker</p>

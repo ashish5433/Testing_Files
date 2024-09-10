@@ -3,38 +3,31 @@ import classes from "../../components/ProductPage2.module.css";
 import Navbar1 from "../../components/navbar";
 import Image from "next/image";
 import Navbar2 from "../../components/navbar2";
-import { db,storage } from "@/firebase/firebase";
-import {collection,getDocs,addDoc, doc, getDoc, setDoc} from 'firebase/firestore'
-// import { getDocs } from "firebase/firestore";
+import { db, storage } from "@/firebase/firebase";
+import { collection, getDocs, addDoc, doc, getDoc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "@/contexts/AuthContext";
-export default function estate_ProductPage2({data}) {
-  // const [productName,setProductName]=useState("")
-  // const orders=collection(db,"Order_Details");
-  // const date =new Date()
-  // const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-  // const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
-  // const createData=async()=>{
-  //   await addDoc(orders,{ProductName:"Eiffel 2BHK Apartments", Seller:"Rishav Kumar",price:43000,Time:showTime,Date:datenow})
-  //   alert("Rented Successfully")
-  // }  
+export default function estate_ProductPage2({ data }) {
   const { user } = useAuth();
+
+  // State to track the currently displayed big image
+  const [bigImage, setBigImage] = useState("/estatecarousel5.jpg");
+
   const addToCart = async () => {
     if (!user) {
       alert("You need to be logged in to add items to your cart");
       return;
     }
 
-    // setLoading(true);
     const productId = "Eiffel_2BHK_Apartments";
-    const productRef = doc(db, 'users', user.uid, 'cart', productId);
+    const productRef = doc(db, "users", user.uid, "cart", productId);
     const productSnap = await getDoc(productRef);
 
     if (productSnap.exists()) {
       await setDoc(productRef, {
-        quantity: productSnap.data().quantity + 1
+        quantity: productSnap.data().quantity + 1,
       }, { merge: true });
     } else {
       await setDoc(productRef, {
@@ -44,49 +37,36 @@ export default function estate_ProductPage2({data}) {
         quantity: 1,
       });
     }
-
-    // setLoading(false);
-    // alert("Added to cart successfully");
   };
-  // console.log(data);
-  const router=useRouter();
-  const pusher=()=>{
+
+  const router = useRouter();
+  const pusher = () => {
     router.push("/components/History");
-  }
+  };
+
+  // Handler to update the big image when a small image is clicked
+  const handleImageClick = (imageUrl) => {
+    setBigImage(imageUrl);
+  };
+
   return (
     <div>
-      {/* <div className="nav2productlist">
-
-      <Navbar2 />
-      </div> */}
       <div className={classes.first}>
         <h1>Eiffel 2BHK Apartments</h1>
         <h3>~ Rishav Kumar</h3>
         <div>
           <div className={classes.big_image_div}>
-            {/* <div className={classes.share_and_like}>
-              <Image
-                className={classes.icons}
-                src="/share_4.png"
-                width={30}
-                height={30}
-              />
-              <Image
-                className={classes.icons}
-                src="/heart3.png"
-                width={35}
-                height={35}
-              />
-            </div> */}
+            {/* Big image display */}
             <Image
               className={classes.big_image}
-              src="/estatecarousel5.jpg"
+              src={bigImage}
               width={1920}
               height={1080}
               alt="Main Product"
-
             />
             <div className={classes.overlay_big}></div>
+
+            {/* Small image gallery */}
             <div className={classes.small_image_div}>
               <Image
                 className={classes.small_image}
@@ -94,7 +74,7 @@ export default function estate_ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
+                onClick={() => handleImageClick("/estatecarousel4.jpg")} // Change big image on click
               />
               <Image
                 className={classes.small_image}
@@ -102,7 +82,7 @@ export default function estate_ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
+                onClick={() => handleImageClick("/estatecarousel3.jpg")} // Change big image on click
               />
               <Image
                 className={classes.small_image}
@@ -110,7 +90,7 @@ export default function estate_ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
+                onClick={() => handleImageClick("/estatecarousel7.jpg")} // Change big image on click
               />
               <Image
                 className={classes.small_image}
@@ -118,16 +98,17 @@ export default function estate_ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
+                onClick={() => handleImageClick("/estatecarousel6.jpg")} // Change big image on click
               />
               <div className={classes.more_div}>
                 <h3>more photos</h3>
               </div>
             </div>
           </div>
+
           <div className={classes.price_and_others}>
             <h1>
-              <span>&#8377; </span> 43,000 . 00 /month
+              <span>&#8377;</span> 43,000 . 00 /month
             </h1>
             <div className={classes.currencies}>
               <p>inr</p>
@@ -138,6 +119,7 @@ export default function estate_ProductPage2({data}) {
             <button onClick={pusher}>View History</button>
             <h3>add to wishlist</h3>
             <div className={classes.icons2_div}>
+              {/* Icons for visit, call, chat, etc. */}
               <div>
                 <Image
                   className={classes.icons2}
@@ -145,7 +127,6 @@ export default function estate_ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>visit</p>
               </div>
@@ -156,7 +137,6 @@ export default function estate_ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>call</p>
               </div>
@@ -167,7 +147,6 @@ export default function estate_ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>chat</p>
               </div>
@@ -178,7 +157,6 @@ export default function estate_ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>live view</p>
               </div>
@@ -189,7 +167,6 @@ export default function estate_ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>meet</p>
               </div>
@@ -197,8 +174,10 @@ export default function estate_ProductPage2({data}) {
           </div>
         </div>
       </div>
+
       <h1 className={classes.seller}>About Seller</h1>
 
+      {/* Seller details section */}
       <div className={classes.agent_card}>
         <div>
           <Image
@@ -207,7 +186,6 @@ export default function estate_ProductPage2({data}) {
             width={1920}
             height={1080}
             alt="Agent Cover"
-
           />
           <div className={classes.agent_card_overlay}></div>
           <div className={classes.agent_profile}>
@@ -217,9 +195,7 @@ export default function estate_ProductPage2({data}) {
               width={500}
               height={500}
               alt="Agent Image"
-
             />
-            
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
@@ -232,7 +208,6 @@ export default function estate_ProductPage2({data}) {
                     width={50}
                     height={50}
                     alt="Contact Image"
-
                   />
                   <p>call</p>
                 </div>
@@ -243,48 +218,36 @@ export default function estate_ProductPage2({data}) {
                     width={50}
                     height={50}
                     alt="Contact Image"
-
                   />
                   <p>chat</p>
                 </div>
-                {/* <div>
-                  <Image
-                    className={classes.icons2}
-                    src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
-                    width={50}
-                    height={50}
-                    alt="Contact Image"
-
-                  />
-                  <p>meet</p>
-                </div> */}
               </div>
             </div>
-            <p>Direct owner / broker at sunseeker</p>
+            <p>Direct owner / broker at Sunseeker</p>
             <div>
               <div>
                 <span>• </span>
-                <span>Location : </span>
+                <span>Location: </span>
                 <span>Chennai</span>
               </div>
               <div>
                 <span>• </span>
-                <span>Listings : </span>
+                <span>Listings: </span>
                 <span>21</span>
               </div>
               <div>
                 <span>• </span>
-                <span>Sold : </span>
+                <span>Sold: </span>
                 <span>5</span>
               </div>
               <div>
                 <span>• </span>
-                <span>Role : </span>
+                <span>Role: </span>
                 <span>Owner</span>
               </div>
               <div>
                 <span>• </span>
-                <span>Reviews : </span>
+                <span>Reviews: </span>
                 <span>19</span>
               </div>
             </div>
@@ -295,11 +258,10 @@ export default function estate_ProductPage2({data}) {
                 width={200}
                 height={200}
                 alt="Company Logo"
-
               />
               <div>
                 <h2>Company Name</h2>
-                <p>direct owner / broker</p>
+                <p>Direct owner / broker</p>
               </div>
             </div>
           </div>
@@ -308,4 +270,3 @@ export default function estate_ProductPage2({data}) {
     </div>
   );
 }
-                       

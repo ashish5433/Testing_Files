@@ -3,25 +3,17 @@ import classes from "../../components/ProductPage2.module.css";
 import Navbar1 from "../../components/navbar";
 import Image from "next/image";
 import Navbar2 from "../../components/navbar2";
-import { db,storage } from "@/firebase/firebase";
-import {collection,getDocs,addDoc, doc, getDoc, setDoc} from 'firebase/firestore'
-// import { getDocs } from "firebase/firestore";
+import { db, storage } from "@/firebase/firebase";
+import { collection, getDocs, addDoc, doc, getDoc, setDoc } from 'firebase/firestore';
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "@/contexts/AuthContext";
-export default function ProductPage2({data}) {
-  // const [productName,setProductName]=useState("")
-  // const orders=collection(db,"Order_Details");
-  // const date =new Date()
-  // const showTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-  // const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
-  // const createData=async()=>{
-  //   await addDoc(orders,{ProductName:"Porsche 918 Spyder", Seller:"Ashish Bhardwaj",price:18000,Time:showTime,Date:datenow})
-  //   alert("Rented Successfully")
-  // }
-  
+export default function ProductPage2({ data }) {
   const { user } = useAuth();
+
+  // State to track the currently displayed big image
+  const [bigImage, setBigImage] = useState("/carcarousel3.jpg");
 
   const addToCart = async () => {
     if (!user) {
@@ -29,7 +21,6 @@ export default function ProductPage2({data}) {
       return;
     }
 
-    // setLoading(true);
     const productId = "Porsche_918_Spyder";
     const productRef = doc(db, 'users', user.uid, 'cart', productId);
     const productSnap = await getDoc(productRef);
@@ -46,49 +37,36 @@ export default function ProductPage2({data}) {
         quantity: 1,
       });
     }
-
-    // setLoading(false);
-    // alert("Added to cart successfully");
   };
-  // console.log(data);
-  const router=useRouter();
-  const pusher=()=>{
+
+  const router = useRouter();
+  const pusher = () => {
     router.push("/components/History");
-  }
+  };
+
+  // Handler to update the big image when a small image is clicked
+  const handleImageClick = (imageUrl) => {
+    setBigImage(imageUrl);
+  };
+
   return (
     <div>
-      {/* <div className="nav2productlist">
-
-      <Navbar2 />
-      </div> */}
       <div className={classes.first}>
         <h1>Porsche 918 Spyder</h1>
         <h3>~ Ashish Bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
-            {/* <div className={classes.share_and_like}>
-              <Image
-                className={classes.icons}
-                src="/share_4.png"
-                width={30}
-                height={30}
-              />
-              <Image
-                className={classes.icons}
-                src="/heart3.png"
-                width={35}
-                height={35}
-              />
-            </div> */}
+            {/* Big image display */}
             <Image
               className={classes.big_image}
-              src="/carcarousel3.jpg"
+              src={bigImage} // Big image source is controlled by the state
               width={1920}
               height={1080}
               alt="Main Product"
-
             />
             <div className={classes.overlay_big}></div>
+
+            {/* Small image gallery */}
             <div className={classes.small_image_div}>
               <Image
                 className={classes.small_image}
@@ -96,7 +74,7 @@ export default function ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
+                onClick={() => handleImageClick("/carcarousel4.jpg")} // Change big image on click
               />
               <Image
                 className={classes.small_image}
@@ -104,7 +82,7 @@ export default function ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
+                onClick={() => handleImageClick("/carcarousel5.jpg")} // Change big image on click
               />
               <Image
                 className={classes.small_image}
@@ -112,7 +90,7 @@ export default function ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
+                onClick={() => handleImageClick("/carcarousel7.jpg")} // Change big image on click
               />
               <Image
                 className={classes.small_image}
@@ -120,13 +98,14 @@ export default function ProductPage2({data}) {
                 width={1920}
                 height={1080}
                 alt="Small Product Image"
-
+                onClick={() => handleImageClick("/carcarousel6.jpg")} // Change big image on click
               />
               <div className={classes.more_div}>
                 <h3>more photos</h3>
               </div>
             </div>
           </div>
+
           <div className={classes.price_and_others}>
             <h1>
               <span>&#8377; </span> 18,000 . 00 /day
@@ -147,7 +126,6 @@ export default function ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>visit</p>
               </div>
@@ -158,7 +136,6 @@ export default function ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>call</p>
               </div>
@@ -169,7 +146,6 @@ export default function ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>chat</p>
               </div>
@@ -180,7 +156,6 @@ export default function ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>live view</p>
               </div>
@@ -191,7 +166,6 @@ export default function ProductPage2({data}) {
                   width={50}
                   height={50}
                   alt="small icons"
-
                 />
                 <p>meet</p>
               </div>
@@ -199,6 +173,7 @@ export default function ProductPage2({data}) {
           </div>
         </div>
       </div>
+
       <h1 className={classes.seller}>About Seller</h1>
       <div className={classes.agent_card}>
         <div>
@@ -208,7 +183,6 @@ export default function ProductPage2({data}) {
             width={1920}
             height={1080}
             alt="Agent Cover"
-
           />
           <div className={classes.agent_card_overlay}></div>
           <div className={classes.agent_profile}>
@@ -218,9 +192,7 @@ export default function ProductPage2({data}) {
               width={500}
               height={500}
               alt="Agent Image"
-
             />
-            
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
@@ -233,7 +205,6 @@ export default function ProductPage2({data}) {
                     width={50}
                     height={50}
                     alt="Contact Image"
-
                   />
                   <p>call</p>
                 </div>
@@ -244,24 +215,12 @@ export default function ProductPage2({data}) {
                     width={50}
                     height={50}
                     alt="Contact Image"
-
                   />
                   <p>chat</p>
                 </div>
-                {/* <div>
-                  <Image
-                    className={classes.icons2}
-                    src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
-                    width={50}
-                    height={50}
-                    alt="Contact Image"
-
-                  />
-                  <p>meet</p>
-                </div> */}
               </div>
             </div>
-            <p>Direct owner / broker at sunseeker</p>
+            <p>Direct owner / broker at Sunseeker</p>
             <div className="heeell">
               <div>
                 <span>• </span>
@@ -296,11 +255,10 @@ export default function ProductPage2({data}) {
                 width={200}
                 height={200}
                 alt="Company Logo"
-
               />
               <div>
                 <h2>Company Name</h2>
-                <p>direct owner / broker</p>
+                <p>Direct owner / broker</p>
               </div>
             </div>
           </div>
