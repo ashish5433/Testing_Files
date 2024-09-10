@@ -17,7 +17,7 @@ const unica = Unica_One({
 
 export const MainFooter = () => {
     return (
-        <section className={`${player.className} flex flex-col items-center gap-2 bg-stone-950 px-8 pt-12 pb-12 `}>
+        <section className={`${player.className} flex flex-col items-center gap-2 bg-stone-950 px-8 pt-12 pb-12 border-t-[10px] border-green-300`}>
             <div className="flex justify-center items-center gap-3 md:gap-5">
 
                 <span className="text-2xl md:text-5xl !text-green-300">- - - - - - - -</span>
