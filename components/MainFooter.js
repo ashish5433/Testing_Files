@@ -29,15 +29,15 @@ export const MainFooter = () => {
                 <div className="flex gap-16">
                     <div className="flex flex-col gap-2">
 
-                        <FlipLink3 href="#">Bikes</FlipLink3>
+                        <FlipLink3 href="/ProductsList/Classic Bikes">Bikes</FlipLink3>
 
-                        <FlipLink3 href="#">Appliances</FlipLink3>
+                        <FlipLink3 href="/ProductsList/Gaming Consoles">Appliances</FlipLink3>
 
                     </div>
                     <div className="flex flex-col gap-2">
-                        <FlipLink3 href="#">Cars</FlipLink3>
+                        <FlipLink3 href="/ProductsList/Sedan Cars">Cars</FlipLink3>
 
-                        <FlipLink3 href="#">Estates</FlipLink3>
+                        <FlipLink3 href="/ProductsList/Office Spaces">Estates</FlipLink3>
 
                     </div>
 
@@ -45,8 +45,8 @@ export const MainFooter = () => {
 
                 <div className="flex flex-col gap-3 max-md:!gap-1 max-md:py-4 max-md:pt-14">
 
-                    <FlipLink href="#">Github</FlipLink>
-                    <FlipLink href="#">Linkedin</FlipLink>
+                    <FlipLink href="https://github.com/Milind-Palaria">Github</FlipLink>
+                    <FlipLink href="https://www.linkedin.com/in/milind-palaria/">Linkedin</FlipLink>
                 </div>
             </div>
             <div className="flex justify-center items-center gap-3 md:gap-5 pt-10">
@@ -69,6 +69,8 @@ const FlipLink = ({ children, href }) => {
             initial="initial"
             whileHover="hovered"
             href={href}
+              target="_blank"
+            rel="noopener noreferrer"
             className="relative block overflow-hidden whitespace-nowrap text-4xl max-md:text-center  text-left tracking-wider font-black uppercase sm:text-4xl md:text-5xl lg:text-6xl !text-green-300"
             style={{
                 lineHeight: 1,
@@ -190,6 +192,7 @@ const FlipLink3 = ({ children, href }) => {
             initial="initial"
             whileHover="hovered"
             href={href}
+             rel="noopener noreferrer"
             className="relative block overflow-hidden whitespace-nowrap text-4xl max-md:text-center  text-left tracking-wider font-black uppercase sm:text-4xl md:text-5xl lg:text-6xl !text-green-300"
             style={{
                 lineHeight: 1,
