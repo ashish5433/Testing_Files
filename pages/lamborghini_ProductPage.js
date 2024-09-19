@@ -52,7 +52,7 @@ export default function LamborghiniProductPage({ data }) {
     } else {
       await setDoc(productRef, {
         productName: "Lamborghini Aventador",
-        productOwner: "Milind Palaria",
+        productOwner: "Ashish Bhardwaj",
         productPrice: 19999,
         quantity: 1,
       });
@@ -69,7 +69,7 @@ export default function LamborghiniProductPage({ data }) {
     <div>
       <div className={classes.first}>
         <h1>lamborghini aventador</h1>
-        <h3>~ Milind Palaria</h3>
+        <h3>~ Ashish Bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
             <Image
@@ -202,7 +202,7 @@ export default function LamborghiniProductPage({ data }) {
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Milind Palaria</h1>
+              <h1>Ashish Bhardwaj</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image

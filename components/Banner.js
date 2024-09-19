@@ -19,7 +19,7 @@ const Banner = () => {
                 <div className="banner-bg-div">
 
                     <h1 className={player.className}>lamborghini aventador</h1>
-                    <h2 className={player.className}>Milind Palaria</h2>
+                    <h2 className={player.className}>Ashish Bhardwaj</h2>
                     <p className={player.className}><span>Engine</span> --- 6498 cc  </p>
                     <p className={player.className}><span>Mileage</span> --- 7.69 kmpl   </p>
                     

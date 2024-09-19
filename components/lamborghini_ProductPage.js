@@ -28,7 +28,7 @@ export default function lamborghini_ProductPage({data}) {
     <div>
       <div className={classes.first}>
         <h1>lamborghini aventador</h1>
-        <h3>~ Milind Palaria</h3>
+        <h3>~ Ashish Bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
             {/* <div className={classes.share_and_like}>
@@ -188,7 +188,7 @@ export default function lamborghini_ProductPage({data}) {
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Milind Palaria</h1>
+              <h1>Ashish Bhardwaj</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image

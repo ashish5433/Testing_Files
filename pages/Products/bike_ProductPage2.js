@@ -32,7 +32,7 @@ export default function bike_ProductPage2({ data }) {
     } else {
       await setDoc(productRef, {
         productName: "Suzuki Hayabusa",
-        productOwner: "Milind Palaria",
+        productOwner: "Ashish Bhardwaj",
         productPrice: 4500,
         quantity: 1,
       });
@@ -53,7 +53,7 @@ export default function bike_ProductPage2({ data }) {
     <div>
       <div className={classes.first}>
         <h1>Suzuki Hayabusa</h1>
-        <h3>~ Milind Palaria</h3>
+        <h3>~ Ashish Bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
             <Image
